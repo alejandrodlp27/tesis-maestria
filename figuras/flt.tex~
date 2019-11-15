@@ -1,0 +1,23 @@
+\begin{tikzpicture}[
+  nonterminal/.style={rectangle,rounded corners=3mm,minimum size=6mm,very thick,draw=black!50,
+    top color=white,bottom color=black!20},
+  terminal/.style={rectangle,rounded corners=3mm,minimum size=6mm,very thick,draw=black!50,
+    top color=white,bottom color=black!20},
+  node distance=15mm,align=center]
+  
+  \node (flt) [nonterminal] {$\lnot$FLT($p$)};
+  \node (frey) [nonterminal,below=of flt] {Construcci\'on de\\ la curva de Frey $E$.};
+  \node (propfrey) [nonterminal,below=of frey] {$E$ es semiestable y $\rhop$ es\\ no-ramificado
+    fuera de $2p$.};
+  \node (modular) [nonterminal,below=of propfrey] {$E$ es modular, en particuar existe\\
+    $f\in S_2(\Gamma_0(N))$ tal que $\rho_f\cong\rho_{E,p}$};
+  \node (ribet) [nonterminal,below=of modular] {Existe $g\in S_2(\Gamma_0(2))$\\ tal que
+    $\rho_f\cong\rho_g$};
+  \node (contra) [terminal,below=of ribet] {\textbf{!}};
+  
+  \path[->] (flt) edge node[right] {Frey} (frey)
+  (frey) edge node[right] {Frey \& Serre} (propfrey)
+  (propfrey) edge node[right] {Wiles} (modular)
+  (modular) edge node[right] {Ribet} (ribet)
+  (ribet) edge (contra);
+\end{tikzpicture}

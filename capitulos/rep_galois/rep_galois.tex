@@ -1,0 +1,461 @@
+\documentclass[../../tesis_maestria]{subfiles}
+\begin{document}
+\section{Representaciones de Galois}\label{sec:rep_galois}
+
+\subsection{Definiciones Preliminares}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta secci\'on vamos a fijar la siguiente notaci\'on: $\l$ y $p$ siempre son n\'umeros primos, $G_{\QQ}=\text{Gal}(\overline{\QQ}|\QQ)$ es el grupo de Galois absoluto de $\QQ$ (muchos resultados de esta secci\'on se pueden generalizar a cualquier grupo de Galois $G_{L\mid K}=\text{Gal}(L\mid K)$) que, con la topolog\'ia de Krull \cite[cap\'itulo IV, \S1]{NeukirchANT}, es un grupo topol\'ogico compacto y Hausdorff, de hecho:
+\[
+  \GQ=\varprojlim_{K}\text{Gal}(\overline{\QQ}\mid K)
+\]
+donde $K$ corre sobre todas las extensiones de Galois de $\QQ$. En particular $\GQ$ es un grupo profinito, i.e. admite una base local del $1\in\GQ$ de los subgrupos normales abiertos $\text{Gal}(\overline{\QQ}\mid K)$ (donde $K/\QQ$ es finito y de Galois).
+
+\begin{defin}
+  Sea $A$ un anillo topol\'ogico. Una \emph{representaci\'on de Galois} es un homomorfismo $\rho:\GQ\ra\GL_n(A)$ de grupos topol\'ogicos. Decimos que dos representaciones de Galois $\rho$ y $\rho'$ son isomorfas, denotado por $\rho\cong\rho'$, si existe una matriz $M\in\GL_n(A)$ tal que $\rho(\sigma)=M\rho'(\sigma)M^{-1}$ para toda $\sigma\in\GQ$. Decimos que $\rho$ es \emph{impar} si $\det\rho(\fc)=-1$ donde $\fc\in\GQ$ es la conjugaci\'on compleja.
+\end{defin}
+
+\begin{nota}
+  Como $\GQ$ es compacto, $\rho$ satisface muchas de las mismas propiedades de las representaciones de grupos finitos como el lema de Schur \cite[parte I, \S4]{SerreLROFG}.
+\end{nota}
+
+Nosotros vamos a estar interesados en tres casos de representaciones de Galois:
+
+\begin{enumerate}
+\item $A$ es una extensi\'on de campos finita sobre $\QQ_{\l}$. Recuerde que todo campo de esta forma se obtiene al completar un campo num\'erico $K|\QQ$ con respecto de un valor absoluto $|\ast|_{\la}$ que est\'a can\'onicamente asociado a un ideal primo $\la\subset\Oo_K$ sobre $\l$. Esta completaci\'on, denotada por $K_{\la}$, tambi\'en se puede obtener como el campo de cocientes del l\'imite inverso $\Oo_{K,\la}:=\varprojlim_n \Oo_K/\la^n$, donde $\Oo_K$ es el anillo de enteros de $K$.
+\item $A$ es un \emph{anillo de coeficientes}. Un anillo de coeficientes es un anillo local completo noetheriano con campo residual $k$ finito. $A$ es naturalmente un anillo topol\'ogico con la topolog\'ia $\m$-\'adica donde $\m$ es el ideal maximal de $A$. Una base para esta topolog\'ia es la familia de abiertos $\{a+\m^N\mid a\in A, N>0\}$. Adem\'as, como $A$ es completo, tenemos que $A\cong\varprojlim A/\m^N$. De esta manera, la topolog\'ia $\m$-\'adica de $A$ induce una topolog\'ia profinita en $\GL_n(A)$ dado por el isomorfismo $\GL_n(A)\cong\varprojlim\GL_n(A/\m^N)$. En este caso, $A$ casi siempre va a ser una extensi\'on finita de la completaci\'on de $\QQ_{\l}$ con respecto de un ideal primo sobre $\l$ o su anillo de enteros.
+\item $A$ es una extensi\'on finita de $\FF_{\l}$. En este caso, a $A$ y a $\GL_n(A)$ les damos la topolog\'ia discreta.
+\end{enumerate}
+
+
+
+El caso cuando $A=K$ es una extensi\'on finita de $\QQ_{\l}$, la representaci\'on $\rho:\GQ\ra\GL_n(K)$ es isomorfa a una representaci\'on cuya imagen cae dentro de $\GL_n(\Oo_K)$ donde $\Oo_K$ es el anillo de enteros de $K$. M\'as precisamente tenemos la siguiente proposici\'on:
+
+\begin{prop}\label{prop:imagen_entera_rho}
+  Sea $K$ una extensi\'on finita de $\QQ_\l$ con anillo de enteros $\Oo_K$ y $\rho:\GQ\ra\GL_n(K)$ una representaci\'on de Galois. Si denotamos a la inclusi\'on $\GL_n(\Oo_K)\hookrightarrow\GL_n(K)$ por $i$, entonces existe una representaci\'on de Galois $\rho':\GQ\ra\GL_n(\Oo_K)$ tal que $\rho\cong i\circ\rho'$. 
+\end{prop}
+\begin{proof}
+  Esto se sigue esencialmente de que $\rho(\GQ)$ es compacto en $\GL_n(K)$ que podemos conjugar para que est\'e contenido en el compacto $\GL_n(\Oo_K)$. Como $\Oo_K$ es un dominio de ideales principales, el rango de la imagen es la adecuada. V\'ease la proposici\'on 9.3.5 de \cite{DiamondShurmanAFCIMF} para m\'as detalles.
+\end{proof}
+En otras palabras, siempre que tengamos una representaci\'on de Galois $\rho:\GQ\ra\GL_n(K)$, podemos asumir (m\'odulo isomorfismo) que la imagen de $\rho$ est\'a contenido en $\GL_n(\Oo_K)$.
+
+En este trabajo vamos a trabajar con tres propiedades que pueden o no cumplir las representaciones de Galois: la irreducibilidad, la ramificaci\'on en primos y la modularidad. El prop\'osito de esta secci\'on es discutir estas propiedades. Empezamos con la m\'as sencilla.
+
+\begin{defin}
+  Sea $\rho:\GQ\ra\GL_n(K)$ una representaci\'on de Galois donde $K$ es un campo finito o una extensi\'on finita de $\QQ_\l$. Decimos que $\rho$ es \emph{irreducible} si el $K-$espacio vectorial $K^n$ tiene exactamente dos subespacios $\GQ-$invariantes: 0 y $K^n$. Adem\'as decimos que es \emph{absolutamente irreducible} si para toda extensi\'on finita $K'$ de $K$, la representaci\'on $\rho':\GQ\ra\GL_n(K')$ definida por la composici\'on $\GQ\morf{\rho}\GL_n(K)\hookrightarrow\GL_n(K')$ es irreducible.
+\end{defin}
+
+Como veremos m\'as adelante (c.f. la proposici\'on \ref{prop:irred_equiv_absirred}), la irreducibilidad y la irreducibilidad absoluta coinciden en dimensi\'on 2 y caracter\'isitca diferente de 2 junto con una hip\'otesis adicional sobre el determinante de la representaci\'on, pero las representaciones que aparecen en este trabajo cumplen esa condici\'on. Esta equivalencia se usar\'a en la secci\'on \ref{sec:langlands_tunnell}.
+
+Las segunda propiedad esencial de las representaciones de Galois que estudiaremos es la ramificaci\'on, pero para poder discutirla necesitamos estudiar la estructura $\GQ$ con m\'as cuidado. Como $\GQ$ es profinito, primero estudiamos los grupos de Galois de extensiones finitas.
+
+Para cualquier extensi\'on finita de Galois $K\mid\QQ$ con anillo de enteros $\Oo_K$, si $\fP\subset\Oo_K$ es un ideal primo sobre $p$ (i.e. $\fP\cap\ZZ=p\ZZ$) entonces el grupo de descomposici\'on de $\fP\mid p$ se define como
+\[
+  D_{p,\fP}=\{\sigma\in\Gal(K\mid\QQ)\mid \sigma(\fP)=\fP\}.
+\]
+Hay un epimorfismo natural $D_{p,\fP}\epi\Gal(\Oo_{K}/\fP\mid \FF_p)$ definida por $\sigma\mapsto\big(x+\fP\mapsto \sigma(x)+\fP\big)$. El nucleo de este morfismo, denotado por $I_{p,\fP}$, es el \emph{grupo de inercia}. Entonces tenemos el isomorfismo:
+\begin{equation}\label{eq:iso_decomp_inercia}
+  \frac{D_{p,\fP}}{I_{p,\fP}}\cong\Gal(\Oo_K/\fP \mid\FF_p).
+\end{equation}
+El grupo de Galois $\Gal(\Oo_K/\fP \mid\FF_p)$ es generado por el automorfismo de Frobenius definido por $x\mapsto x^p$.  A cualquier preimagen $\sigma\in D_{p,\fP}$ de $\varphi_p$ bajo $D_{p,\fP}\epi\Gal(\Oo_{K}/\fP\mid \FF_p)$  se le llama un \emph{elemento de Frobenius} sobre $p$. Entonces $\sigma$ est\'a bien definido m\'odulo el grupo de inercia $I_{p,\fP}$.
+
+En el caso de la extensi\'on $\ol{\QQ}\mid\QQ$, si $\p\subset\ol{\ZZ}$ es un ideal maximal de la cerradura entera de $\ZZ$ en $\ol{\QQ}$, entonces definimos el grupo de descomposici\'on de $\p$ como:
+\[
+  D_{\p}:=\{\sigma\in\GQ\mid \sigma(\p)=\p\}.
+\]
+Este grupo de descomposici\'on es el l\'imite inverso de los grupos de descomposici\'on de las subextensiones finitas de Galois, es decir
+\[
+  D_{\p}\cong \varprojlim_{K}D_{p,\p\cap\Oo_K}
+\]
+donde $K\subset\ol{\QQ}$ corre sobre todas las subextensiones finitas de Galois y $\Oo_K$ es el anillo de enteros de $K$, adem\'as $p$ es el n\'umero primo que cumple $\p\cap\ZZ=p\ZZ$. En efecto, el isomorfismo est\'a dado por $\sigma\mapsto \{\sigma|_K\}_{K}$ donde estamos identificando a $\varprojlim D_{p,\p\cap\Oo_K}$ como subconjunto del producto $\prod_K\text{Gal}(K\mid\QQ)$.
+
+Ahora, como $\p\cap\ZZ=p\ZZ$, entonces la inclusi\'on $\ZZ\hookrightarrow\ol{\ZZ}$ induce la inclusi\'on $\ZZ/p\ZZ \hookrightarrow\ol{\ZZ}/\p$. Por lo tanto $\ol{\ZZ}/\p$ es una extensi\'on (de campos) de $\FF_p=\ZZ/p\ZZ$. De hecho es la cerradura algebraica de $\FF_p$ porque cualquier elemento $\alpha+\p\in\ol{\ZZ}/\p$ satisface un polinomio m\'onico con coeficientes en $\FF_p$ que es la reducci\'on m\'odulo $p$ del polinomio m\'onico que satisface $\alpha\in\ol{\ZZ}$ y porque cualquier extensi\'on algebraica propia de $\ol{\ZZ}/\p$ inducir\'ia una extensi\'on entera de $\ol{\ZZ}$ en $\ol{\QQ}$ y esto no puede suceder porque $\ol{\ZZ}$ es la cerradura entera de $\ZZ$ en $\ol{\QQ}$. Por lo tanto tenemos un isomorfismo $\ol{\ZZ}/\p\cong\ol{\FF}_p$ y gracias a esto identificamos $\ol{\ZZ}/\p$ con $\ol{\FF}_p$. Por lo tanto obtenemos un epimorfismo $\ol{\ZZ}\epi\ol{\FF}_p$ con nucleo $\p$.
+
+De esta manera, cualquier $\sigma\in D_{\p}$ induce un homomorfismo $\tilde{\sigma}$ definido por el siguiente diagrama conmutativo:
+\[
+  \begin{tikzcd}
+    \ol{\ZZ} \arrow[d,two heads] \arrow[r,"\sigma"] & \ol{\ZZ} \arrow[d,two heads]\\
+    \ol{\FF}_p \arrow[r,dashed,"\tilde{\sigma}"]& \ol{\FF}_p
+  \end{tikzcd}
+\]
+M\'as precisamente hay un homomorfismo $D_{\p}\ra G_{\FF_p}$ definido por $\sigma\mapsto\tilde{\sigma}$ donde $\tilde{\sigma}(\alpha+\p)=\sigma(\alpha)+\p$.
+
+El nucleo de $D_{\p}\ra G_{\FF_p}$ se llama el grupo de inercia de $\p$ y se denota por $I_{\p}$. An\'alogamente al caso de $D_{\p}$, el grupo de inercia de $\p$ es el l\'imite inverso de los grupos de inercia $I_{p,\p\cap\Oo_K}$ donde $K$ corre sobre todas las subextensiones finitas de Galois, i.e.
+\[
+  I_{\p}\cong\varprojlim_K I_{p,\p\cap\Oo_K}
+\]
+donde $\Oo_K$ es el anillo de enteros de $K$.
+
+Recuerde que $G_{\FF_p}\cong\wh{\ZZ}$, la completaci\'on profinita\footnote[2]{Formalmente $\wh{\ZZ}$ se define como el l\'imite inverso $\wh{\ZZ}=\varprojlim_n (\ZZ/n\ZZ)$ donde el sistema proyectivo se define con el orden de divisibilidad, m\'as precisamente, cuando $n\mid m$ entonces usamos la proyecci\'on m\'odulo $n$ y as\'i la familia de morfismos $\{\ZZ/m\ZZ\epi\ZZ/n\ZZ\}_{n\mid m}$ forman un sistema proyectivo; su l\'imite inverso es $\wh{\ZZ}$} de $\ZZ$ (c.f. \cite[cap\'itulo IV, \S2, ejemplo 5]{NeukirchANT}). Entonces el \emph{automorfismo de Frobenius} $\varphi_p:\overline{\FF}_p\ra\overline{\FF}_p$ definido por $\varphi_p(x)=x^p$ corresponde al elemento $1\in\wh{\ZZ}$ y el subgrupo generado por $\varphi_p$ corresponde al subgrupo denso $\ZZ\subset\wh{\ZZ}$. A cualquier preimagen de $\varphi_p$ en $D_{\p}$ bajo el homomorfismo $D_{\p}\ra G_{\FF_p}$ se le llama un \emph{elemento de Frobenius absoluto sobre} $p$.
+
+Con todo esto podemos definir la ramificaci\'on:
+
+\begin{defin}
+  Sea $\rho:\GQ\ra\GL_n(A)$ una representaci\'on de Galois. Entonces $\rho$ es \emph{no-ramificado} en $p$ si cumple $I_{\p}\subseteq\ker\rho$ para alg\'un (y por lo tanto todo, ver la siguiente nota) ideal maximal $\p\subset\overline{\ZZ}$ sobre $p$. En general decimos que $\rho$ es \emph{no-ramificado casi donde sea} si $\rho$ es no-ramificado para todo primo $p$ salvo posiblemente un conjunto finito de n\'umeros primos.
+\end{defin}
+
+\begin{nota}
+  Si elegimos otro ideal primo $\p'$ sobre $p$, entonces existe un $\sigma\in\GQ$ tal que $\sigma(\p)=\p'$ (esto es porque $\GQ$ act\'ua transitivamente sobre el conjunto de ideales primos sobre $p$). De esta manera $\sigma D_{\p}\sigma^{-1}=D_{\sigma(\p)}=D_{\p'}$ y en particular los grupos de inercia, $I_{\p}$ y $I_{\p}$, son conjugados. Por lo tanto, como $\ker\rho$ es un subgrupo normal, $I_{\p}\subseteq\ker\rho$ si y solamente si $I_{\p'}\subseteq\ker\rho$. Es decir la definici\'on anterior no depende del ideal primo $\p$ sobre $p$.
+\end{nota}
+
+\begin{nota}
+  Si $\rho:\GQ\ra\GL_n(\CC)$ es una representaci\'on compleja, entonces se factoriza a trav\'es de una representaci\'on $\rho':\Gal(K_{\rho}\mid\QQ)\ra\GL_n(\CC)$ donde $K_{\rho}$ es una extensi\'on finita igual al campo fijo de $\ker\rho\subset\GQ$. Esto se sigue de que cualquier representaci\'on $\sigma:G\ra \GL_2(\CC)$ tiene imagen finita cuando $G$ es compacto, en efecto la representaci\'on inducida $\bar{\sigma}:G/\ker\sigma\ra\GL_n(\CC)$ es un homeomorfismo a su imagen $\sigma(G)$. Pero \'este es compacto en $\GL_n(\CC)$, por lo tanto es de Lie. Por lo tanto $\sigma(G)$ es totalmente disconexo y de Lie y concluimos que $G/\ker\sigma\cong\sigma(G)$ es finito. Como cualquier representaci\'on $\rho:\GQ\ra\GL_n(\CC)$ tiene imagen finita, $\rho$ es no-ramificado en $p$ si y solamente si  $K_{\rho}$ es no ramificado en $p$\footnote[2]{i.e. la factorizaci\'on del ideal $p\Oo_{\rho}$ del anillo de enteros de $K_{\rho}$ es un producto lineal de ideales primos distintos, todos con \'indice de ramificaci\'on 1.}.
+\end{nota}
+
+\begin{ejemplo}\label{ej:car_ciclo_modN}
+  Sea $\chi:(\ZZ/N\ZZ)^*\ra\CC^*$ un caracter de Dirichlet primitivo. Sabemos que $\Gal(\QQ(\mu_N)|\QQ)\cong(\ZZ/N\ZZ)^*$ y es la imagen de la proyecci\'on $\pi:\GQ\epi\Gal(\QQ(\mu_n)\mid\QQ)$ definida por la restricci\'on $\sigma\mapsto\sigma|_{\QQ(\mu_N)}$. Juntamos estos comentarios en el siguiente diagrama:
+  \[
+    \begin{tikzcd}
+      \GQ \arrow[r,"\pi"] \arrow[rrr,dashed,bend right=20,"\rho_{\chi}"']&
+      \Gal(\QQ(\mu_N)\mid\QQ) \arrow[r,"\cong"] &
+      (\ZZ/N\ZZ)^* \arrow[r,"\chi"] &
+      \CC^*
+    \end{tikzcd}
+  \]
+  Por lo tanto obtenemos una representaci\'on $\rho_{\chi}$ asociado a $\chi$. Afirmamos que $\rho_{\chi}$ es no-ramificado cuando $p\nmid N$. En efecto, $\ker\rho_{\chi}=\ker\pi$ y as\'i su campo fijo es $\QQ(\mu_N)$ donde la ramificaci\'on de primos es bien  conocido: $p$ es no-ramificado cuando $p\nmid N$.
+\end{ejemplo}
+
+Ahora estudiemos m\'as a fondo qu\'e sucede cuando $\rho$ es no-ramificado en un primo $p$. En este caso elige un ideal primo $\p\subset\overline{\ZZ}$
+sobre $p$ y un elemento de Frobenius absoluto $\sigma\in D_{\p}\subset\GQ$. Resulta que el valor $\rho(\sigma)$ es independiente de la elecci\'on de $\sigma$. En efecto, si $\sigma'$ es otro elemento de Frobenius absoluto entonces $\sigma'=\sigma\tau$ para alguna $\tau\in I_{\p}$ y as\'i $\rho(\sigma')=\rho(\sigma\tau)=\rho(\sigma)$ ya que $I_{\p}\subseteq\ker\rho$ por hip\'otesis.
+
+Ahora, si elegimos otro ideal maximal $\p'$ sobre $p$, entonces $\tau D_{\p}\tau^{-1}=D_{\p'}$ para alguna $\tau\in\GQ$ y as\'i cualquier elemento de Frobenius absoluto $\sigma'\in D_{\p'}$ es de la forma $\tau\sigma\tau^{-1}$ donde $\sigma\in D_{\p}$ es un elemento de Frobenius absoluto. Por lo tanto cambiar de ideal maximal sobre $p$ conjuga al elemento de Frobenius absoluto. Esto quiere decir que el valor $\rho(\sigma)$ cambia por conjugaci\'on (por $\rho(\tau)$ en este caso). Por lo tanto la clase de conjugaci\'on $[\sigma]=\{\tau\sigma\tau^{-1}\mid\tau\in\GQ\}$ de un elemento de Frobenius absoluto no depende de la elecci\'on de $\p$, solamente de $p$. Este hecho nos sugiere la siguiente definici\'on:
+
+\begin{defin}
+  Sea $p$ un n\'umero primo y sea $\sigma\in D_{\p}\subset\GQ$ un elemento de Frobenius absoluto para alg\'un ideal maximal $\p\subset\ol{\ZZ}$ sobre $p$. La clase de conjugaci\'on $[\sigma]\subset\GQ$ se llama la \emph{clase de conjugaci\'on de Frobenius} sobre $p$ y se denota por $\Fr_p$.
+\end{defin}
+
+Recuerde que el polinomio caracter\'istico de la matriz $\rho(\sigma)$ (para alguna $\sigma\in\Fr_p$) es invariante bajo conjugaci\'on. Por lo tanto el polinomio caracter\'istico
+\[
+  \det(\rho(\Fr_p)-T\Id):=\det(\rho(\sigma)-T\Id)
+  \quad\text{para alguna}\;\sigma\in\Fr_p
+\]
+est\'a bien definido y lo denotamos por $f_{\rho,p}$. Similarmente la traza $\tr\rho(\Fr_p)$ est\'a bien definido.
+
+Los primeros ejemplos de representaciones de Galois son los caracteres ciclot\'omicos y sus propiedades de ramificaci\'on son sencillas.
+
+El grupo de Galois $\GQ$ act\'ua sobre $\mu_N\subset\ol{\QQ}$ de manera natural,
+entonces hay un homomorfismo de grupos $\GQ\ra\text{Aut}(\mu_N)$. Recuerde que $\text{Aut}(\mu_N)\cong(\ZZ/N\ZZ)^*$, bajo el isomorfismo $f\mapsto n$ donde $n$ es el entero que cumple $f(\zeta)=\zeta^n$ para alguna raiz primitiva de la unidad $\zeta\in\mu_N$ (observe que este isomorfismo no es can\'onico). Por lo tanto obtenemos una representaci\'on
+\[
+  \bar{\chi}_N:\GQ\lra\GL_1(\ZZ/N\ZZ)=(\ZZ/N\ZZ)^*,
+\]
+que llamamos el \emph{caracter ciclot\'omico m\'odulo} $N$. Esta representaci\'on cumple:
+\begin{prop}\label{prop:car_ciclo_modN} El caracter ciclot\'omico m\'odulo $N$ cumple y es caracterizado por las siguientes dos propiedades
+\begin{enumerate}[label=\roman*)]
+  \item $\bar{\chi}_N$ es no-ramificada en todo primo $q\nmid N$.
+  \item $\bar{\chi}_N(\Fr_q)\equiv q\Mod{N}$ para toda $q\nmid N$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+  c.f. \cite[\S5.2 proposici\'on 5.12 y \S8.1 teorema 8.7]{SaitoNumberTheory2}
+\end{proof}
+
+Ahora, si fijamos un n\'umero primo $\ell$, tenemos el siguiente diagrama conmutativo:
+\[
+  \begin{tikzcd}
+     & (\ZZ/\ell^{n+1}\ZZ)^* \arrow[d,"\mod \ell^n"]\\
+     \GQ \arrow[ru,"\bar{\chi}_{\ell^{n+1}}"] \arrow[r,"\bar{\chi}_{\ell^n}"'] &
+     (\ZZ/\ell^n\ZZ)^*
+  \end{tikzcd}
+\]
+Entonces podemos pasar al l\'imite inverso. Sabemos que $\varprojlim_n (\ZZ/\l^n\ZZ)^*\cong\ZZ^*_{\l}$, entonces si denotamos por $\chi_{\l}$ al morfismo inducido por la propiedad universal del l\'imite inverso, obtenemos una representaci\'on
+\[
+  \chi_{\ell}:\GQ\lra \ZZ^*_{\l}.
+\]
+La representaci\'on $\chi_{\ell}$ se llama el \emph{caracter ciclot\'omico $\ell$-\'adico}. Similarmente a $\bar{\chi}_N$, la representaci\'on $\chi_{\ell}$ cumple:
+
+\begin{prop}\label{prop:chiell} Para todo primo $\l$, el caracter ciclot\'omico $\chi_{\l}$ cumple, y es caracterizado   por, las siguientes propiedades:
+\begin{enumerate}[label=\roman*)]
+  \item $\chi_{\ell}$ es no-ramificada para todo primo $q$ distinto de $\l$.
+  \item $\chi_{\ell}(\Fr_q)=q$ cuando $q\neq\l$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+  Las propiedades de $\bar{\chi}_{\l^n}$ de la proposici\'on \ref{prop:car_ciclo_modN} se preservan al pasar al l\'imite inverso.
+\end{proof}
+
+\begin{nota}\marginpar{\scriptsize esta nota nueva es una generalizacion de la nota despues del teorema de Eichler-Shimura que cambie de lugar aqui. La proposicion que sigue tambien es nuevo y se usa en Langlands-Tunnell }
+  En general los caracteres ciclot\'omicos los vamos a usar para imponer condiciones sobre el determinante de las representaciones de Galois. M\'as precisamente vamos a pedir, o demostrar, que el determinante de una representaci\'on $\rho:\GQ\ra\GL_n(A)$, definido por la composici\'on
+  \[
+    \det\rho:\GQ\lra\GL_n(A)\morf{\det}A^*
+  \]
+  sea igual a alg\'un caracter ciclot\'omico. Pero inmediatamente vemos que $A$ no necesariamente es $(\ZZ/N\ZZ)^*$ o $\ZZ_\l^*$, entonces las igualdades $\det\rho=\bar{\chi}_N$ o $\det\rho=\chi_\l$ no est\'an bien definidas. Por suerte hay una manera natural de corregir esta discrepancia.
+
+  Cuando $A$ es una extensi\'on finita de $\QQ_\l$ (resp. su anillo de enteros), tenemos $\ZZ_\l\subset\QQ_\l$ (resp. $\ZZ_\l\subset A$)  as\'i tenemos una inclusi\'on natural $\ZZ_\l^*\hookrightarrow A^*$. Por lo tanto si componemos $\chi_\l$ con esta inclusi\'on obtenemos la representaci\'on $\chi_\l:\GQ\ra A^*$ que denotamos con el mismo s\'imbolo. De esta manera la igualdad $\det\rho=\chi_\l$ tiene sentido.
+  De manera similar, si $A$ es una extensi\'on finita de $\FF_p$, componemos el caracter ciclot\'omico $\bar{\chi}_p$ con la inclusi\'on $\FF_p^*\hookrightarrow A^*$ para obtener el caracter $\bar{\chi}_p:\GQ\ra A^*$ que s\'i se puede comparar con $\det\rho$.
+  
+  En palabras, cuando decimos que $\det\rho$ es igual a un caracter ciclot\'omico, estamos componiendo el caracter ciclot\'omico con una inclusi\'on adecuada para que la igualdad tenga sentido.
+\end{nota}
+
+Con estas consideraciones sobre los caracteres ciclot\'omicos, estamos en posici\'on para enunciar y probar la equivalencia de la irreducibilidad y la irreducibilidad absoluta de las representaciones de Galois de dimensi\'on 2:
+
+\begin{prop}\label{prop:irred_equiv_absirred}
+  Sea $\rho:\GQ\ra\GL_2(K)$ una representaci\'on de Galois con $K$ una extensi\'on finita de $\FF_\l$ (resp. $\QQ_\l$) donde $\l\neq2$. Si $\rho$ es irreducible y $\det\rho=\bar{\chi}_\l$ (resp. $\det\rho=\chi_\l$) entonces $\rho$ es absolutamente irreducible.
+\end{prop}
+\begin{proof}
+  Sea $\fc\in\GQ$ la conjugaci\'on compleja. Claramente $\rho(\fc)^2=\Id$ y as\'i sus valores propios satisfacen la ecuaci\'on $T^2-1=0$. Como $\l\neq2$, los dos valores propios 1 y $-1$ son distintos y $\det(\fc)=-1$.
+  
+  Ahora supongamos que $\rho$ no es absolutamente irreducible. Entonces existe una extensi\'on finita $L$ de $K$ tal que la composici\'on $\GQ\morf{\rho}\GL_2(K)\hookrightarrow\GL_2(L)$ no es irreducible. Como estamos en dimensi\'on 2, esto significa que existe un subespacio $V\subset L^2$ de dimensi\'on 1 que es $\GQ-$invariante. Gracias a la dimensi\'on de $V$, \'este tiene que ser un eigenespacio de $\rho(\fc)$ porque no hay ning\'un otro subespacio de dimensi\'on 1 que sea estable bajo la acci\'on de $\rho(\fc)$.
+
+  Ahora, $\rho(\fc)$ est\'a definido sobre $K$, i.e. las entradas de $\rho(\fc)$ son elementos de $K$. De esta manera, un generador de $V$, cuyas coordenadas est\'an en $L$, tiene un m\'ultiplo cuyas coordenadas est\'an en $K$. Por lo tanto induce el subespacio $V\cap K^2\subset K^2$ de dimensi\'on 1 que es $\GQ-$estable. Esto contradice la irreducibilidad de $\rho$. Por lo tanto concluimos que $\rho$ es absolutamente irreducible.
+\end{proof}
+
+\begin{comment}%%%%%%%%%%%%%%%%%%%%% comentario sobre G-modulos
+Para estudiar m\'as a fondo la ramificaci\'on vamos a definir las representaciones de Galois de una manera equivalente que facilita el estudio algebraico de la ramificaci\'on:
+
+\begin{defin}
+  Sea $M$ un grupo abeliano finito y $G$ un grupo arbitrario. Decimos que $M$ es un $G$-m\'odulo finito si existe un homomorfismo continuo $G\ra\text{Aut}(M)$. Una funci\'on $f:M\ra M'$ es un morfismo de $G$-m\'odulos si $f$ respeta la acci\'on de $G$, es decir $f(x^{\sigma})=f(x)^{\sigma}$.
+\end{defin}
+
+En esta secci\'on nos vamos a enfocar en el caso $G=\GQ$ y es en este caso donde podemos definirla ramificaci\'on de un $\GQ$-m\'odulo:
+
+\begin{defin}
+  Sea $M$ un $\GQ$-m\'odulo finito y $p$ un n\'umero primo. Entonces definimos:
+  \begin{enumerate}
+  \item $M$ es \emph{no-ramificado} en $p$ si el campo fijo asociado al subgrupo $\ker(\GQ\ra\text{Aut}(M))\subset\GQ$ es no-ramificado en $p$.
+  \item $M$ es \emph{bueno} en $p$ si existe un esquema de grupo finito plano $X$ sobre $\ZZ_{(p)}$ tal que $X(\ol{\QQ})\otimes\QQ\cong M$.
+  \end{enumerate}
+\end{defin}
+
+Estas dos propiedades est\'an muy relacionadas:
+
+\begin{prop}
+  Sea $M$ un $\GQ$-m\'odulo finito y $p$ un n\'umero primo. Entonces:
+  \begin{enumerate}
+  \item si $M$ es no-ramificado en $p$, entonces $M$ es bueno en $p$.
+  \item si $M$ es bueno en $p$ y $p\nmid \# M$, entonces $M$ es no ramificado en $p$.
+  \end{enumerate}
+\end{prop}
+\end{comment}%%%%%%%%%%%%%%%%%%%%%%%%%%% comentario sobre G-modulos
+
+\subsection{Representaciones asociadas a curvas el\'ipticas}%%%%%%%%%%%%%%
+
+Sea $E$ una curva el\'iptica sobre $\QQ$ y $E[N]\subset E(\ol{\QQ})$ sus puntos de orden $N$. Observa que el grupo de Galois absoluto $\GQ$ act\'ua sobre $E(\ol{\QQ})$ y en particular act\'ua sobre $E[N]$. Esta acci\'on est\'a bien definida porque la acci\'on de $G_{\QQ}$ conmuta con la suma de $E$. En efecto, si $P$ y $Q$ son dos puntos de $E$, entonces las coordenadas de $P+Q$ son funciones racionales en las coordenadas de $P$ y $Q$ \cite[\S III.2, Group Law Algorithm]{SilvermanTAOEC}. Por lo tanto, como el neutro tiene coordenadas racionales,
+\[
+  O=O^{\sigma}=([N]P)^{\sigma}=(P+\cdots+P)^{\sigma}=
+  P^{\sigma}+\cdots+P^{\sigma}=[N]P^{\sigma}
+\]
+y as\'i $P^{\sigma}\in E[N]$ siempre que $P\in E[N]$. De esta manera cada $\sigma$ induce un automorfismo de $E[N]$, es decir, tenemos una representaci\'on $G_{\QQ}\ra\text{Aut}(E[N])$. Por otro lado, sabemos que $E[N]\cong(\ZZ/N\ZZ)\times(\ZZ/N\ZZ)$  (c.f. la proposici\'on \ref{prop:estructura_EN} de la secci\'on \ref{sec:preliminares_curvas}), entonces Aut$(E[N])$ es simplemente $\GL_2(\ZZ/N\ZZ)$. As\'i definimos:
+
+\begin{defin}
+  La representaci\'on de Galois de los puntos de $N$-torsi\'on de una curva el\'iptica $E/\QQ$  se denota por
+  \[
+    \rhoN:G_{\QQ}\lra \GL_2(\ZZ/N\ZZ)
+  \]
+\end{defin}
+
+Cuando $N=p$ es primo, podemos determinar la ramificaci\'on de $\rhop$ en los primos donde $E$ tiene buena reducci\'on y calcular su polinomio caracter\'istico.
+
+\begin{prop}\label{prop:prop_de_rhop}
+  Sea $p$ un primo y sea $E$ una curva el\'iptica sobre $Q$ con buena reducci\'on en un primo $q$ distinto de $p$. Entonces,
+  \begin{enumerate}[label=\roman*)]
+  \item $\rhop$ es no-ramificado en $q$ y en particular, $\rhop$ es no-ramificado casi donde sea.
+  \item El polinomio caracter\'istico de $\rhop$ cumple
+    \[
+      \det(\rhop(\Fr_q)-T\Id)\equiv q-a_{q}(E)T+T^2 \Mod{p},
+    \]
+    donde $a_q(E)=q+1-\# E(\FF_q)$ (compare con el teorema \ref{thm:traza_frobenius}).
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+  (c.f. \cite[\S3.3, proposici\'on 3.15]{SaitoFLTBT})
+\end{proof}
+
+Como en el caso del caracter ciclot\'omico m\'odulo $N$, podemos pasar al l\'imite inverso. M\'as precisamente, si fijamos un primo $\ell$ y tomamos $n\geq1$ arbitrario, tenemos el siguiente diagrama conmutativo:
+\[
+  \begin{tikzcd}
+    &
+    \GL_2(\ZZ/\ell^{n+1}\ZZ) \arrow[d,two heads,"\mod \ell^n"]
+    \arrow[r,dash,"\cong"]&
+    \text{Aut}(E[\ell^{n+1}]) \arrow[d,two heads,dashed]\\
+    \GQ \arrow[ru,"\bar{\rho}_{E,\ell^{n+1}}"] \arrow[r,"\bar{\rho}_{E,\ell^n}"']&
+    \GL_2(\ZZ/\ell^n\ZZ) \arrow[r,dash,"\cong"]&
+    \text{Aut}(E[\ell^n])
+  \end{tikzcd}
+\]
+Por lo tanto, como en el caso del caracter ciclot\'omico $\ell$-\'adico, existe naturalmente una representaci\'on de $\GQ$ en $\varprojlim\GL_2(\ZZ/\ell^n\ZZ)\cong\varprojlim\text{Aut}(E[\ell^n])=\text{Aut}(T_{\ell}(E))$, es decir, tenemos:
+
+\begin{defin}
+  Sea $E$ una curva el\'iptica sobre $\QQ$, entonces la \emph{representaci\'on de Galois
+    $\ell$-\'adica} asociada a $E$, es la representaci\'on
+  \[
+    \rho_{E,\ell}:\GQ\lra\GL_2(\ZZ_{\ell})\cong\text{Aut}(T_{\ell}(E))
+  \]
+\end{defin}
+
+Esta representaci\'on cumple casi las mismas propiedades que $\rhop$. La siguiente proposici\'on sobre $\rho_{E,\l}$ se obtiene esencialmente aplicando el el l\'imite inverso a la proposici\'on \ref{prop:prop_de_rhop}.
+
+\begin{prop}\label{prop:prop_de_rhol}
+  Sea $\l$ un primo fijo y sea $E$ una curva el\'iptica sobre $\QQ$, entonces
+  \begin{enumerate}[label=\roman*)]
+  \item $\rho_{E,\ell}$ es no-ramificado en $q$ para todo primo distinto de $\l$ donde $E$ tenga buena reducci\'on. En particular, $\rho_{E,\l}$ es no-ramificado casi donde sea.
+  \item El polinomio caracter\'istico de $\rho_{E,\ell}$ es
+    \[
+      \det(\rho_{E,\l}(\Fr_q)-T\Id)=q-a_q(E)T+T^2 \qquad(\forall q\neq \l).
+    \]
+  \end{enumerate}
+\end{prop}
+
+Del polinomio caracter\'istico de $\rho_{E,\ell}(\Fr_q)$ podemos leer el determinante y la traza de $\rho_{E,\l}(\Fr_q)$. En particular, el caracter $\det\rho_{E,\l}:\GQ\ra\ZZ^*_{\l}$ obtenido de la composici\'on $\GQ\ra\GL_2(\ZZ_{\l})\morf{\det}\ZZ^*_{\l}$, cumple que $\det\rho_{E,\ell}(\Fr_q)=q$ para toda $q$ distinta de $\l$; cumple la mitad de las propiedades que caracterizan al caracter ciclot\'omico $\l$-\'adico. Por otro lado, como toda curva el\'iptica
+sobre $\QQ$ solamente tiene una cantidad finita de primos donde hay reducci\'on mala, entonces $\rho_{E,\l}$ es no-ramificado casi donde sea. Entonces, como consecuencia de las proposiciones \ref{prop:car_ciclo_modN}, \ref{prop:chiell}, \ref{prop:prop_de_rhop}  y \ref{prop:prop_de_rhol}, tenemos el siguiente corolario:
+
+\begin{cor}\label{cor:det_de_rhop}
+  Sea $E$ una curva el\'iptica sobre $\QQ$ y sean $p$ y $\l$ primos fijos. Entonces:
+  \begin{enumerate}
+  \item $\det\rhop=\bar{\chi}_p$ y $\tr\rhop(\Fr_q)\equiv a_q(E)\Mod{p}$ para todo primo $q$ distinto de $p$.
+    \item $\det\rho_{E,\l}=\chi_{\l}$ y $\tr\rho_{E,\l}(\Fr_q)=a_q(E)$ para todo primo $q$ distinto de $p$.
+  \end{enumerate}
+\end{cor}
+
+\subsection{La modularidad de representaciones de Galois}%%%%%%%%%%%%%%
+
+En esta secci\'on estudiamos las representaciones de Galois que surgen de las formas modulares. Como en la secci\'on \ref{sec:formas_modulares}, denotamos por $S_2(\Gamma_0(N))$ al espacio de formas cuspidales de peso 2 y sea $f\in S_2(\Gamma_0(N))$ una forma primitiva (v\'ease la definici\'on \ref{def:formaprimitiva}). Recuerde que el campo num\'erico de $f$, denotado por $K_f$, es la extensi\'on finita de $\QQ$ generada por los valores propios de $f$ bajo los operadores de Hecke (c.f. la proposici\'on \ref{prop:camponumerico}). Denotamos por $\Oo_f$ al anillo de enteros de $K_f$.
+
+Gracias al trabajo de Eichler y Shimura, cada forma primitiva de peso 2 tiene asociado una representaci\'on de Galois:
+
+\begin{thm}\label{thm:eichlershimura}(Eichler-Shimura)
+  Sea $f\in S^{\mathrm{new}}_2(\Gamma_0(N))$ una forma primitiva y $\l$ un n\'umero primo. Para   todo ideal primo $\la\subset\Oo_f$ sobre $\l$ escribimos $K_{f,\la}$ como la completaci\'on de   $K_f$ con respecto del valor absoluto asociado a $\la$. Bajo estas condiciones, existe una representaci\'on de Galois
+  \[
+    \rho_{f,\la}:\GQ\lra\GL_2(K_{f,\la})
+  \]
+  que satisface las siguientes propiedades:
+  \begin{enumerate}[label=\roman*)]
+  \item $\rho_{f,\la}$ es no-ramificado en $q$ para todo primo $q\nmid N\l$.
+  \item\label{es_uno} $\det\rho_{f,\la}=\chi_{\l}$ el caracter ciclot\'omico $\l-$\'adico (esta iguladad se justifica en la nota despu\'es de la proposici\'on \ref{prop:chiell}).
+  \item $\tr(\rho_{f,\la}(\Fr_q))=a_q(f)$ para todo primo $q\nmid N\l$.
+  \end{enumerate}
+\end{thm}
+
+%\begin{nota}
+%  Para justificar la notaci\'on de la propiedad \emph{(\ref{es_uno}}, primero observamos que $\det\rho_{f,\la}$ es la representaci\'on definida por la composici\'on:
+%  \[
+%    \begin{tikzcd}
+%      \GQ \arrow[r,"\rho_{f,\la}"] & \GL_2(K_{f,\la}) \arrow[r,"\det"] &
+%      K_{f,\la}^*.
+%    \end{tikzcd}
+%  \]
+%  Pero $K_{f,\la}$ es una extensi\'on finita de $\QQ_{\l}$, por lo tanto $\ZZ_{\l}^*\subset K_{f,\la}^*$. Entonces identificamos el caracter ciclot\'omico $\l-$\'adico $\chi_{\l}$ con la composici\'on
+%  \[
+%    \begin{tikzcd}
+%      \GQ \arrow[r,"\chi_{\l}"] & \ZZ_{\l}^* \arrow[r,hook] & K_{f,\la}^*,
+%    \end{tikzcd}
+%  \]
+%  para poder hablar de la igualdad $\det\rho_{f,\la}=\chi_{\l}$.
+%\end{nota}
+
+\begin{proof}
+  Esto es el teorema 9.5.4 en \S 9.5 de \cite{DiamondShurmanAFCIMF}, \'o v\'ease \S 7.6 de \cite{ShimuraITTATOAF}.
+\end{proof}
+
+Este teorema tiene una generalizaci\'on a otros pesos distintos de 2 (c.f. el teorema 9.6.5 de \cite{DiamondShurmanAFCIMF}). El teorema anterior para pesos mayores que 2 es debido a Deligne \cite{DeligneFMERLA} y para peso 1 es debido a Deligne y Serre \cite{DeligneSerreFMDP1}. Aunque en este trabajo solamente nos enfocaremos en peso 2 para definir modularidad, el art\'iculo de Deligne y Serre volver\'a a aparecer en la secci\'on \ref{sec:langlands_tunnell} para la prueba de la modularidad de $\rhot$.
+
+Las representaciones de Galois asociadas a formas primitivas nos determinan una clase muy importante de representaciones. Para definirla, necesitamos separar en casos seg\'un qu\'e anillo topol\'ogico $A$ tomamos:
+
+\begin{defin}\label{def:modularidad_rho_ext_finita}
+  Sea $\l$ un primo y sea $A=K$ una extensi\'on finita de $\QQ_{\l}$. Sea $\rho:\GQ\ra\GL_2(K)$ una representaci\'on de Galois no-ramificada casi donde sea. Decimos que $\rho$ es \emph{modular} si existe una forma primitiva $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ y un ideal primo $\la\subset\Oo_{f}$ sobre $\l$ tales que $K_{f,\la}\hookrightarrow K$ y $\rho\cong\rho_{f,\la}$ (donde estamos identificando $\rho_{f,\la}$ con la composici\'on $\GQ\morf{\rho_{f,\la}}\GL_2(K_{f,\la})\hookrightarrow\GL_2(K)$).
+\end{defin}
+
+aqui empieza lo nuevo------------------------------------------------
+\marginpar{\scriptsize agregue dos proposiciones que prueban una condicion suficiente para establecer la modularidad de $\rho_{E,\l}$}\\
+
+Esta definici\'on es dif\'icil de aplicar, entonces queremos una condici\'on suficiente para modularidad que sea m\'as pr\'actico de verificar. Primero enunciamos una condici\'on suficiente para determinar cuando dos representaciones son isomorfas  y luego la aplicamos a las representaciones $\rho_{E,\l}$ que vimos en la secci\'on anterior.
+
+\begin{prop}\label{prop:cond_iso_de_rep}
+  Sea $K$ una extensi\'on finita de $\QQ_\l$ y $\rho,\rho':\GQ\ra\GL_n(K)$ dos representaciones de Galois que son no-ramificadas casi donde sea. Entonces:
+  \[
+    \rho\;\text{es irreducible y}\;\;
+    \tr\,\rho(\Fr_q)=\tr\,\rho'(\Fr_q)\;\text{para casi todo primo}\; q
+    \quad\then\quad \rho\cong\rho'.
+  \]
+\end{prop}
+\begin{proof}
+  Esto es la proposici\'on 3.4 de $\S3.1$ en \cite{SaitoFLTTP}.
+\end{proof}
+
+\begin{cor}\label{cor:modularidad_rhol}
+  Sea $E$ una curva el\'iptica sobre $\QQ$ tal que $\rho_{E,\l}:\GQ\ra\GL_2(\ZZ_\l)\hookrightarrow\GL_2(\QQ_\l)$ es irreducible para alg\'un primo $\l\neq2$ (donde $E$ necesariamente tiene buena reducci\'on). Si existe una forma primitiva $f\in S^{\mathrm{new}}_2(\Gamma_0(N))$ tal que $a_q(f)=a_q(E)$ para casi todo primo $q$, entonces $\rho_{E,\l}$ es modular.
+\end{cor}
+\begin{proof}
+  Por la proposici\'on \ref{prop:prop_de_rhol} y el Teorema \ref{thm:eichlershimura}, las representaciones $\rho_{E,\l}$ y $\rho_{f,\l}$ son no-ramificadas casi donde sea (esto es independiente del ideal primo $\la\subset\Oo_f$). Si componemos $\rho_{E,\l}$ con la inclusi\'on $i:\GL_2(\ZZ_\l)\hookrightarrow\GL_2(K_{f,\la})$, esta nueva representaci\'on sigue siendo no-ramificada casi donde sea porque $\ker\rho_{E,\l}\subseteq\ker(i\circ\rho_{E,\l})$. Adem\'as sigue siendo irreducible porque la proposici\'on \ref{prop:irred_equiv_absirred} nos dice que $\rho_{E,\l}$ es absolutamente irreducible.
+  
+  Por lo tanto, para aplicar la proposici\'on anterior a $\rho_{E,\l}$ y $\rho_{f,\l}$ solamente nos falta verificar que $\tr\,\rho_{E,\l}(\Fr_q)=\tr\,\rho_{f,\l}(\Fr_q)$ para casi todo primo $q$, pero esto es inmediato de las f\'ormulas para $\tr\,\rho_{E,\l}(\Fr_q)$ y de $\tr\,\rho_{f,\l}(\Fr_q)$ que aparecen en el corolario \ref{cor:det_de_rhop} y el teorema \ref{thm:eichlershimura} respectivamente. Con esto aplicamos la proposici\'on \ref{prop:cond_iso_de_rep} para concluir que $\rho_{E,\l}\cong\rho_{f,\l}$ y que $\rho_{E,\l}$ es modular.\marginpar{\scriptsize Necesito que $a_q(f)\in\QQ$????}
+\end{proof}
+
+aqui termina lo nuevo------------------------------------------------\\
+
+%\begin{prop}\label{prop:cond_iso_rep_f}
+%  Sean $\rho:\GQ\ra\GL_2(L)$ una representaci\'on irreducible e impar donde $L$ es una extensi\'on finita de $\QQ_\l$. Sea $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ una forma primitiva y $\la\subset\Oo_{f}$ un ideal primo sobre $\l$. Entonces si $a_q(f)=\tr(\rho(\Fr_q))$ y $\det(\rho(\Fr_q))=q$ para casi todo primo $q$, entonces $\rho\cong\rho_{f,\la}$.
+%\end{prop}
+
+%\begin{proof}
+%  Las dos igualdades, junto con los teoremas \ref{prop:chiell} y \ref{thm:eichlershimura} nos dicen que los polinomios caracter\'isticos $\det(\rho(\Fr_q)-T\,\Id)$ y $\det(\rho_{f,\la}(\Fr_q)-T\Id)$ son iguales para casi todo $q$. Como la traza y el determinante son funciones continuas y como $\{\Fr_q\}_{q}$  es denso en $\GQ$, entonces los polinomios caracter\'isticos de $\rho$ y $\rho_{f,\la}$ son iguales, i.e.
+%  \[
+%    \det(\rho(\sigma)-T\,\Id)=\det(\rho_{f,\la}(\sigma)-T\,\Id)
+%    \qquad\forall\sigma\in\GQ.
+%  \]
+%Como $\rho$ es irreducible e impar entonces podemos concluir que $\rho\cong\rho_{f,\la}$  (c.f. ejercicio 9.6.1 de \cite{DiamondShurmanAFCIMF}).
+%\end{proof}
+
+Para definir modularidad para representaciones sobre extensiones finitas de $\FF_{\l}$, retomamos la representaci\'on de Galois $\rho:\GQ\ra\GL_n(A)$, donde $A$ es una extensi\'on finita de $\QQ_{\l}$. Bajo estas condiciones, $\rho$ se factoriza a trav\'es de la inclusi\'on $\GL_n(\Oo_{A})\hookrightarrow\GL_n(A)$ donde $\Oo_A$ es el anillo de enteros de $A$; esto es exactamente la proposici\'on \ref{prop:imagen_entera_rho}. M\'as precisamente, existe una representaci\'on de
+Galois $\rho':\GQ\ra\GL_n(\Oo_A)$ tal que $\rho$ es isomorfa a la composici\'on
+\[
+  \begin{tikzcd}
+    \GQ \arrow[r,"\rho'"] & \GL_n(\Oo_A) \arrow[r,hook] & \GL_n(A).
+  \end{tikzcd}
+\]
+
+Por lo tanto, en el caso $A=K_{f,\la}$ para alguna forma primitiva $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ y un ideal primo $\la\subset\Oo_f$ sobre $\l$, cada representaci\'on de Galois $\rho:\GQ\ra\GL_n(K_{f,\la})$  tiene asociada una representaci\'on $\rho':\GQ\ra\GL_n(\Oo_{f,\la})$ donde $\Oo_{f,\la}$ es el anillo de enteros de $K_{f,\la}$. Definimos la representaci\'on $\bar{\rho}_{f,\la}:\GQ\ra\GL_n(\Oo_{f,\la}/\m_{f,\la})$ obtenida por la composici\'on de $\rho'$ con la proyecci\'on m\'odulo $\m_{f,\la}=\la\Oo_{f,\la}$. Resumimos estos dos p\'arrafos con el siguiente diagrama conmutativo:
+\begin{equation}\label{cd:rhobarra}
+  \begin{tikzcd}[column sep=20mm]
+    & \GL_n(K_{f,\la}) & \\
+    \GQ \arrow[r,near end,"\rho'"] \arrow[ur,"\rho_{f,\la}"]
+    \arrow[rr,bend right=20,dashed,"\exists\,\bar{\rho}_{f,\la}"']&
+    \GL_n(\Oo_{f,\la}) \arrow[r,two heads,"\mathrm{mod}\,\m_{f,\la}"]
+    \arrow[u,hook]&
+    \GL_n(\Oo_{f,\la}/\m_{f,\la}).
+  \end{tikzcd}
+\end{equation}
+Recuerde que $\Oo_{f,\la}/\m_{f,\la}$ es una extensi\'on finita de $\FF_{\l}$. Por lo tanto la asignaci\'on $\rho_{f,\la}\mapsto\bar{\rho}_{f,\la}$ asocia a cada representaci\'on $\rho_{f,\la}:\GQ\ra\GL_2(K_{f,\la})$ una representaci\'on $\bar{\rho}_{f,\la}:\GQ\ra\GL_2(F)$ donde $F$ es una extensi\'on finita de $\FF_{\l}$.
+
+Ahora definimos la modularidad de representaciones de Galois sobre $\bar{\FF}_{\l}$.
+
+\begin{defin}
+  Una representaci\'on de Galois $\rho:\GQ\ra\GL_2(\bar{\FF}_{\l})$ es \emph{modular} si existe una forma primitiva $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ y un ideal primo $\la\subset\Oo_f$ sobre $\l$ tales que $\rho\cong\bar{\rho}_{f,\la}$.
+\end{defin}
+
+\begin{nota}
+  Si $F$ es una extensi\'on finita de $\FF_{\l}$, entonces $F\subset\bar{\FF}_{\l}$. As\'i podemos extender la definici\'on anterior a la representaci\'on $\rho:\GQ\ra\GL_2(F)$ simplemente considerando la composici\'on $\GQ\morf{\rho}\GL_2(F)\hookrightarrow\GL_2(\bar{\FF}_{\l})$. Conversamente, si tenemos una representaci\'on $\rho:\GQ\ra\GL_2(\bar{\FF}_{\l})$, la imagen de $\rho$ es finito por ser un subconjunto compacto del espacio discreto $\bar{\FF}_{\l}$ (ya que $\GQ$ es compacto y $\rho$ es continua). Por lo tanto la imagen de $\rho$ est\'a contenido en $\GL_2(F)$ para alguna extensi\'on finita $F$ de $\FF_{\l}$, es decir, $\rho$ se factoriza a trav\'es de la inclusi\'on $\GL_2(F)\hookrightarrow\GL_2(\bar{\FF}_{\l})$.
+  En conclusi\'on, una representaci\'on $\rho:\GQ\ra\GL_2(\bar{\FF}_{\l})$ induce una representaci\'on $\rho:\GQ\ra\GL_2(F)$ donde $[F:\FF_{\l}]<\infty$ y vice versa. Por lo tanto la definici\'on anterior realmente es una definici\'on de modularidad de representaciones sobre extensiones finitas de $\FF_{\l}$.
+\end{nota}
+
+Como con la definici\'on \ref{def:modularidad_rho_ext_finita}, esta \'ultima definici\'on de modularidad no es pr\'actica, pero tambi\'en tenemos un resultado an\'alogo al corolario \ref{cor:modularidad_rhol} para establecer una condici\'on suficiente para la modularidad de una representaci\'on $\rho:\GQ\ra\GL_2(\ol{\FF}_\l)$.
+
+\begin{prop}\label{prop:cond_mod_rhop}
+  Sea $E$ una curva el\'iptica sobre $\QQ$ tal que su representaci\'on de Galois $\rhop$ asociada a sus puntos de $p-$torsi\'on es irreducible. Si existe una forma primitiva $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ y un ideal primo $\fP\subset\Oo_{f}$ sobre $p$ tales que
+  \[
+    a_q(E)\equiv a_q(f)\Mod{\fP}
+  \]
+para casi todo primo $q$, entonces $\bar{\rho}_{E,p}$ es modular.
+\end{prop}
+\marginpar{esta proposici\'on y la nota tambien son nuevas}
+\begin{nota}
+  La prueba de la proposici\'on anterior es muy similar a la prueba del corolario \ref{cor:modularidad_rhol} pero se basa en una versi\'on distinta de de la proposici\'on \ref{prop:cond_iso_de_rep}. Esa versi\'on viene en la misma proposici\'on de \cite{SaitoFLTBT} citada en la prueba y de hecho no requiere la hip\'otesis sobre la ramificaci\'on como lo pide la proposici\'on \ref{prop:cond_iso_de_rep}.
+\end{nota}
+
+
+La modularidad de una curva el\'iptica est\'a codificada en la modularidad de las representaciones $\ell$-\'adicas asociadas a la curva:
+
+\begin{thm}\label{thm:equivmodular}
+  Sea $E/\QQ$ una curva el\'iptica. Entonces las siguientes afirmaciones son equivalentes:
+  \begin{enumerate}
+  \item $E$ es modular.
+  \item $\rho_{E,\ell}$ es modular para todo primo $\ell$.
+  \item Existe un primo $\ell$ tal que $\rho_{E,\ell}$ es modular.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  c.f. \cite[\S3.4, proposici\'on 3.23]{SaitoFLTBT}
+\end{proof}
+
+Este teorema es un paso fundamental en la prueba de STW semiestable (v\'ease la segunda figura de la introducci\'on).
+
+\end{document}

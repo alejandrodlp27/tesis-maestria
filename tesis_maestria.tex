@@ -1,0 +1,93 @@
+\documentclass[12pt]{report}
+
+%%% PAQUETES
+\usepackage{amsmath,amsfonts,amssymb,amsthm} %AMS
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{macros/enumitem}
+\usepackage{macros/import}
+\usepackage{macros/subfiles}
+\usepackage{macros/verbatim}
+\usepackage{macros/cancel}
+\usepackage{macros/cite}
+\usepackage[mathscr]{macros/euscript}
+\usepackage{macros/chngcntr}
+%\usepackage{macros/caption}
+%\usepackage{macros/subcaption}
+
+
+%%% PAQUETES PERSONALES
+\usepackage{macros/template_spanish}
+\usepackage{macros/tesis_maestria}
+\usepackage{macros/math_letters}
+
+
+\usepackage[symbol]{macros/footmisc} %% cambio de simbolos de notas de pie
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} %%%%%%%%%%%%%%%%%%
+\counterwithout{footnote}{section}
+
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning,graphs,arrows}
+\usetikzlibrary{decorations.markings}
+% \usetikzlibrary{decorations.pathmorphing}
+
+%%%Figures and Graphics
+\usepackage{graphicx}
+%\usepackage{caption,subcaption}
+\graphicspath{{../figuras}}
+\newcommand{\directory}{/home/pi/math/maestria/tesis_maestria/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Margenes
+
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2cm}
+\addtolength{\textheight}{4cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\newpage
+
+\subfile{capitulos/intro/intro}
+
+\chapter{Preliminares}
+
+\subfile{capitulos/formas_modulares/formas_modulares}
+
+\subfile{capitulos/curvas/curvas}
+
+\subfile{capitulos/curvas_elipticas/curvas_elipticas}
+
+\subfile{capitulos/rep_galois/rep_galois}
+
+%\subfile{capitulos/preliminares/preliminares}
+
+\chapter{El teorema de modularidad}
+
+%\subfile{capitulos/smlc_intro/smlc_intro}
+
+\subfile{capitulos/modularidad_de_rho/modularidad_de_rho}
+
+\subfile{capitulos/3_5/3_5}
+
+%\subfile{capitulos/smlc/smlc}
+
+%\chapter{Deformaciones de Galois}
+
+%\chapter{El \'ultimo teorema de Fermat}
+
+
+%\appendix
+
+%\subfile{capitulos/apendices/apendices}
+
+%%%%%%%%%%%%%%%%%%%% Bibliografia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{bibliografia}{}
+\bibliographystyle{apalike}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

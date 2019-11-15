@@ -1,0 +1,248 @@
+\documentclass[../../tesis_maestria]{subfiles}
+\begin{document}
+
+\section{Un teorema de Deligne y Serre}\label{sec:DeligneSerre}%%%%%%%%%%%%%%%%%%% DELIGNE Y SERRE
+
+En esta secci\'on vamos a probar un paso muy importante en la prueba de la modularidad de $\rhot$
+que aparece en un art\'iculo famoso de Pierre Deligne y Jean-Pierre Serre
+\cite[Teorema 6.7, \S6, pg. 521]{DeligneSerreFMDP1}. Para esto requerimos los siguientes ingredientes:
+
+Sea $K\subset\CC$ un campo num\'erico, es decir, una extensi\'on finita de $\QQ$. Sea $\lambda$ un
+lugar finito (i.e. no-arquimediano) de $K$; \'estos son clases de eqivalencias de valores absolutos
+sobre $K$. Denotamos por $\fO_{\lambda}$ al anillo de valoraci\'on asociado a $\lambda$, similarmente
+denotamos por $\m_{\lambda}$ y $k_{\lambda}$ al ideal maximal de $\fO_{\lambda}$ y al campo residual
+$\fO_{\lambda}/\m_{\lambda}$ respectivamente. Sea $l$ la caracter\'istica de $k_{\lambda}$.
+
+Sea $f:\HH\ra\CC$ una forma modular de peso $k$ ($\geq 1$), nebentypus $\eps$ sobre $\Gamma_0(N)$.
+Escribimos su serie de Fourier como $f(z)=\sum_{n=0}^{\infty}a_nq^n$ donde estamos usando la notaci\'on
+tradicional $q=e^{2\pi inz}$. Decimos que $f$ es $\lambda$-\emph{entero} si $a_n\in\fO_{\lambda}$ para
+toda $n\geq0$ y escribimos $f\equiv 0\Mod{\lambda}$ si adem\'as $a_n\in\m_{\lambda}$ para toda
+$n$. POr \'ultimo, si denotamos por $T_p$ al $p$-\'esimo operador de Hecke, decimos que $f$ es un
+\emph{vector propio de $T_p$ m\'odulo $\lambda$ con valores propios $a_p+\m_{\lambda}\in k_{\lambda}$}
+si $T_pf-a_pf\equiv 0\Mod{\lambda}$, es decir que $f$ es casi un vector propio de $T_p$.
+\begin{comment}
+\begin{thm}\label{thm:DS}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DELIGNE & SERRE
+  Con la notaci\'on anterior, sea $f\in M_{k}(\Gamma_0(N),\eps)$ con $k\geq1$ cuyos coeficientes
+  de Fourier pertenecen a $K$. Adem\'as supongamos que $f$ es $\lambda$-entero,
+  $f\not\equiv0\Mod{\lambda}$ y que $f$ es un vector propio de $T_p$ m\'odulo $\lambda$ para toda
+  $p\nmid Nl$ con valores propios $a_p+\m_{\lambda}\in k_{\lambda}$. Sea $k_f\subseteq k_{\lambda}$
+  el subcampo generado por todas las $a_p+\m_{\lambda}$ y los $\eps(p)+\m_{\lambda}$ donde
+  $p\nmid Nl$. Entonces existe una representaci\'on semisimple $\rho:G_{\QQ}\ra\GL_2(k_f)$ que
+  cumple las siguientes propiedades:
+  \begin{enumerate}[label=\emph{\roman*})]
+  \item $\rho$ es no-ramificada para toda $p\nmid Nl$.
+  \item $\tr(\rho(\frob)_p)=a_p+\m_{\lambda}$ para toda $p\nmid Nl$.
+  \item $\det(\rho(\frob)_p)=\eps(p)p^{k-1}+\m_{\lambda}$ para toda $p\nmid Nl$.
+  \end{enumerate}
+\end{thm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Antes de empezar la prueba, vamos a hacer tres reducciones preliminares:
+
+\begin{enumerate}
+\item Supongamos que $(K',\lambda',f',k',\eps',\{a'_n\})$ es como en las hip\'otesis
+  del teorema \ref{thm:DS} donde $K\subseteq K'$ es una extensi\'on finita, $\lambda'$ extiende
+  a $\lambda$, $\eps=\eps'$ y $k\equiv k'\Mod{l-1}$. Esta \'ultima hip\'otesis, junto con el
+  peque\~no teorema de Fermat implica que:
+  \begin{align*}
+    l-1\mid k-k' &\quad\then\quad
+    p^{k-k'}\equiv 1 \Mod{l} \quad\then\quad
+    p^{k-1}\equiv p^{k'-1}\Mod{l}\\ &\quad\then\quad
+    p^{k-1}\equiv p^{k'-1}\Mod{\m_{\lambda'}},
+  \end{align*}
+  y como $\eps=\eps'$, obtenemos:
+  \[
+    \eps(p)p^{k-1}\equiv \eps'(p)p^{k'-1}\Mod{\m_{\lambda'}}
+  \]
+  Si adem\'as pedimos que $f\equiv f\Mod{\lambda'}$, ie. $a_n\equiv a'_n\Mod{\m_{\lambda'}}$,
+  entonces el teorema \ref{thm:DS} es simult\'aneamente cierto para $f$ como para $f'$. En efecto,
+  en una direcci\'on compones la representaci\'on con la inclusi\'on
+  $\GL_2(k_f)\hookrightarrow\GL_2(k_{f'})$ y en la otra direcci\'on...
+
+  En palabras, esta reducci\'on nos dice que podemos cambiar a $K$ por una extensi\'on finita y
+  a $\lambda$ por una prolongaci\'on. Tambi\'en podemos cambiar el peso agreg\'andole alg\'un
+  m\'ultiplo de $l-1$.
+
+\item Vamos a probar que podemos asumir que el peso $k$ es mayor que $1$. Tomamos una serie de
+  Eisenstien normalizada $E'_{2m}(z)$ con $m>1$ tal que $l-1\mid 2m$; sea $E'_{2m}(z)=\sum b_nq^n$
+  su serie de Fourier. La serie de Fourier del producto $E'_{2m}f$ es $\sum b_nq^n$ donde,
+  gracias a la elecci\'on de $m$ y al corolario \ref{cor:eisenstien_trivial}, tenemos
+  \[
+    b_n=\sum_{i+j=n}a_ic_j=a_nc_0+\sum_{\underset{j>0}{i+j=n}}a_ic_j\equiv a_n \Mod{\m_{\lambda}}
+  \]
+  porque $c_j\equiv0\Mod{l}$ para toda $j>0$ (recuerda que el ideal maximal $\m_{\lambda}$ se contrae
+  al ideal primo $(l)\subset\ZZ$). Por \'ultimo, el peso de $E'_{2m}f$ es $k+2m$ que, por la
+  elecci\'on de $m$, tenemos que $k+2m\equiv k\Mod{l-1}$. Entonces si tomamos $K=K'$,
+  $\lambda=\lambda'$, $\eps=\eps'$, $k'=k+2m$ y $f'=E'_{2m}f$, podemos aplicar la reducci\'on
+  anterior para concluir que el teorema \ref{thm:DS} es simult\'aneamente cierta para $f$ como
+  para $E'_{2m}f$, es decir, sin p\'erdida de generalidad podemos multiplicar $f$ por una
+  serie de Eisenstien normalizada para elevar el peso de $f$ a un peso mayor que 1.
+
+\item La tercera reducci\'on va a ser ver que podemos suponer que $f$ es un vector propio de
+  $T_p$ en lugar de pedir la hip\'otesis m\'as d\'ebil de que $f$ es un vector propio de $T_p$
+  \emph{m\'odulo} $\m_{\lambda}$. Para ver esto, primero definimos:
+  \[
+    M:=\big\{f\in M_k(\Gamma_0(N),\eps)\mid f_{\infty}(q)\in\fO_{\lambda}[[q]]\big\}
+  \]
+  donde $f_{\infty}(q)$ es simplemente la serie de Fourier de $f$. $M$ es el $\fO_{\lambda}$-m\'odulo
+  de formas modulares con coeficientes en $\fO_{\lambda}$. Recuerda que $M_k(\Gamma_0(N),\eps)$
+  es un $\CC$-espacio vectorial de dimensi\'on finita (por ejemplo \cite[\S2.5]{MiyakeMF}),
+  entonces $M$ es un $\fO_{\lambda}$-m\'odulo libre de rango finito... Adem\'as definimos
+  \[
+    \Ff:=\{T_p:M\ra M\mid p\nmid Nl\}
+  \]
+  como la familia de operadores de Hecke que nos interesa. Como n\'umeros primos distintos son
+  primos relativos, entonces todos los operadores de $\Ff$ son conmutativos dos a dos
+
+  Con estas dos definiciones, simplemente hay que aplicar el siguiente lema, llamado el
+  lema de levantamiento de Deligne-Serre \cite[Lema 6.11]{DeligneSerreFMDP1}, a $M$ y a $\Ff$.
+
+\end{comment}
+
+\begin{lema}\label{lem:delignserre}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LEMA
+    (Deligne-Serre) Sean $\fO=(\fO,\m,k)$ un anillo de varloraci\'on discreta, $M$ un
+    $\fO$-m\'odulo libre de rango finito, $\Ff\subseteq\End_{\fO}(M)$ una familia de endomorfismos
+    que conmutan dos a dos. Si $f\in M-\{0\}$ es tal que $Tf\equiv a_Tf\Mod{\m}$ para toda
+    $T\in\Ff$, ie. es un vector propio m\'odulo $\m$ para todo endomorfismo de $\Ff$, entonces
+    existe un anillo de valoraci\'on discreta $\fO'=(\fO',\m',k')$ tal que $\fO\subseteq\fO'$,
+    $\m=\fO\cap\m'$ y el campo de fracciones de $\fO'$ es una extensi\'on finita del campo de
+    fracciones de $\fO$; adem\'as existe un elemento $f'\in\fO'\otimes_{\fO}M$ distinto de cero
+    tal que $Tf'=a'_{T}f'$ para toda $T\in\Ff$ y tal que $a_T\equiv a'_T\Mod{\m'}$.
+\end{lema}
+\begin{comment}
+  Gracias a que la extensi\'on de campos de fracciones es finita, el ideal maximal $\m'$ se
+  contrae a $\m$ y que $a_T\equiv a'_T\Mod{\m'}$, la reducci\'on 1 se puede aplicar a $f'$. Esto
+  concluir\'ia la reducci\'on 3.
+\end{comment}
+\begin{proof}
+  Sea $\Hh$ la $\fO$-sub\'algebra de $\End_{\fO}(M)$ generada por $\Ff$. Como $M$ es libre
+  de rango finito, entonces $\End_{\fO}(M)$ es libre de rango finito, y as\'i $\Hh$ es un
+  $\fO$-m\'odulo libre de rango finito, en particular es un m\'odulo plano\footnote{Recuerda
+    que un m\'odulo libre es proyectivo y todo m\'odulo proyectivo es plano; Tambi\'en se
+    puede usar la conmutatividad del producto tensorial y la suma directa para probar de
+    manera elemental que el funtor $N\mapsto N\otimes\Hh$ es exacto izquierdo.}. Observa
+  que el morfismo que convierte a $\Hh$ en un $\fO$-\'algebra es $x\mapsto x\Id_M$.
+
+  Ahora, definimos $\chi:\Hh\ra k$ como el morfismo que asigna valores propios,
+  es decir definimos $\chi(T):=a_T+\m$ para toda $T\in\Ff$ y extendemos por linealidad a todo
+  $\Hh$. Observa que  por construcci\'on $\chi|_{\fO}=\Id_{\fO}$, entonces $\chi$ es sobreyectivo.
+  Por lo tanto $\Hh/\ker\chi\cong k$ y as\'i $\ker\chi\subset\Hh$ es un ideal maximal.
+
+  Sea $\p\subseteq\ker\chi$ un ideal primo minimal\footnote{La existencia de este ideal primo
+    minimal se prueba con el lema de Zorn: como $\ker\chi$ es maximal, el conjunto de ideales
+    primos contenidos en $\ker\chi$ es no vac\'io, ahora si tomamos una cadena descendiente
+    $\p_1\subseteq\p_2\subseteq\cdots$ de ideales primos, entonces $\cap \p_i$ es un ideal primo
+    y una cota de la cadena; por el lema de Zorn el conjunto de ideales primos contenidos en
+    $\ker\chi$ tiene elementos minimales.}.
+  Como $\p$ es minimal, todo sus elementos distintos de cero son divisores de cero. En efecto:
+  si denotamos al conjunto de divisores del cero junto con el mismo 0 por $D$, entonces
+  \[
+    \p\not\subseteq D\quad\then\quad
+    \Hh-D\not\subseteq\Hh-\p \quad\then\quad
+    \Hh-\p\subsetneq (\Hh-D)(\Hh-\p)\quad!
+  \]
+  lo cual es una contradicci\'on porque $(\Hh-D)(\Hh-\p)$ es un conjunto multiplicativo que
+  contiene estrictamente al conjunto multiplicativo maximal $\Hh-\p$ \cite[\S3]{AtiyahITCA}.
+  Por lo tanto $\p\subseteq D$.
+
+  Como $\Hh$ es un $\fO$-m\'odulo libre, para toda $x\in\fO$ el endomorfismo $f\mapsto xf$
+  de $\Hh$ se representa por la matriz diagonal $x\Id_M$ cuyo determinante es una potencia
+  de $x$ que (salvo en el caso $x=0$) es distinto de cero porque $\fO$ es un dominio entero.
+  
+  En particular $f\mapsto xf$ es inyectiva para toda $x\in\fO-\{0\}$. Por lo tanto $\fO$ no
+  tiene divisores de cero en $\Hh$ y as\'i $\p\cap\fO=0$. De esta manera la
+  composici\'on $\fO\ra\Hh\epi\Hh/\p$ es inyectiva; por lo tanto podemos considerar
+  a $\fO$ como un subanillo de $\Hh/\p$. Adem\'as, como $\Hh$ es un $\fO$-m\'odulo finitamente
+  generado, entonces $\Hh/\p$ tambi\'en es un $\fO$-m\'odulo finitamente generado. Como
+  $\fO$ es un anillo noetheriano (por ser anillo de valoraci\'on discreta), entonces $\Hh/\p$ es
+  un $\fO$-m\'odulo noetheriano, ie. todos sus subm\'odulos son finitamente generados.
+
+  Este comentario sirve para probar que $\Hh/\p$ es una extensi\'on entera de $\fO$. En efecto,
+  si tomamos $T+\p\in\Hh/\p$ arbitrario, entonces como $\fO[T+\p]=\fO[T]+\p\subseteq\Hh/\p$,
+  tenemos que $\fO[T+\p]$ es un $\fO$-m\'odulo finitamente generado para toda $T+\p\in\Hh/\p$,
+  por lo tanto (\cite[\S5, Proposici\'on 5.1]{AtiyahITCA}) $T+\p$ es entero sobre $\fO$ para toda
+  $T+\p\in\Hh/\p$.
+
+  Ahora, sea $L$ el campo de fracciones del dominio entero $\Hh/\p$ y $\fO_L$ la cerradura
+  entera de $\fO$ en $L$. Esto hace que $\fO_L$ sea un anillo de valoraci\'on discreta con
+  ideal maximal $\m_L$ que se contrae a $\m$ y cuyo campo residual $k_L$ es una extensi\'on de $k$.
+  Como $\fO\subseteq\Hh/\p$ es una extensi\'on entera, tenemos que $\Hh/\p\subseteq\fO_L$.
+  Resumiendo, tenemos las siguientes inclusiones:
+  \[
+    \fO\hookrightarrow \Hh/\p \hookrightarrow \fO_L \hookrightarrow L.
+  \]
+
+  Definimos $\chi':\Hh\ra\fO_L$ como la composici\'on de $\Hh\epi\Hh/\p\hookrightarrow\fO_L$
+  y denotamos $a'_T:=\chi'(T)$ para toda $T\in\Ff$. En este caso, tenemos que
+  $\chi'(\ker\chi)\subseteq\m_L$. Para probar esto requerimos del ``Going Up Theorem''
+  \cite[proposici\'on 4.15 y corolario 4.17]{EisenbudCAWAVTAG}. Como $\ker\chi$ es un ideal
+  maximal que contiene a $\p$, entonces $\ker\chi+\p\subset\Hh/\p$ es un ideal maximal. Por
+  el ``Going Up Theorem'' existe un ideal primo $I\subset\fO_L$ tal que $I\cap\Hh/\p=\ker\chi+\p$
+  y adem\'as, como $\ker\chi+\p$ es maximal, $I$ tambi\'en es maximal. Como $\fO_L$ es local,
+  necesariamente tenemos que $I=\m_L$. Por lo tanto $\m_L\cap\Hh/\p=\ker\chi+\p$ y as\'i
+  $\chi'(\ker\chi)\subseteq\m_L$.
+
+  Esto \'ultimo nos garantiza que $a'_T\equiv a_T\Mod{\m_L}$, porque
+  $\chi(T-a_T)=\chi(T)-a_T+\m=0+\m$ para toda $T\in\Ff$ implica que $T-a_T\in\ker\chi$ y por lo
+  anterior tenemos que:
+  \begin{equation}\label{eqn:eigenvalorescoincidenmodm}
+    \chi'(T-a_T)=a'_T-a_T\in\m_L \quad\then\quad a'_T\equiv a_T\Mod{\m_L}
+  \end{equation}
+ 
+  Con esto sabemos quienes tienen que ser los valores propios, ahora tenemos que
+  construir un
+  vector propio con esos valores propios. Como $\Hh$ es un $\fO$-m\'odulo plano, entonces
+  la inclusi\'on $\fO\hookrightarrow L$
+  se preserva cuando tomamos el producto tensorial con $\Hh$, es decir tenemos una inclusi\'on
+  $\Hh\cong\fO\otimes_{\fO}\Hh\hookrightarrow L\otimes_{\fO}\Hh$.
+
+  Observa que $L\otimes M$ es un $L\otimes\Hh$-m\'odulo finitamente generado con la acci\'on
+  $(\la\otimes T)(\mu\otimes f)=(\la\mu\otimes T(f))$. 
+
+  Sea $\fP$ la extensi\'on del ideal primo $\p$ en $L\otimes\Hh$ bajo la inclusi\'on
+  $\Hh\subset L\otimes\Hh$. Como $\Hh$ es un $\fO$-m\'odulo noetheriano, $\p$ es un ideal
+  finitamente generado por algunas $\{T_1,\dots,T_n\}\subset\p$. Por lo tanto $\fP$ es un ideal
+  de $L\otimes\Hh$ finitamente generado por $\{1\otimes T_1,\ldots,1\otimes T_n\}$.
+  Como $\p$ consta de puro divisores de cero, existen $T_1,\ldots,T'_n\in\Hh$ tales que $T_iT'_i=0$.
+  Para cada $1\otimes T_i\in\fP$ toma un $f_i\in M$ tal que $T'_i(f_i)\neq 0$. Observa que
+  $(1\otimes T_i)(1\otimes T'_i(f_i))=(1\otimes T_i(T'_i(f_i)))=1\otimes 0=0$. Por lo tanto
+  todas las $1\otimes T_i\in\fP$ son divisores de cero de $L\otimes M$ como
+  $L\otimes\Hh$-m\'odulo y as\'i $\fP\subseteq D'$ donde $D'$ es el conjunto de divisores
+  de cero de $L\otimes M$.
+
+  Es bien conocido que el conjunto de los divisores de cero de un m\'odulo
+  finitamente generado (junto con el cero) es la uni\'on de los ideales primos asociados%
+  \footnote{Un ideal primo $\p$ de un anillo $A$ es asociado a un $A$-m\'odulo $M$ si existe un
+  elemento $f\in M$ tal que $\p=(f:0):=\{a\in A \mid af=0\}$.}
+al m\'odulo \cite[teorema 3.1, pg 89]{EisenbudCAWAVTAG}. Por lo tanto si denotamos al conjunto
+de ideales primos asociados de $L\otimes M$ como $\Aa=\mathrm{Ass}_{L\otimes\HH}(L\otimes M)$
+tenemos que
+\[
+  \fP \subseteq D'=\bigcup_{\q\in \Aa}\q
+\]
+
+Por el teorema de ``Prime Avoidence'' $\fP$ est\'a contenido en alg\'un $\q\in\Aa$. Por lo tanto
+existe un elemento $\la\otimes f''\in L\otimes M$ tal que $\q$ es el anulador de
+$\la\otimes f''\neq0$. Como $T-a'_T\in\p$ para toda $T\in\Ff$, entonces
+$1\otimes(T-a'_T)\in\fP\subseteq\q$ y as\'i:
+\begin{equation}\label{eqn:eigenvalorprima}
+  \big(1\otimes(T-a'_T)\big)(\la\otimes f'')=0 \quad\then\quad (T-a'_T)(f'')=0 \quad\then\quad
+  Tf''=a'_Tf''.
+\end{equation}
+Por lo tanto, si tomamos $f'\in\Oo_L\otimes M$ un m\'ultiplo de $\la\otimes f''$ (cancela el
+denominador de $\la$), entonces $f'$ es el elemento buscado gracias a
+(\ref{eqn:eigenvalorescoincidenmodm}) y a
+(\ref{eqn:eigenvalorprima}).
+\end{proof}
+  
+%\end{enumerate} Para la prueba de Deligne Serre, NO el lema de levantamiento
+
+\begin{comment}
+Este teorema requiere, de manera esencial, el siguiente resultado debido a Deligne:
+\begin{thm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DELIGNE
+  (Deligne) Sea $f\in M_k(\Gamma_0(N),\eps)$ una forma modular de peso $k\geq2$ distinto de 0.
+  Supongamos que $f$ es un vector propio para $T_p$ con valor propio $a_p$ para todo primo
+  $p\nmid N$.
+\end{thm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{comment}
+
+\end{document}

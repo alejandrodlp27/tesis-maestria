@@ -1,0 +1,53 @@
+
+\resizebox{!}{0.8\textheight}{
+\begin{tikzpicture}[
+  nonterminal/.style={rectangle,rounded corners=3mm,minimum size=6mm,line width=2pt,draw=black!80,
+    top color=white,bottom color=black!20},
+  terminal/.style={rectangle,rounded corners=3mm,minimum size=6mm,very thick,draw=black!50,
+    top color=white,bottom color=black!20},
+  point/.style={circle,inner sep=-1pt,minimum size=1pt,fill=black},
+  thm/.style={rectangle,draw=red!50,top color=white,bottom color=red!20,line width=2pt},
+  lin/.style={line width=2pt,draw=black!70},
+  node distance=15mm,align=center]
+
+\matrix[row sep=10mm, column sep=-10mm,ampersand replacement=\&]{
+  \&\node (semis) [nonterminal] {$E$ es semiestable.};\&\\%[-5mm]
+  
+  \&\node (p) [point]{};\&\\%[-10mm]
+  
+  \&\&\node (red) [nonterminal] {$\rhot$ es reducible.};\\[5mm]
+  
+  \&\&\node (cincoirred) [nonterminal] {$\rhoc$ es irreducible.};\\[5mm]
+  
+  \node (irred) [nonterminal] {$\rhot$ es irreducible.};
+  \&\&\node (eprima) [nonterminal] {$\exists E'$ tal que
+    $\rhoc\cong\ol{\rho}_{E',5}$,\\ $\ol{\rho}_{E',3}$ es irreducible.};\\
+
+  \&\node (LT) [thm]{Teorema de\\ Langlands-Tunnell};\&\\
+  
+  \&\&\node (eprimamodular) [nonterminal] {$\ol{\rho}_{E',3}$ es modular.};\\[-5mm]
+  
+  \node (rhotmodular) [nonterminal] {$\rhot$ es modular.};\&\&\\[-5mm]
+
+  \&\&\node (rhocmodular) [nonterminal] {$\rhoc(\cong\ol{\rho}_{E',5})$ es modular.};\\
+
+  \&\node (emodular) [nonterminal] {$E$ es modular.};\&\\%[-155mm]
+};
+\graph {
+  (semis) --[lin]
+  (p) ->[bend right,lin]
+  (irred) --[bend left,lin]
+  (LT) ->[bend left,lin,shorten >=5pt]
+  (rhotmodular) ->[lin,edge label'=CLMS(3), shorten >=2pt] (emodular);
+  
+  (p) ->[lin,bend left=10]
+  (red) ->[lin,edge label=$\S$\ref{sec:X015}]
+  (cincoirred) ->[lin,edge label=$\S$\ref{sec:3_5}]
+  (eprima) --[lin,bend right]
+  (LT) ->[lin,bend right]
+  (eprimamodular) ->[lin,edge label=T.\ref{thm:equivmodular}]
+  (rhocmodular) ->[lin,bend left,edge label=CLMS(5)]
+  (emodular);
+};
+\end{tikzpicture}
+}

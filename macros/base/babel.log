@@ -1,0 +1,419 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=latex 2019.6.18)  8 AUG 2019 21:51
+entering extended mode
+**./babel.ins
+(babel.ins
+LaTeX2e <2018-12-01>
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\docstrip.tex"
+\blockLevel=\count80
+\emptyLines=\count81
+\processedLines=\count82
+\commentsRemoved=\count83
+\commentsPassed=\count84
+\codeLinesPassed=\count85
+\TotalprocessedLines=\count86
+\TotalcommentsRemoved=\count87
+\TotalcommentsPassed=\count88
+\TotalcodeLinesPassed=\count89
+\NumberOfFiles=\count90
+\inFile=\read1
+\inputcheck=\read2
+\off@0=\count91
+\off@1=\count92
+\off@2=\count93
+\off@3=\count94
+\off@4=\count95
+\off@5=\count96
+\off@6=\count97
+\off@7=\count98
+\off@8=\count99
+\off@9=\count100
+\off@10=\count101
+\off@11=\count102
+\off@12=\count103
+\off@13=\count104
+\off@14=\count105
+\off@15=\count106
+\@maxfiles=\count107
+\@maxoutfiles=\count108
+
+Utility: `docstrip' 2.5g <2018/05/03>
+English documentation    <2018/05/03>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+(babel.ins File ./babel.log already exists on the system.
+Overwrite it? [y/n]
+\answer=y
+
+By default you will be asked this question for every file.
+If you enter `y' now,
+I will assume `y' for all future questions
+without prompting.
+\noprompt=y
+
+Generating file(s) ./babel.log 
+\openout0 = `./babel.log'.
+
+
+Processing file babel.dtx (dummy) -> babel.log
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+
+Generating file(s) ./babel.sty ./babel.def ./switch.def ./hyphen.cfg ./nil.ldf 
+./xebabel.def ./luababel.def ./txtbabel.def 
+\openout0 = `./babel.sty'.
+
+\openout1 = `./babel.def'.
+
+\openout2 = `./switch.def'.
+
+\openout3 = `./hyphen.cfg'.
+
+\openout4 = `./nil.ldf'.
+
+\openout5 = `./xebabel.def'.
+
+\openout6 = `./luababel.def'.
+
+\openout7 = `./txtbabel.def'.
+
+
+Processing file babel.dtx (package) -> babel.sty
+                          (core) -> babel.def
+                          (kernel) -> switch.def
+                          (patterns) -> hyphen.cfg
+                          (nil) -> nil.ldf
+                          (xetex) -> xebabel.def
+                          (luatex) -> luababel.def
+                          (texxet) -> txtbabel.def
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+
+Generating file(s) ./plain.def ./bplain.tex ./blplain.tex 
+\openout0 = `./plain.def'.
+
+\openout1 = `./bplain.tex'.
+
+\openout2 = `./blplain.tex'.
+
+
+Processing file babel.dtx (plain) -> plain.def
+                          (bplain) -> bplain.tex
+                          (blplain) -> blplain.tex
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+
+Generating file(s) ./esperanto.sty ./afrikaans.sty ./dutch.sty ./american.sty .
+/british.sty ./english.sty ./UKenglish.sty ./USenglish.sty ./germanb.sty ./aust
+rian.sty ./ngermanb.sty ./naustrian.sty ./irish.sty ./scottish.sty ./welsh.sty 
+./breton.sty 
+\openout0 = `./esperanto.sty'.
+
+\openout1 = `./afrikaans.sty'.
+
+\openout2 = `./dutch.sty'.
+
+\openout3 = `./american.sty'.
+
+\openout4 = `./british.sty'.
+
+\openout5 = `./english.sty'.
+
+\openout6 = `./UKenglish.sty'.
+
+\openout7 = `./USenglish.sty'.
+
+\openout8 = `./germanb.sty'.
+
+\openout9 = `./austrian.sty'.
+
+\openout10 = `./ngermanb.sty'.
+
+\openout11 = `./naustrian.sty'.
+
+\openout12 = `./irish.sty'.
+
+\openout13 = `./scottish.sty'.
+
+\openout14 = `./welsh.sty'.
+
+\openout15 = `./breton.sty'.
+
+
+Processing file bbcompat.dtx (styfile,esperanto) -> esperanto.sty
+                             (styfile,afrikaans) -> afrikaans.sty
+                             (styfile,dutch) -> dutch.sty
+                             (styfile,american) -> american.sty
+                             (styfile,british) -> british.sty
+                             (styfile,english) -> english.sty
+                             (styfile,UKenglish) -> UKenglish.sty
+                             (styfile,USenglish) -> USenglish.sty
+                             (styfile,germanb) -> germanb.sty
+                             (styfile,austrian) -> austrian.sty
+                             (styfile,ngermanb) -> ngermanb.sty
+                             (styfile,naustrian) -> naustrian.sty
+                             (styfile,irish) -> irish.sty
+                             (styfile,scottish) -> scottish.sty
+                             (styfile,welsh) -> welsh.sty
+                             (styfile,breton) -> breton.sty
+File bbcompat.dtx ended by \endinput.
+Lines  processed: 590
+Comments removed: 270
+Comments  passed: 20
+Codelines passed: 195
+
+
+Generating file(s) ./francais.sty ./italian.sty ./portuges.sty ./spanish.sty ./
+catalan.sty ./galician.sty ./danish.sty ./norsk.sty ./swedish.sty ./finnish.sty
+ ./magyar.sty ./greek.sty ./croatian.sty ./czech.sty ./slovak.sty ./polish.sty 
+
+\openout0 = `./francais.sty'.
+
+\openout1 = `./italian.sty'.
+
+\openout2 = `./portuges.sty'.
+
+\openout3 = `./spanish.sty'.
+
+\openout4 = `./catalan.sty'.
+
+\openout5 = `./galician.sty'.
+
+\openout6 = `./danish.sty'.
+
+\openout7 = `./norsk.sty'.
+
+\openout8 = `./swedish.sty'.
+
+\openout9 = `./finnish.sty'.
+
+\openout10 = `./magyar.sty'.
+
+\openout11 = `./greek.sty'.
+
+\openout12 = `./croatian.sty'.
+
+\openout13 = `./czech.sty'.
+
+\openout14 = `./slovak.sty'.
+
+\openout15 = `./polish.sty'.
+
+
+Processing file bbcompat.dtx (styfile,francais) -> francais.sty
+                             (styfile,italian) -> italian.sty
+                             (styfile,portuges) -> portuges.sty
+                             (styfile,spanish) -> spanish.sty
+                             (styfile,catalan) -> catalan.sty
+                             (styfile,galician) -> galician.sty
+                             (styfile,danish) -> danish.sty
+                             (styfile,norsk) -> norsk.sty
+                             (styfile,swedish) -> swedish.sty
+                             (styfile,finnish) -> finnish.sty
+                             (styfile,magyar) -> magyar.sty
+                             (styfile,greek) -> greek.sty
+                             (styfile,croatian) -> croatian.sty
+                             (styfile,czech) -> czech.sty
+                             (styfile,slovak) -> slovak.sty
+                             (styfile,polish) -> polish.sty
+File bbcompat.dtx ended by \endinput.
+Lines  processed: 590
+Comments removed: 270
+Comments  passed: 20
+Codelines passed: 195
+
+
+Generating file(s) ./estonian.sty ./romanian.sty ./slovene.sty ./russianb.sty .
+/ukraineb.sty ./turkish.sty ./lsorbian.sty ./usorbian.sty ./bahasa.sty ./hebrew
+.sty ./basque.sty ./latin.sty ./icelandic.sty ./serbian.sty ./bulgarian.sty 
+\openout0 = `./estonian.sty'.
+
+\openout1 = `./romanian.sty'.
+
+\openout2 = `./slovene.sty'.
+
+\openout3 = `./russianb.sty'.
+
+\openout4 = `./ukraineb.sty'.
+
+\openout5 = `./turkish.sty'.
+
+\openout6 = `./lsorbian.sty'.
+
+\openout7 = `./usorbian.sty'.
+
+\openout8 = `./bahasa.sty'.
+
+\openout9 = `./hebrew.sty'.
+
+\openout10 = `./basque.sty'.
+
+\openout11 = `./latin.sty'.
+
+\openout12 = `./icelandic.sty'.
+
+\openout13 = `./serbian.sty'.
+
+\openout14 = `./bulgarian.sty'.
+
+
+Processing file bbcompat.dtx (styfile,estonian) -> estonian.sty
+                             (styfile,romanian) -> romanian.sty
+                             (styfile,slovene) -> slovene.sty
+                             (styfile,russianb) -> russianb.sty
+                             (styfile,ukraineb) -> ukraineb.sty
+                             (styfile,turkish) -> turkish.sty
+                             (styfile,lsorbian) -> lsorbian.sty
+                             (styfile,usorbian) -> usorbian.sty
+                             (styfile,bahasa) -> bahasa.sty
+                             (styfile,hebrew) -> hebrew.sty
+                             (styfile,basque) -> basque.sty
+                             (styfile,latin) -> latin.sty
+                             (styfile,icelandic) -> icelandic.sty
+                             (styfile,serbian) -> serbian.sty
+                             (styfile,bulgarian) -> bulgarian.sty
+File bbcompat.dtx ended by \endinput.
+Lines  processed: 590
+Comments removed: 270
+Comments  passed: 20
+Codelines passed: 195
+
+
+Generating file(s) ./samin.sty ./interlingua.sty ./albanian.sty ./bahasam.sty 
+\openout0 = `./samin.sty'.
+
+\openout1 = `./interlingua.sty'.
+
+\openout2 = `./albanian.sty'.
+
+\openout3 = `./bahasam.sty'.
+
+
+Processing file bbcompat.dtx (styfile,samin) -> samin.sty
+                             (styfile,interlingua) -> interlingua.sty
+                             (styfile,albanian) -> albanian.sty
+                             (styfile,bahasam) -> bahasam.sty
+File bbcompat.dtx ended by \endinput.
+Lines  processed: 590
+Comments removed: 270
+Comments  passed: 20
+Codelines passed: 195
+
+
+Generating file(s) ./bbind.ist ./bbglo.ist 
+\openout0 = `./bbind.ist'.
+
+\openout1 = `./bbglo.ist'.
+
+
+Processing file bbidxglo.dtx (idx) -> bbind.ist
+                             (glo) -> bbglo.ist
+Lines  processed: 124
+Comments removed: 74
+Comments  passed: 0
+Codelines passed: 30
+
+
+Generating file(s) ./babel-data-bidi.lua 
+\openout0 = `./babel-data-bidi.lua'.
+
+
+Processing file babel.dtx (bididata) -> babel-data-bidi.lua
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+
+Generating file(s) ./babel-data-cjk.lua 
+\openout0 = `./babel-data-cjk.lua'.
+
+
+Processing file babel.dtx (cjkdata) -> babel-data-cjk.lua
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+
+Generating file(s) ./babel-bidi-basic-r.lua 
+\openout0 = `./babel-bidi-basic-r.lua'.
+
+
+Processing file babel.dtx (basic-r) -> babel-bidi-basic-r.lua
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+
+Generating file(s) ./babel-bidi-basic.lua 
+\openout0 = `./babel-bidi-basic.lua'.
+
+
+Processing file babel.dtx (basic) -> babel-bidi-basic.lua
+File babel.dtx ended by \endinput.
+Lines  processed: 20058
+Comments removed: 4717
+Comments  passed: 25
+Codelines passed: 15244
+
+***********************************************************
+*
+* To finish the installation you have to move all the files
+* with names ending in .ldf, .sty, .def or .lua into a
+* directory searched by TeX
+*
+* For making a format the following files have to be in a
+* directory which is searched by IniTeX:
+*   hyphen.cfg
+*   language.dat
+*   and files with hyphenation patterns
+*
+* To produce source listings you can run babel.dtx
+* through LuaLaTeX. Deja Vu fonts are required.
+*
+*
+* Happy TeXing
+*
+***********************************************************
+)
+Overall statistics:
+Files  processed: 12
+Lines  processed: 142890
+Comments removed: 34173
+Comments  passed: 255
+Codelines passed: 107518
+ ) ) 
+Here is how much of TeX's memory you used:
+ 917 strings out of 492896
+ 11070 string characters out of 3133493
+ 95289 words of memory out of 3000000
+ 4856 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 17i,0n,15p,307b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+No pages of output.

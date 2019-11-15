@@ -1,0 +1,31 @@
+
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+  nonterminal/.style={rectangle,rounded corners=3mm,minimum size=6mm,line width=2pt,draw=black!80,
+    top color=white,bottom color=black!20},
+  terminal/.style={rectangle,rounded corners=3mm,minimum size=6mm,very thick,draw=black!50,
+    top color=white,bottom color=black!20},
+  point/.style={circle,inner sep=-1pt,minimum size=1pt,fill=black},
+  thm/.style={rectangle,draw=red!50,top color=white,bottom color=red!20,line width=2pt},
+  lin/.style={line width=2pt,draw=black!70,font=\scriptsize},
+  node distance=15mm,align=center]
+
+  \matrix[column sep=20mm,row sep=-5mm,ampersand replacement=\&]{
+    \&\&[-12mm] \node(x) {STW}; \&[-12mm] \&\& \\
+  \node (flt) [nonterminal] {$\lnot$FLT($p$)}; \&
+  \node (frey) [nonterminal] {$\exists$ $E$, que\\ cumple $\dagger$}; \&[-12mm]\&[-12mm]
+  \node (stw) [nonterminal] {$E$ es modular, i.e.\\ $\exists f\in S_2(\Gamma_0(N))$\\
+    tal que $\rho_f\cong\bar{\rho}$}; \&
+  \node (ribet) [nonterminal] {$\exists g\in S_2(\Gamma_0(2))$\\ tal que $\rho_f\cong\rho_g$};\&[-10mm]
+  \node (contra) [terminal] {\textbf{!}};\\
+};
+\graph{
+  (flt) ->[lin,edge label=Frey\text{,}\\ Serre]
+  (frey);
+  (stw) ->[lin,edge label=Mazur\text{,}\\ Ribet]
+  (ribet) ->[lin]
+  (contra);
+};
+\draw[lin,loosely dashed] (frey) -> (stw);
+\end{tikzpicture}
+}

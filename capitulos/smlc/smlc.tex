@@ -1,0 +1,114 @@
+\documentclass[../../tesis_maestria]{subfiles}
+\begin{document}
+\section{La conjetura del levantamiento modular semiestable}
+
+En esta secci\'on usamos los resultados de las secciones anteriores para probar 
+c\'omo dos casos de la CLMS implican la conjetura de STW semiestable:
+
+\begin{thm}
+  Sea $E$ una curva el\'iptica semiestable definida sobre $\QQ$, entonces
+  \[
+    \mathrm{CLMS}(3) \;\; \mathrm{y}\;\; \mathrm{CLMS}(5)
+    \quad\then\quad \mathrm{STW}\;\mathrm{semiestable}
+  \]
+\end{thm}
+
+Este teorema claramente se sigue de los siguientes dos resultados importantes:
+
+\begin{prop}
+  Sea $E$ una curva el\'iptica semiestable, entonces:
+  \[
+    \mathrm{CMLS}(3)\;\;\mathrm{y}\;\; \rhot\;\;\mathrm{irreducible}\quad\then\quad
+    E \;\;\mathrm{es}\;\mathrm{modular.}
+  \]
+\end{prop}
+
+\begin{proof}
+  Por el teorema \ref{thm:modularidad_rhot} (en particular la f\'ormula \ref{eqn:eigenformabuscada}),
+  tenemos que la hip\'otesis sobre la irreducibilidad de $\rhot$, es suficiente para garantizar
+  la existencia de una eigenforma $f\in S_2(\Gamma_0(N))$ y un ideal primo $\fP\subset\Oo_f$ que
+  cumplen la condici\'on \ref{cond_ii} de la CLMS(3). Como estamos asumiendo por hip\'otesis que
+  la CLMS(3) es cierta, podemos concluir que $E$ es modular.
+\end{proof}
+
+\begin{prop}
+  Sea $E$ una curva el\'iptica semiestable, entonces:
+  \[
+    \mathrm{CMLS}(3),\;\mathrm{CMLS}(5) \;\;\mathrm{y}\;\; \rhot\;\;\mathrm{reducible}\quad\then\quad
+    E \;\;\mathrm{es}\;\mathrm{modular.}
+  \]
+\end{prop}
+
+\begin{proof}
+  Como todas las curvas el\'ipticas tales que $\rhot$ y $\rhoc$ son modulares, podemos asumir 
+\end{proof}
+
+\subsection{Semiestabilidad de representaciones}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta secci\'on vamos a estudiar diferentes tipos de ramificaci\'on de una representaci\'on de
+Galois y los vamos a relacionar con las reducciones m\'odulo $p$ de las curvas el\'ipticas. Para
+definir los diferentes tipos de ramificaci\'on, necesitamos separar las representaciones en dos
+casos: representaciones $\ell$-\'adicas y representaciones m\'odulo $\ell$. Empezamos con \'estos
+\'ultimos:
+
+\begin{defin}
+  Sea $\rho:\GQ\ra\GL_2(\FF_{q})$ una representaci\'on de Galois m\'odulo $\ell$, donde $q=\ell^f$.
+  Entonces:
+  \begin{enumerate}
+  \item Sea $X$ un esquema sobre $\ZZ_{(p)}$ finito plano de grupos. Entonces $X(\ol{\QQ})$ es
+    un $\GQ-$m\'odulo de modo natural. Si existe $X$ tal que $X(\ol{\QQ})\cong\FF_q\times\FF_q$
+    como $\GQ-$m\'odulos (donde $\FF_q\times\FF_q$ es un $\GQ-$m\'odulo mediante la acci\'on de
+    $\rho$), entonces decimos que $\rho$ es \emph{bueno} en $p$. \marginpar{revisar el articulo de
+      Shatz en cornell silverman, arithmetic geometry}
+  \item $\rho$ es \emph{ordinario} en $p$ si existe una matriz $Q\in\GL_2(\FF_q)$ y una
+    funci\'on $f:I_{p,\fP}\ra\FF_q^*$ tal que
+    \[
+      Q \rho(\sigma) Q^{-1}=\begin{pmatrix}\chi(\sigma) & f(\sigma)\\ 0&1\end{pmatrix}
+      \qquad (\forall\sigma\in I_{p,\fP})
+    \]
+    donde $\chi$ es la restricci\'on del caracter
+    $\GQ\morf{\bar{\chi}_p}\FF_p^*\hookrightarrow\FF_q^*$ al grupo de inercia.
+  \end{enumerate}
+\end{defin}
+
+\begin{defin}
+  Sea $\rho:\GQ\ra\GL_2(R)$ una representaci\'on de Galois $\ell$-\'adico. Entonces:
+  \begin{enumerate}
+  \item $\rho$ es \emph{bueno} en $p$ si para cada natural $n>0$ existe un esquema $X_n$
+    sobre $\ZZ_{(p)}$ finito plano de grupos tal que $X(\ol{\QQ})\cong(R/\m^n)\times(R/\m^n)$.
+  \item $\rho$ es \emph{ordinario} en $p$ si existe una matriz $Q\in\GL_2(R)$ y una
+    funci\'on $f:I_{p,\fP}\ra R^*$ tal que
+    \[
+      Q \rho(\sigma) Q^{-1}=\begin{pmatrix}\chi(\sigma) & f(\sigma)\\ 0&1\end{pmatrix}
+      \qquad (\forall\sigma\in I_{p,\fP})
+    \]
+    donde $\chi$ es la restricci\'on del caracter $\GQ\morf{\chi_{\ell}}\ZZ_{\ell}^*\ra R^*$ al
+    grupo de inercia.
+  \end{enumerate}
+\end{defin}
+
+Resumimos estas definiciones con:
+
+\begin{defin}
+  Sea $\rho:\GQ\ra\GL_2(A)$ una representaci\'on de Galois (donde $A$ es $\FF_q$ o un anillo de
+  coeficientes). Entonces decimos que $\rho$ es \emph{semiestable en $p$} si $\rho$ es bueno u
+  ordinario en $p$. En general decimos que $\rho$ es \emph{semiestable} si es no-ramificado casi donde
+  sea y semiestable en los dem\'as primos donde ramifica.
+\end{defin}
+
+La importancia de estas definiciones para el estudio de las representaciones de Galois asociadas
+a curvas el\'ipticas se resume en el siguiente teorema:
+
+\begin{thm}
+  Sea $E$ una curva el\'iptica sobre $\QQ$ y $\rho_{E,\ell}$ su representaci\'on $\ell$-\'adica
+  asociada. Entonces:
+  \begin{enumerate}
+  \item $E$ tiene buena reducii\'on m\'odulo $p$ $\iff$ $\rho_{E,\ell}$ es bueno en $p$.
+  \item $E$ tiene reducci\'on estable m\'odulo $p$ $\iff$ $\rho_{E,\ell}$ es semiestable en $p$.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  (c.f. \cite[\S3.7, proposici\'on 3.46]{SaitoFLTBT})
+\end{proof}
+\end{document}
