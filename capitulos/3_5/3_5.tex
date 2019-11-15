@@ -52,9 +52,9 @@ Este lema nos dice que las curvas elípticas $E$ con $\rhot$ y $\rhoc$ reducible
 
 El siguiente paso es encontrar una ecuación de Weierstrass para la curva elíptica $X_0(15)$ para calcular sus puntos racionales. La ecuación de Weierstrass de $X_0(15)$ lo calculó Fricke en su obra celebrada \emph{Die Elliptischen Funktionen Und Ihere Anwendungen} en 1922. En el teorema \ref{thm:eq-weierstrass-E} vimos que para encontrar una ecuación de Weierstrass bastaba exhibir dos funciones $x,y\in\CC(X_0(N))$, tales que $x$ y $y$ solamente tienen polos en $\infty$ de orden 2 y 3 respectivamente. Por la prueba del teorema \ref{thm:eq-weierstrass-E}, las funciones $\{1,x,y,x^2,xy,y^2,x^3\}$ satisfacen una $\CC-$combinación lineal que resulta ser una ecuación de Weierstrass. Esta ecuación define una curva elíptica sobre $\CC$ isomorfa a $X_0(15)$.
 
-El método que seguimos es debido a Gerard Ligozat, un alumno de Nerón, que en su tesis doctoral calcula ecuaciones de Weierstrass los invariantes de las curvas modulares $X_0(N)$ de género 1, i.e. para $N\in\{11,14,15,17,19,20,21,24,27,32,36,49\}$ \cite{LigozatCMDG1}. Además calculó otros invariantes como el conductor y el rango de las curvas $X_0(N)$ y con estos cálculos, Ligozat pudo probar que la conjetura de Birch y Swinnerton-Dyer para las curvas modulares elípticas. Ligozat generalizó un método desarrollado por Morris Newmann en los 50's para construir sistemáticamente funciones meromorfas sobre $X_0(N)$.
+El método que seguimos es debido a Gerard Ligozat, un alumno de Nerón, que en su tesis doctoral calcula las ecuaciones de Weierstrass y los invariantes de las curvas modulares $X_0(N)$ de género 1, i.e. para $N\in\{11,14,15,17,19,20,21,24,27,32,36,49\}$ \cite{LigozatCMDG1}. Además calculó otros invariantes como el conductor y el rango de las curvas $X_0(N)$ y con estos cálculos, Ligozat pudo verificar la conjetura de Birch y Swinnerton-Dyer para las curvas modulares elípticas. Ligozat generalizó un método desarrollado por Morris Newmann en los a\~nos 50 para construir sistemáticamente funciones meromorfas sobre $X_0(N)$.
 
-Para construir $x,y\in K(X_0(15))$ usaremos la función $\eta$ de Dedekind definida por
+Para construir $x,y\in \CC(X_0(15))$ usaremos la función $\eta$ de Dedekind definida por
 \begin{equation}\label{defin:eta}
 	\eta(z):=e^{2\pi iz/24}\prod_{n=1}^\infty(1-e^{2\pi inz})=\sum_{n=1}^{\infty} \left(\frac{n}{12}\right)q^{n^2/24},
 \end{equation}
@@ -71,7 +71,7 @@ Al conjunto de exponentes $\{r_d\}$, indexados por los divisores positivos de $N
 \]
 El discriminante modular $\Delta$ y las funciones de Fricke, e.g.  \eqref{eq:def_x_fricke}, son ejemplos de $\eta-$cocientes.
 
-Newmann probó que bajo ciertas condiciones sobre el conjunto $\mathbf{r}$, la función holomorfa $\eta_\mathbf{r}$ era débilmente modular con respecto de $\Gamma_0(N)$; el caso $(N,6)=1$ aparece en \cite{NewmanCAAOACOMFI} (véase el teorema 1) y el caso $(N,6)>1$, e.g. $N=15$, aparece en la segunda parte \cite{NewmanCAAOACOMFII}. Ligozats aumentó las condiciones de Newmann para caracterizar cuándo un $\eta-$cociente define una función meromorfa sobre $X_0(15)$. Enunciamos este resultado
+Newmann probó que bajo ciertas condiciones sobre el conjunto $\mathbf{r}$, la función holomorfa $\eta_\mathbf{r}$ era débilmente modular con respecto de $\Gamma_0(N)$; el caso $(N,6)=1$ aparece en \cite{NewmanCAAOACOMFI} (véase el teorema 1) y el caso $(N,6)>1$, e.g. $N=15$, aparece en la segunda parte \cite{NewmanCAAOACOMFII}. Ligozat aumentó las condiciones de Newmann para caracterizar cuándo un $\eta-$cociente define una función meromorfa sobre $X_0(15)$. Enunciamos este resultado
 
 \begin{thm}\label{thm:ligozats}
 	(Ligozat) Sea $N$ fijo y sea $\eta_\mathbf{r}$ un $\eta-$cociente. Entonces $\eta_\mathbf{r}$ define una función meromorfa sobre $X_0(N)$ si y solo si el conjunto de exponentes $\mathbf{r}$ satisface las siguientes condiciones:
@@ -79,9 +79,9 @@ Newmann probó que bajo ciertas condiciones sobre el conjunto $\mathbf{r}$, la f
 		\item $\sum r_d d \equiv 0 \Mod{24}$,
 		\item $\sum N r_d/d\equiv0\Mod{24}$
 		\item $\sum r_d=0$,
-		\item $\prod (N/d)^{r_d}\in\QQ^2$.
+		\item $\prod (N/d)^{r_d}=\frac{a^2}{b^2}$ donde $a,b\in\ZZ$.
 	\end{enumerate}
-	donde las sumas y el producto se hacen sobre $\mathbf{r}$.
+	donde las sumas y el producto se hacen sobre los divisores positivos de $N$.
 \end{thm}
 \begin{proof}
 	Véase la proposición 3.2.1 de \cite{LigozatCMDG1}. Para probar la necesidad, curiosamente aparece el teorema de reciprocidad cuadrática.
@@ -96,7 +96,7 @@ Este resultado nos permite construir funciones meromorfas sobre $X_0(15)$ de man
 	\end{equation}
 \end{lema}
 \begin{proof}
-Primero aplicamos el resultado de Ligozats para construir tres funciones en $\CC(X_0(15))$ y a partir de éstas, definimos $x$ y $y$. Por último probaremos que $x$ y $y$ satisfacen \eqref{lema:relacionweierstrass} mediante comparaciones de series de Fourier.
+Primero aplicamos el resultado de Ligozat para construir tres funciones en $\CC(X_0(15))$ y a partir de éstas, definimos $x$ y $y$. Por último probaremos que $x$ y $y$ satisfacen \eqref{lema:relacionweierstrass} mediante comparaciones de series de Fourier.
 
 En seguida exhibimos tres conjuntos de exponentes $\mathbf{r}=\{r_1,r_3,r_5,r_{15}\}$ que satisfacen las condiciones del teorema \ref{thm:ligozats} junto con sus series de Fourier que se pueden calcular a partir de \eqref{defin:eta}:
 \begin{align*}
@@ -110,7 +110,7 @@ Con estas tres funciones meromorfas sobre $X_0(15)$, definimos:
 	\quad\text{y}\quad
 	y(z):=\frac{1}{5}(\eta_{\mathbf{r}_3}(z)-\eta_{\mathbf{r}_2}(z))+3\eta_{\mathbf{r}_1}(z)-19.
 \]
-La combinación lineal que define a $y$ es para cancelarle el polo de $\eta_{\mathbf{r}_3}$ en $\infty$ de orden $4$ para que quede un polo de orden 3.  En efecto la serie de Fourier de $y$ es:
+La combinación lineal que define a $y$ es para cancelarle el polo de $\eta_{\mathbf{r}_3}$ en $\infty$ de orden $4$ para que quede un polo de orden 3.  En efecto la serie de Fourier de $y$ es:\marginpar{corregir serie de Fourier de $y$}
 \[
 	y(z)=q^{-3}+q^{-1}+q^2+6q^3+\cdots
 \]
@@ -118,7 +118,7 @@ La combinación lineal que define a $y$ es para cancelarle el polo de $\eta_{\ma
  \[
  A_1+A_2x+A_3y+A_4x^2+A_5xy+A_6y^2+A_7x^3=0
  \]
-Como solamente necesitamos siete coeficientes, solamente tenemos que calcular las series de Fourier de $\{1,x,y,x^2,xy,y^2,x^3\}$ hasta orden siete para poder calcular las $A_i$. De esta manera podemos deducir los valores de las $A_i$'s y con el cambio de variable \eqref{eq:cambio-variable-weierstrass-general} del teorema \ref{thm:eq-weierstrass-E} obtenemos la ecuación de Weierstrass buscada:
+Como solamente necesitamos siete coeficientes, solamente tenemos que calcular las series de Fourier de $\{1,x,y,x^2,xy,y^2,x^3\}$ hasta orden siete para poder calcular las $A_i$. De esta manera podemos deducir los valores de las $A_i$ y con el cambio de variable \eqref{eq:cambio-variable-weierstrass-general} del teorema \ref{thm:eq-weierstrass-E} obtenemos la ecuación de Weierstrass buscada:
 	\[
 		y^2+xy+y=x^3+x^2-10x-10.	
 	\]
@@ -133,13 +133,13 @@ Otra vez por el teorema \ref{thm:eq-weierstrass-E} concluimos que $X_0(15)\cong\
 \end{figure}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \begin{nota}
-Lo que hizo Fricke para calcular una ecuación para $X_0(15)$ fue un poco distinto. Él definió el $eta-$cociente
+Lo que hizo Fricke para calcular una ecuación de $X_0(15)$ fue un poco distinto. Él definió el $\eta-$cociente
 \begin{equation}\label{eq:def_x_fricke}
 	x(z):=
 	\frac{\eta(3z)^3\eta(5z)^3}{\eta(z)^3\eta(15z)^3}=
 	q^{-2}+3+9q^2+O(q^4).
 \end{equation}
-Una vez definida $x$, Fricke considera un múltiplo adecuado de la derivada de $x$ y lo llama $y$. De esta manera obtiene el segundo generador de $K(X_0(15))$ como $\CC-$álgebra, es decir $K(X_0(15))=\CC(x,y)$. Después, Fricke calcula y compara coeficientes de Fourier para encontrar la relación algebraica entre $x$ y $y$ que resulta ser:
+Una vez definida $x$, Fricke considera un múltiplo adecuado de la derivada de $x$ y lo llama $y$. De esta manera obtiene el segundo generador de $\CC(X_0(15))$ como $\CC-$álgebra, es decir $K(X_0(15))=\CC(x,y)$. Después, Fricke calcula y compara coeficientes de Fourier para encontrar la relación algebraica entre $x$ y $y$ que resulta ser:
 \begin{equation}\label{eq:formula_fricke}
 		y^2=x^4-10x^3-13x^2+10x+1.
 \end{equation}
@@ -154,7 +154,7 @@ De esta manera obtenemos la ecuación de Weierstrass:
 	\end{equation}
 \end{nota}
 
-Con la ecuación de Weierstrass de $X_0(15)$ podemos calcular sus puntos racionales que denotamos por $G=X_0(15)(\QQ)$. El primer paso es probar que $G$ es finito. Para esto usamos el teorema de Mordell-Weil\footnote{Para toda curva elíptica $E$ sobre un campo numérico $K$, el grupo $E(K)$ es un grupo abeliano finitamente generado (cf. teorema 6.7 del capítulo VIII de \cite{SilvermanTAOEC}).} que nos dice que
+Con la ecuación de Weierstrass de $X_0(15)$ podemos calcular sus puntos racionales que denotamos por $G=X_0(15)(\QQ)$. Para esto usamos el teorema de Mordell-Weil\footnote{Para toda curva elíptica $E$ sobre un campo numérico $K$, el grupo $E(K)$ es un grupo abeliano finitamente generado (cf. teorema 6.7 del capítulo VIII de \cite{SilvermanTAOEC}).} que nos dice que
 \[
 	G\cong G_{\mathrm{tor}}\times\ZZ^r,
 \]
@@ -177,7 +177,7 @@ Este teorema lo usamos para probar:
 	Sea $G=X_0(15)(\QQ)$ el grupo de puntos racionales de la curva modular $X_0(15)$. Entonces $G_\mathrm{tor}$ tiene 8 elementos y son:
 	\[
 		G_\mathrm{tors}=
-		\left\{ \left(-\tfrac{13}{4},\tfrac{9}{8}\right),(-1,0),(3,-2),(8,-27),(8,18),(-2,-2),(-2,3) \right\}\cup\{O\}
+		\left\{ \left(-\tfrac{13}{4},\tfrac{9}{8}\right),(-1,0),(3,-2),(8,-27),(8,18),(-2,-2),(-2,3) \right\}\cup\{O\}.
 	\]
 \end{prop}
 
@@ -199,14 +199,7 @@ Ahora sea $P_0=(x_0,y_0)\in G_\mathrm{tor}$ donde las coordenadas están dadas p
 \begin{enumerate}
 	\item[Caso 1:] $P_0+P_0=O$.
 	
-	En este caso, $P_0=-P_0$ y tenemos que calcular $-P_0$. La recta vertical $x-x_0=0$ pasa por $P_0$ y $O$. La segunda intersección afín de esta recta con $X_0(15)$ es $-P_0$, por lo tanto $-P_0=(x_0,y'_0)$ donde alguna $y'_0\in\QQ$. Para calcular $y'_0$, sustituimos $x=x_0$ en \eqref{eq:weierstrass-simple-x15} para obtener un polinomio cuadrático $F(x_0,y)$ de la forma
-	\[
-		F(x_0,y)=y^2+0y+(263466+12987x_0-x_0^3)=0.
-	\]
-	
-Una raíz es $y_0$ porque $P_0$ está sobre la curva y la recta vertical. La otra raíz es $y'_0$, entonces $F(x_0,y)=\la(y-y_0)(y-y'_0)$ para alguna constante $\la\in\CC$. Al comparar coeficientes de ambas expresiones para $F(x_0,y)$ concluimos que $\la=1$ y $y'_0=-y_0$. De esta manera tenemos $-P_0=(x_0,-y_0)$. Por lo tanto $P_0=-P_0$ si y solo si $y_0=0$. En general, para cualquier curva elíptica, definida por una ecuación de Weierstrass $F$, tenemos que $P_0=(x_0,y_0)=-P_0$ si y solo si $(x_0,y_0)$ es una solución de la ecuación $\partial F(x,y)/\partial y=0$.
-
-Ahora sustituimos $y_0=0$ en \eqref{eq:weierstrass-simple-x15} obtenemos tres posibles valores para $x_0$ que corresponden a los siguientes tres puntos racionales de orden 2 en $G_\mathrm{tor}$:
+	En este caso, $P_0=-P_0$. Por la ecuaci\'on \eqref{eq:coord-inverso-P}, tenemos $-P_0=(x_0,-y_0)$. Por lo tanto $P_0=-P_0$ si y solo si $y_0=0$. Ahora sustituimos $y_0=0$ en \eqref{eq:weierstrass-simple-x15} y obtenemos tres posibles valores para $x_0$ que corresponden a los siguientes tres puntos racionales de orden 2 en $G_\mathrm{tor}$:
 \[
 	(-102,0),\quad (-21,0)\quad\text{y}\quad (123,0)
 \]
@@ -214,7 +207,7 @@ Ahora sustituimos $y_0=0$ en \eqref{eq:weierstrass-simple-x15} obtenemos tres po
 	
 	Si $P_0=(x_0,y_0)$, entonces por la factorización de $D$, solamente tenemos que considerar coordenadas $y_0$ que sean divisores de $2^4 3^8 5^2=\sqrt{-D}$. Sustituimos cada divisor en \eqref{eq:weierstrass-simple-x15} y resolvemos la ecuación cúbica en $x$ para obtener (o probar que no tienen) soluciones y así posibles coordenadas de $P_0$. Como $\sqrt{-D}$ tiene 270 divisores (positivos y negativos), este proceso lo verificamos con Mathematica y otenemos los siguientes cuatro puntos racionales:
 	\[
-		(303,-4860),\quad (303,-4860),\quad (-57,-540)\quad\text{y}\quad (-57,540)
+		(303,4860),\quad (303,-4860),\quad (-57,-540)\quad\text{y}\quad (-57,540)
 	\]
 \end{enumerate}
 
