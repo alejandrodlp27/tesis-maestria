@@ -170,7 +170,11 @@ Por otro lado, como $P,Q$ y $P+Q$ están sobre $L$, las coordenadas $x(P),x(Q)$ 
 	x(P)x(Q)+x(P)x(P+Q)+x(Q)x(P+Q)=b-2\la\mu,\nonumber\\
 	x(P)x(Q)x(P+Q)=\mu^2-c, \label{eq:prod-coord-P+Q}
 \end{gather}
-donde \eqref{eq:coord-P+Q} nos dice que $x(P+Q)=\la^2-a-x(P)-x(Q)$ cuando $P\neq Q$. La fórmula \eqref{eq:prod-coord-P+Q} la usaremos en la sección \ref{sec:3-5}. Cuando $P=Q$, tenemos la fórmula de duplicación:
+donde \eqref{eq:coord-P+Q} nos dice que
+\begin{equation}\label{eq:x-coord-suma}
+	x(P+Q)=\paren{\frac{y(P)-y(Q)}{x(P)-x(Q)}}^2-a-x(P)-x(Q) \quad\text{cuando}\quad P\neq Q.
+\end{equation}
+La fórmula \eqref{eq:prod-coord-P+Q} la usaremos en la sección \ref{sec:3-5}. Cuando $P=Q$, tenemos la fórmula de duplicación:
 \begin{equation}
 	x(2P)=\frac{x^4-2bx^2-8cx+b^2-4ac}{4x^3+4ax^2+4bx+4c}.
 \end{equation}
@@ -183,8 +187,8 @@ Las isogenias resultan estar estrechamente relacionadas con la estructura de gru
 	Sea $\varphi: E\ra E'$ una isogenia de curvas elípticas, entonces cumple:
 	\begin{enumerate}[label=\roman*)]
 		\item Para todos $P,Q\in E$, tenemos $\varphi(P+Q)=\varphi(P)+\varphi(Q)$, es decir $\varphi$ es un homomorfismo de grupos.
-		\item El núcleo $\ker\varphi$ es un subgrupo finito de $E$.
-		\item Conversamente, para todo subgrupo finito $C$ de $E$ existe una única curva elíptica, denotada por $E/C$, y una isogenia $\varphi bE\ra E/C$ con $\ker\varphi =C$. 
+		\item\label{inc:nucleo-finito} El núcleo $\ker\varphi$ es un subgrupo finito de $E$.
+		\item Conversamente, para todo subgrupo finito $C$ de $E$ existe una única curva elíptica, denotada por $E/C$, y una isogenia $\varphi :E\ra E/C$ con $\ker\varphi =C$. 
 	\end{enumerate}
 \end{thm}
 \begin{proof}
@@ -197,6 +201,46 @@ Las isogenias resultan estar estrechamente relacionadas con la estructura de gru
 		X(P):=x(P)+\sum_{Q\in C-\{O\}} x(P+Q)-x(Q),\qquad Y(P):=y(P)+\sum_{Q\in C-\{O\}} y(P+Q)-y(Q).
 	\]
 Véase \cite{VeluIECE} para más detalles.
+\begin{comment}
+Por ejemplo, si $E$ está dada por la ecuación $y^2=x^3+ax^2+bx$, y $C$ el subgrupo de orden 2 generado por $T=(0,0)$, entonces
+\[
+	X(P)=x(P)+x(P+T)-x(T)=x(P)+\paren{\frac{y(P)-y(T)}{x(P)-x(T)}}^2-a-x(P)-x(T)=\paren{\frac{y(P)}{x(P)}}^2-a,
+\]
+porque $T=(x(T),y(T))=(0,0)$. Si escribimos $P=(x,y)$, entonces tenemos:
+\[
+	X(x,y)=\frac{y^2}{x^2}-a=\frac{y^2-ax^2}{x^2}=\frac{x^3+bx}{x^2}=x+\frac{b}{x}.
+\]
+Para calcular $Y(x,y)$, solamente necesitamos calcular $y(P+T)$. Como $x(P+T)=b/x$ entonces:
+\begin{gather*}
+	y(P+T)^2=\frac{b^3}{x^3}+a\frac{b^2}{x^2}+b\frac{b}{x}\quad\then\quad y(P+T)^2= b^3x^{-3}\left(1+\frac{x}{b}a+\frac{x^2}{b^2}b\right)\\
+	\therefore y(P+T)=\frac{1+ab^{-1}x+b^{-1}x^2}{x^3}.
+\end{gather*}
+Por lo tanto
+\[
+	Y(x,y)=y+\frac{1+ab^{-1}x+b^{-1}x^2}{x^3}.
+\]
+\end{comment}
+\end{nota}
+
+\begin{nota}
+	La existencia de la isogenia dual	junto con la existencia de la isogenia $E\ra E/C$ del teorema \ref{thm:kernel-isogenias}, nos implica que el rango del grupo de puntos racionales $E(\QQ)$ es invariante bajo isogenias:
+	
+	Sean $E$ y $E'$ curvas elípticas sobre $\QQ$, denotamos por $G=E(\QQ)$ (resp. $G'=E(\QQ)$) a su grupos de puntos racionales. Si una isogenia $\varphi:G\ra G'$ está definida sobre $\QQ$, entonces $\varphi$ se restringe a un homomorfismo de grupos $\varphi:G\ra G'$. Por otro lado, el teorema de Mordell-Weil nos dice que $G$ y $G'$ son finitamente generados y (gracias al teorema de estructura de grupoes abelianos finitamente generados):
+\[
+	G\cong G_\mathrm{tor}\oplus\ZZ^r,\qquad G'\cong G'_\mathrm{tor}\oplus\ZZ^{r'}
+\]
+donde $r$ (resp. $r'$) es el rango de $E$ (resp. $E'$). Por el inciso \ref{inc:nucleo-finito}, $\ker\varphi$ es finito y así $\ker\varphi\subseteq G_\mathrm{tor}$. Por lo tanto $\varphi$ se factoriza a través de un homomorfismo $\bar{\varphi}$ inyectivo:
+\[
+	\begin{tikzcd}
+		G \arrow[d] \arrow[r,"\varphi"] & G' \\
+		G/G_\mathrm{tor}\cong\ZZ^r \arrow[ur,dashed,"\bar{\varphi}"']
+	\end{tikzcd}
+\]
+Como $G/G_\mathrm{tor}$ es libre y $\bar{\varphi}$ es inyectivo, la imagen $\bar{\varphi(G/G_\mathrm{tor})}\subseteq\ZZ^{r'}\subseteq G'$ es libre de rango al menos $r$ porque si $\{g_1,\ldots,g_n\}$ es una base de $G/G_\mathrm{tor}$, entonces $\{\bar{\varphi}(g_1),\ldots,\bar{\varphi}(g_n)\}$ es linealmente independiente. Por lo tanto $r\leq r'$. Hemos probado que si existe una isogenia $\varphi:E\ra E'$ entonces $r\leq r'$.  Por lo tanto la existencia de la isogenia dual nos da la otra desigualdad para concluir
+\[
+	\exists \varphi: E\lra E' \quad\text{una isogenia sobre}\;\QQ\quad\then\quad
+	\text{rango de}\; E \;= \;\text{rango de}\; E'.
+\]
 \end{nota}
 
 Otra manera de definir la suma de $E$ es con divisores:

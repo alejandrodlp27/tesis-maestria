@@ -226,6 +226,46 @@ podemos concluir que:
 	\]
 \end{proof}
 
+Como $G_\mathrm{tor}$ es abeliano y de orden 8, el teorema de estructura de grupos abelianos finitamente generados\footnote{•} nos dice que $G_\mathrm{tor}$ es isomorfo a  uno de los siguientes tres posibilidades:
+\[
+	\ZZ/8\ZZ\ZZ,\quad,\ZZ/2\ZZ\times\ZZ/4\ZZ,\quad\text{ó}\quad \ZZ/2\ZZ\times\ZZ/2\ZZ\times\ZZ/2\ZZ.
+\]
+Para saber cual de estas tres posibilidades es la correcta, necesitamos estudiar el orden del los puntos de $G_\mathrm{tor}$. Por suerte, la definición geométrica, nos permite calcular a vista la duplicación de los puntos de $G_\mathrm{tor}$.
+
+En el diagrama \ref{fig:orden-puntos-racionales} graficamos los 7 puntos racionales afines sobre la curva elíptica y trazamos rectas tangentes en esos puntos. Si la recta tangente es vertical, omitimos la recta y marcamos el punto de verde; estos puntos son de orden 2. Si duplicamos el resto de los cuatro puntos, obtenemos el punto $(3,-2)$ que es de orden 2. Por lo tanto el resto de los puntos, i.e. $\{-2,3),(-2,-2),(8,18),(8,-27)\}$ tienen orden 4. En conclusión $G_\mathrm{tor}$ tiene tres elementos de orden 2 y cuatro de orden cuatro. Es implica que
+\[
+	G_\mathrm{tor}\cong\ZZ/2\ZZ\times\ZZ/4\ZZ.
+\]
+
+\begin{figure}[!h]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA
+  \centering
+  \includegraphics[scale=0.3]{figuras/orden-puntos-racionales}
+  \caption{Visualización de la suplicación de los puntos racionales de $X_0(15)$. Los puntos verdes son de orden 2 y los puntos rojos son de orden 4.}
+  \label{fig:orden-puntos-racionales}
+\end{figure}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+Para cada punto $P\in G_\mathrm{tor}$ de orden 2, i.e. $P\in\{(-\tfrac{13}{4},\tfrac{9}{8})=,(-1,0),(3,-2)\}$, el subgrupo generado por $P$ actúa sobre $G_\mathrm{tor}$ mediante traslación:
+\[
+	\gen{P}\act G_\mathrm{tor}\quad\text{definido por}\quad (O,Q)\mapsto Q,\;\; (P,Q)\mapsto P+Q.
+\]
+Como $\gen{P}$ solamente tiene dos elementos y $G_\mathrm{tor}$ tiene ocho elementos, entonces cada acción $\gen{P}\act G_\mathrm{tor}$ descompone $G_\mathrm{tor}$ en cuatro órbitas. En la figura \ref{fig:orbitas-puntos} ilustramos estas particiones para cada punto de orden 2. Esos diagramas también muestran parte de la tabla de operaciones. En la figura \ref{fig:orbitas-puntos} vemos las órbitas de $G$ bajo la acción ${O,P}\act G$ donde $P$ corre sobre los puntos de orden 2, i.e. $P\in\{-\tfrac{13}{4},\tfrac{9}{8}\right),(-1,0),(3,-2)\}$.
+
+\begin{figure}\centering
+\begin{minipage}[t]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{figuras/orbitas-puntos-2}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{figuras/orbitas-puntos-1}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{figuras/orbitas-puntos-3}
+\end{minipage}
+\caption{Las flechas indican la operación $+P$ donde $P$ es alguno de los tres puntos de orden 2 que tiene $X_0(15)(\QQ)$}
+\label{fig:orbitas-puntos}
+\end{figure}
+
+
 El próximo paso es probar que el rango de $G\cong G_\mathrm{tor}\times\ZZ^r$ es cero, i.e. $r=0$. Para esto estudiamos el grupo $G/2G$ para encontrar una fórmula para $r$. El teorema de Mordell-Weil dice que $G$ es un grupo abeliano finitamente generado y por lo tanto el teorema de estructura de grupos abelianos finitamente generados nos dice que:
 \[
 	G\cong\ZZ^r\times\frac{\ZZ}{p_1^{n_1}\ZZ}\times\cdots\times\frac{\ZZ}{p_s^{n_s}\ZZ},
@@ -404,13 +444,13 @@ Ahora probamos que el núcleo de $\alpha$ es la imagen de $\psi$. Primero sea $P
 donde (*) es exactamente el inciso \ref{in:imagen}. Con esto concluimos que $\ker\alpha=\psi(\bar{G})$. Las siguientes dos afirmaciones del lema se siguen del primer teorema de isomorfismo y de la fórmula \eqref{eq:rango-indices-2} para el rango que deducimos arriba. 
 \end{proof}
 
-Con este lema, hemos reducido el problema de calcular el rango de la curva elíptica $X_0(15)$, a calcular la imagen de $\alpha$ y $\bar{\alpha}$. Para hacer esto, vamos a deducir una condición necesaria que cumplen los elementos de la imagen de $\alpha$, pero primero estudiamos unos casos particulares.
+Con este lema, hemos reducido el problema de calcular el rango de la curva elíptica $X_0(15)$, a calcular la imagen de $\alpha$ y $\bar{\alpha}$. Para hacer esto, vamos a deducir una condición necesaria que cumplen los elementos de la imagen de $\alpha$. Esto nos va a producir una lista de posibles candidatos y por lo tanto un algoritmo para calcular puntos en la imagen.
 
-Ahora si $P=(x,y)\in G$ es tal que $x=0$, entonces $y^2=0(0^2+a0+b)=0$ y así $P=T$. Entonces $\alpha(P)=b\QQ^{*2}$ y por lo tanto $b\QQ^{*2}$ siempre es un elemento de la imagen de $\alpha$. Por otro lado, si $y=0$ entonces $0=x(x^2+ax+b)$ y por lo tanto $x=0$ (que implica $P=T$) ó
+En general sea $\alpha(P)\in\alpha(G)$ donde $P=(x(P),y(P))\in G$. Si $x=0$, entonces $y(P)^2=0(0^2+a0+b)=0$ y así $P=T$. Entonces $\alpha(T)=b\QQ^{*2}\in\alpha(G)$. Si $y=0$ entonces $0=x(x^2+ax+b)$ y por lo tanto $x$ puede asumir uno de los siguientes tres valores:
 \[
-	x=\frac{-a\pm\sqrt{a^2-4b}}{2}=\frac{-a\pm\sqrt{\bar{b}}}{2}.
+	x=0,\qquad x=\frac{-a\pm\sqrt{a^2-4b}}{2}=\frac{-a\pm\sqrt{\bar{b}}}{2}.
 \]
-Si $\bar{b}$ no es un cuadrado perfecto, entonces $x\not\in\QQ$ y por lo tanto $P\not\in G$ por lo que no obtenemos un punto nuevo en $\alpha(G)$. Si $\bar{b}$ es un cuadrado perfecto, por ejemplo $\bar{b}=d^2$, entonces
+Si $x=0$ nos regresamos al caso $P=T$, entonces supongamos que $x=(a\pm\sqrt{\bar{b}})/2$. Si $\bar{b}$ no es un cuadrado perfecto, entonces $x\not\in\QQ$ y por lo tanto $P\not\in G$ por lo que no obtenemos un punto nuevo en $\alpha(G)$. Si $\bar{b}$ es un cuadrado perfecto, por ejemplo $\bar{b}=d^2$, entonces
 \[
 	\paren{\frac{-a\pm d}{2},0}\in G\quad\then\quad \alpha\paren{\frac{-a\pm d}{2},0}=\frac{-a\pm d}{2}\QQ^{*2}.
 \]
@@ -418,18 +458,20 @@ Por lo tanto los dos elementos $\tfrac{1}{2}(-a\pm d)\QQ^{*2}$ están en la imag
 
 El último caso $xy\neq0$ lo tratamos en el siguiente lema:
 
-\begin{lema}\label{lema:imagen-alpha}
-	Sea $G$ el grupo de puntos racionales de una curva elíptica $E$ definido por $y^2=x^3+ax^2+bx$ y sea $P=(x,y)\in G$ tal que $xy\neq0$. Entonces existe un divisor $\delta$ de $b$, positivo o negativo, tal que la ecuación diofantina
+\begin{lema}\label{lema:imagen-alpha}%%%%%%%%
+	Sea $G$ el grupo de puntos racionales de una curva elíptica $E$ definido por $y^2=x^3+ax^2+bx$. Para todo punto $P=(x,y)\in G$ tal que $xy\neq0$, existe un divisor $\delta$ de $b$, positivo o negativo, tal que la ecuación diofantina:
 	\[
-		X^2=\delta Y^4+aY^2Z^2+\frac{b}{\delta}Z^4
+		X^2=F_\delta(Y,Z)=0,\quad\mathrm{donde}\;\mathrm{por}\quad
+		F_\delta(Y,Z):=\delta Y^4+aY^2Z^2+b_0Z^4\quad(b=\delta b_0)
 	\]
 	tiene una solución $(X_0,Y_0,Z_0)$, con $Y_0\neq0$, y además:
 	\[
 		P=\left(\frac{\delta Y_0^2}{Z_0^2},\frac{\delta X_0 Y_0}{Z_0^3} \right),\qquad \alpha(P)\equiv\delta\Mod{\QQ^{*2}}.
 	\]
+	Si $Z_0=0$ tomamos $P=O$ y por lo tanto $\alpha(P)\equiv 1 \Mod{\QQ^{*2}}$.
 \end{lema}
 \begin{proof}
-	Sea $P=(x,y)\in G$ tal que $x\neq0$ y $yneq0$. Como $x,y\in\QQ$, podemos reescribir estas fracciones como
+	Sea $P=(x,y)\in G$ tal que $x\neq0$ y $y\neq0$. Como $x,y\in\QQ$, podemos reescribir estas fracciones como
 	\[
 		x=\frac{m}{e^2},\qquad y=\frac{n}{e^3},
 	\]
@@ -465,7 +507,7 @@ Con esto, \eqref{eq:diofantina-preliminar-2} implica que $n_0=MN$. Si sustituimo
 \]
 Por lo tanto  $(X,Y,Z)=(N,M,e)$ es una solución de la ecuación diofantina:
 \[
-	X^2=\delta Y^4+aY^2Z^2+\frac{b}{\delta}Z^4.
+	X^2=\delta Y^4+aY^2Z^2+b_0 Z^4.
 \]
 
 Además, el punto $P$ tiene coordenadas:
@@ -478,14 +520,38 @@ Por lo tanto
 \]
 \end{proof}
 
-Con el lema anterior podemos desarrollar un algoritmo que calcula la imagen de $\alpha$:
+Con el lema anterior nos sugiere un algoritmo que calcula la imagen de $\alpha$: toma todos los divisores de $b$ y ve si la ecuación diofantina $X^2=F_\delta(Y,Z)$ tiene solución; los que tengan solución nos producen elementos en la imagen y todos los elementos en la imagen surgen de esta manera.
 
+Podemos mejorar el algoritmo. Supongamos que hay dos divisores $\delta_1$ y $\delta_2$ tales que $\delta_1\equiv\delta_2\Mod{\QQ^{*2}}$. Entonces existe un racional $d/e\in\QQ$ tal que $\delta_1 e^2=\delta_2 d^2$. Esto implica que el punto $P$ asociado a la solución $(X_0,Y_0,Z_0)$ es igual a:
+	\[
+		P=(\delta_1 Y_0^2Z_0^{-2},\delta_1 X_0Y_0Z_0^{-3})=(\delta_2 (dY_0)^2(eZ_0)^{-2},\delta_2 (deX_0)(dY_0)(eZ_0)^{-3}),
+	\]
+que es el punto asociado a la solución $(deX_0,dY_0,eZ_0)$ de la ecuación diofantina asociada a $\delta_2$, en efecto:
+	\begin{align*}
+		\delta_2(d Y_0)^4+a(d Y_0)^2(eZ_0)^2+\frac{b}{\delta_2}(eZ_0)^4
+		&=\frac{e^2}{d^2}\delta_1(d Y_0)^4+a(d Y_0)^2(eZ_0)^2+\frac{b d^2}{\delta_1 e^2}(eZ_0)^4\\
+		&=e^2d^2 (\delta Y_0^4+aY_0^2 Z_0^2+b_0Z_0^4)\\
+		&=e^2d^2X_0^2,
+	\end{align*}
+	\[
+		\therefore\quad (deX_0)^2=F_{\delta_2}(dY_0,eZ_0).
+	\]
+Acabamos de probar que si $\delta_1\equiv\delta_2\Mod{\QQ^{*2}}$ entonces $X^2=F_{\delta_1}(Y,Z)$ tiene solución si y solo si $X^2=F_{\delta_2}(Y,Z)$ tiene solución.
+
+Por lo tanto si partimos el conjunto de divisores de $b$ en clases de equivalencia módulo $\QQ^{*2}$, entonces basta verificar si $X^2=F_\delta(Y,Z)=0$ para solamente un divisor $\delta$ por cada clase de equivalencia. De esta manera tenemos el siguiente algoritmo para calcular la imagen de $\alpha$:
+
+\begin{alg}\label{alg:puntos-racionales}
+Cálculo de $\alpha(G)$. Sea $G$ el grupo de puntos racionales de una curva elíptica $E$ definido por $y^2=x^3+ax^2+bx$. Denotamos por $\mathfrak{D}$ al conjunto de divisores positivos y negativos de $b$.
 \begin{enumerate}
-	\item Para todo divisor $\delta\mid b$, escribimos la ecuación diofantina $X^2=\delta Y^4+aY^2Z^2+\frac{b}{\delta}Z^4$.
-	\item Determina si la ecuación diofantina tiene una solución $(X_0,Y_0,Z_0)$ con $Y_0\neq0$.
-	\item Si $(X_0,Y_0,Z_0)$ es una solución con $Y_0\neq0$, entonces el punto $P=(\delta Y_0^2Z_0^{-2},\delta X_0Y_0Z_0^{-3})\in G$ cumple que $\alpha(P)=\delta\QQ^{*2}$. En este caso $\delta\QQ^{*2}$ es un elemento de la imagen de $\alpha$.
-	\item Si no tiene solución, elige otro divisor $\delta$. 
+	\item Parte $\mathfrak{D}$ en clases de equivalencia módulo $\QQ^{*2}$ y toma un sistema completo de residuos $\mathfrak{D}'=\{\delta_1,\ldots,\delta_n\}$ módulo $\QQ^{*2}$.
+	\item Para todo divisor $\delta_i\in\mathfrak{D}'$, determina si la ecuación diofantina $X^2=\delta_i Y^4+aY^2Z^2+b_i Z^4$ (donde $b=\delta_i b_i$) tiene una solución $(X_i,Y_i,Z_i)$ con $Y_i\neq0$.
+	\begin{enumerate} 
+		\item\label{in:existencia-diof} Si existe tal solución, entonces $b\Mod{\QQ^{*2}}\in\alpha(G)$.
+		\item Si no tiene tal solución, cambia de divisor y repite.
+	\end{enumerate}
+	\item Cuando se terminen los divisores, la lista de elementos obtenidos en \ref{in:existencia-diof} es la imagen de $\alpha$.
 \end{enumerate}
+\end{alg}
 
 \begin{nota}
 	Cuando $\bar{b}$ es un cuadrado perfecto vimos que $\frac{-a\pm d}{2}\QQ^{*2}$ son dos elementos de la imagen de $\alpha$, pero el algoritmo anterior ya nos produce estos dos elementos. En efecto, si $\bar{b}=d^2$ es un cuadrado perfecto, entonces $b$ admite la factorización
@@ -499,51 +565,221 @@ Con el lema anterior podemos desarrollar un algoritmo que calcula la imagen de $
 	tiene la solución trivial $(X_0,Y_0,Z_0)=(0,1,1)$ y por lo tanto el algoritmo nos produce los dos elementos $\frac{-a\pm d}{2}\QQ^{*2}$.
 \end{nota}
 
-El lema \ref{lema:imagen-alpha}
-
-
-Para hacer esto, primero reescribimos la ecuación de Weierstrass de $X_0(15)$. Empezamos con el cambio de variable que hicimos para aplicar el teorema de Lutz-Nagell y simplemente trasladamos uno de los puntos de orden 2 al origen, por ejemplo hacemos:
+\begin{comment}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COMENTARIO
+\begin{ejemplo} 
+Aplicamos el algoritmo deducido del lema \ref{lema:imagen-alpha} a $G=X_0(15)(\QQ)$ y deducimos que
+\begin{equation}\label{eq:imagen-alpha}
+	\alpha(G)=\big\{1\Mod{\QQ^{*2}},-1\Mod{\QQ^{*2}}\big\}\quad\then\quad \#\alpha(G)=2.
+\end{equation}
+Primero tenemos que reescribir la ecuación de Weierstrass. Empezamos con la ecuación de Weierstrass simplificada \eqref{eq:weierstrass-simple-x15} que usamos para aplicar el teorema de Lutz-Nagell. Podríamos simplemente trasladar uno de los puntos de orden 2 al origen, pero la ecuación resultante tendría coeficientes muy grandes. Entonces mejor tomamos el cambio de variable:
 \[
-	x'=x-21,\qquad y'=y
+	x'=9x-21,\qquad y'=27y
 \]
 y la ecuación \ref{eq:weierstrass-simple-x15} se convierte en
 \[
-	y^2=x^3-63x^2-11664x.
+	y^2=x^3-7x^2-144x.
 \]
-Aquí, el punto $(0,0)$ es claramente de orden 2; a este punto lo denotamos por $T=(0,0)$
+En este caso tenemos $a=-7$, $b=-144=-2^4 3^2$.
+
+Todo divisor $\delta$ de $b$ es de la forma $\pm 2^\alpha3^\beta$ donde $0\leq\alpha\leq4$ y $0\leq\beta\leq2$, entonces módulo $\QQ^{*2}$ tenemos que
+\[
+	\delta=\pm2^\alpha3^\beta\equiv
+	\begin{cases}
+		\pm1\Mod{\QQ^{*2}} & 2\mid\alpha,\;\; \beta=0,2\\
+		\pm2\Mod{\QQ^{*2}} & 2\nmid\alpha,\;\; \beta=0,2\\
+		\pm3\Mod{\QQ^{*2}} & 2\mid\alpha,\; \beta=1\\
+		\pm6\Mod{\QQ^{*2}} & 2\nmid\alpha,\;\;\beta=1
+	\end{cases}.
+\]
+Por lo tanto, $\{-6,-3,-2,-1,1,2,3,6\}$ es un sistema completo de residuos módulo $\QQ^{*2}$. En lo que sigue probaremos que para $\delta=\pm1$ las ecuaciones diofantinas asociadas tienen solución, pero para el resto de las ecuaciones diofantinas no tienen solución.
+\begin{enumerate}
+	\item[($\delta=1$)] $(X_0,Y_0,Z_0)=(1,1,0)$ es una solución de $X^2=Y^4-7Y^2Z^2-144Z^4$ y corresponde al punto $O$.
+	
+	
+	\item[($\delta=-1$)] $(X_0,Y_0,Z_0)=(0,3,1)$ es una solución de $X^2=-Y^4-7Y^2Z^2+144 Z^4$ y corresponde al punto $(-9,0)$.
+	
+	
+	\item[($\delta=\pm6$)] La ecuación diofantina $X^2=F_\delta(Y,Z)=0$ no tiene solución. El siguiente argumento es independiente del signo de $\delta$, entonces tomamos $\delta=6$. Supongamos que	tiene una solución $(X_0,Y_0,Z_0)$. Entonces:
+	\begin{equation}\label{eq:divseis2}
+		X_0^2=6Y_0^4-7Y_0^2 Z_0^2 -24 Z_0^4.
+	\end{equation}
+	Si reducimos la ecuación módulo 3, obtenemos:
+	\[
+		X_0^2\equiv -(Y_0Z_0)^2 \Mod{3}.
+	\]
+	Como $-1$ no es un residuo cuadrático módulo 3, esto solamente sucede cuando $X_0\equiv0\Mod{3}$. Escribimos $X_0=3x_0$ para algún entero $x_0$. Además $Y_0Z_0\equiv0\mod{3}$. Sin pérdida de generalidad supongamos que $Y_0\equiv0\Mod{3}$, entonces $Y_0=3y_0$ para alguna $y_0\in\ZZ$. Sustituimos esto en la ecuación diofantina \eqref{eq:divseis2} y obtenemos:
+	\[
+		3^2 x_0^2 = 2\cdot 3^5y_0^4- 63 y_0^2 Z_0^2 -24 Z_0^4 \quad\then\quad
+		3x_0^2 = 2\cdot 3^4 y_0^4- 21 y_0^2 Z_0^2 -8 Z_0^4 \quad\then\quad 3\mid Z_0.
+	\]
+	Entonces, si escribimos $Z_0=3z_0$, entonces la ecuación diofantina  anterior se reescribe como:
+	\begin{gather*}
+		3x_0^2 = 2\cdot 3^4 y_0^4- 3^3 7 y_0^2 z_0^2 -2^3 3^4 z_0^4\quad\then\quad
+		x_0^2 = 2\cdot 3^3 y_0^4- 3^2 7 y_0^2 z_0^2 -2^3 3^3 z_0^4,\\
+		\therefore\quad \paren{\frac{x_0}{3}}^2= 6 y_0^4-7y_0^2 z_0^2-24z_0^4=F_6(y_0,z_0).
+	\end{gather*}
+	Por lo tanto si $(X_0,Y_0,Z_0)$ es una solución de $X^2=F_6(Y,Z)$, entonces $(x_0/3,y_0,z_0)$ es otra solución cuyas entradas son estrictamente menores a la solución original. Por lo tanto podemos construir una cadena infinita de soluciones enteras cuyas entradas decrecen estrictamente. Esto es un ejemplo de \emph{descenso a infinito}, un método famoso para probar que una ecuación diofantina no tiene solución. Por lo tanto $(x_0,Y_0,Z_0)$ no puede existir, es decir $X^2=F_{\pm6}(Y,Z)$ no tiene soluciones y $\delta=\pm 6$ no contribuye a la imagen de $\alpha$.
+
+	
+	
+	\item[($\delta=\pm 2,3$)] Vamos a probar que la ecuación diofantina $X^2=F_\delta(Y,Z)$ no tiene solución. Una clave para hacer los cuatro casos juntos es observar que $2\equiv2^3 3^2$ y $3\equiv 2^2 3^3\Mod{\QQ^{*2}}$, es decir:
+	\[
+		\delta\equiv2^{\alpha}3^\beta\Mod{\QQ^{*2}},\quad\text{tales que}\quad |\alpha-\beta|=1.
+	\]
+Supongamos que $(X_0,Y_0,Z_0)$ es una solución a la ecuación diofantina. Los divisores -3,-2,2 y 3 son de la forma $\delta=\pm2^\alpha 3^\beta$ donde $|\alpha-\beta|=1$. Ahora reducimos la ecuación diofantina asociada a $\delta$ , módulo 5 para obtener la congruencia:
+\begin{equation}\label{eq:congmod5}
+	X_0^2\equiv \pm2^\alpha 3^\beta Y_0^4 -7 Y_0^2 Z_0^2 \mp 2^{4-\alpha} 3^{2-\beta} Z_0^4 \Mod{5}.
+\end{equation}
+Observe que $2\cdot3\equiv 1\Mod{5}$, entonces $3^{\beta}\equiv 2^{-\beta}$ y por lo tanto la congruencia anterior se reduce a
+\[
+	X^2\equiv \pm 2^{\alpha-\beta} Y_0^4 +2 Y_0^2 Z_0^2 \mp 2^{\beta-\alpha-2} Z_0^4 \Mod{5}.
+\]
+
+Por el pequeño teorema de Fermat, tenemos que $Y_0^4\equiv1$ ó $Y_0^4\equiv0\Mod{5}$ según si $5\nmid Y_0$ o no. Por lo tanto:
+\[
+	X_0^2\equiv
+	\begin{cases}
+	\pm 2^{\alpha-\beta}+2 Y_0^2 Z_0^2 \mp 2^{\beta-\alpha-2} \Mod{5} & Y_0,Z_0\not\equiv0\Mod{5}\\
+	\mp 2^{\beta-\alpha-2} \Mod{5} & Y_0\equiv0, Z_0\not\equiv0\Mod{5}\\
+	\pm 2^{\alpha-\beta} \Mod{5} & Y_0\not\equiv0, Z_0\equiv0\Mod{5}\\
+	0 & Y_0\equiv Z_0\equiv0\Mod{5}
+	\end{cases}.
+\]
+Como $-2^{-2}\equiv -4^{-1}\equiv -(-1)^{-1}\equiv 1\Mod{5}$, entonces lo anterior se reduce a
+\[
+	X_0^2\equiv
+	\begin{cases}
+	2(Y_0Z_0)^2 \pm(2^{\alpha-\beta}+2^{\beta-\alpha})\Mod{5} & Y_0,Z_0\not\equiv0\Mod{5}\\
+	\pm 2^{\beta-\alpha} \Mod{5} & Y_0\equiv0, Z_0\not\equiv0\Mod{5}\\
+	\pm 2^{\alpha-\beta} \Mod{5} & Y_0\not\equiv0, Z_0\equiv0\Mod{5}\\
+	0 & Y_0\equiv Z_0\equiv0\Mod{5}
+	\end{cases}.
+\]
+En este caso $|\alpha-\beta|=1$, así la suma dentro del paréntesis es igual a $2+2^{-1}\equiv2+3\equiv0\Mod{5}$. Concluimos que
+\[
+	X_0^2\equiv
+	\begin{cases}
+	2(Y_0Z_0)^2 & Y_0,Z_0\not\equiv0\Mod{5}\\
+	2,3 \Mod{5} & Y_0\equiv0, Z_0\not\equiv0\Mod{5}\\
+	2,3 \Mod{5} & Y_0\not\equiv0, Z_0\equiv0\Mod{5}\\
+	0 & Y_0\equiv Z_0\equiv0\Mod{5}
+	\end{cases}.
+\]
+Como 2 y 3 no son un residuos cuadráticos módulo 5, los tres primeros casos no pueden suceder. Por lo tanto $Y_0\equiv Z_0\equiv0\Mod{5}$. De la ecuación \eqref{eq:congmod5} también concluimos que $X_0\equiv 0\Mod{5}$.
+
+Escribimos $X_0=5x_0$, $Y_0=5y_0$ y $Z_0=5z_0$, y lo sustituimos en la ecuación diofantina $X^2=F_\delta(Y,Z)$, obtenemos:
+\begin{gather*}
+	\paren{\frac{x_0}{5}}^2 =\pm2^\alpha 3^\beta y_0^4 -63 y_0^2 z_0^2 \mp 2^{4-\alpha}3^{2-\beta} z_0^4,\\
+	\therefore\quad \paren{\frac{X_0}{25},\frac{Y_0}{5},\frac{Z_0}{5}}\;\;\text{es una solución de}\;\; X^2=F_\delta(Y,Z).
+\end{gather*}
+Otra vez por un argumento de descenso a infinito, vemos que una solución $(X_0,Y_0,Z_0)$ de la ecuación diofantina $X^2=F_\delta(Y,Z)0$ no puede existir.
+\end{enumerate}
+
+Con todos los casos resueltos, podemos concluir que
+\[
+		\alpha(G)=\{\alpha(O),\alpha(-81,0)\}=\big\{1\Mod{\QQ^{*2}},-1\Mod{\QQ^{*2}}\big\}
+\]
+y verificamos \eqref{eq:imagen-alpha}.
+\end{ejemplo}
+\end{comment}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COMENTARIO
 
 
+Usamos este algoritmo para probar que
 
-
-
-
-\begin{figure}[!h]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA
-  \centering
-  \includegraphics[scale=0.2]{figuras/pts_racionales_x15}
-  \caption{Los puntos racionales afines de la ecuación $Y^2+XY+Y=X^3+X^2-10X-10$.}
-  \label{fig:eq_weierstrass}
-\end{figure}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-\begin{prop}\label{prop:propiedadesx015}
-  Sea $G=X_0(15)(\QQ)$ el grupo de puntos racionales de la curva modular $X_0(15)$ y sea $G\cong G_{\mathrm{tors}}\times\ZZ^r$ su estructura de grupo abeliano finitamente generado. Entonces
-  \begin{enumerate}[label=(\roman*)]
-  \item $r=0$, i.e. $G$ es finito.
-  \item $\# G=8$ donde cuatro elementos corresponden a las cuatro cúspides de $X_0(15)$.
-  \item Los cuatro puntos racionales no-cuspidales de $X_0(15)(\QQ)$ corresponden a las cuatro clases $[E_i,C_i]\in S_0(15)(\QQ)$ cuyos $j$-invariantes son:
-    \[
-      j(E_i)\in\left\{
-        -\frac{5^2}{2},-\frac{5^2241^3}{2^3},-\frac{5\cdot 29^3}{2^5},\frac{5\cdot 211^3}{2^{15}}
-      \right\}
-    \]
-  \end{enumerate}
+\begin{prop}\label{prop:rango-X015}
+  El rango de la curva modular elíptica $X_0(15)$ es 0, por lo tanto, si $G=X_0(15)(\QQ)$ es su grupo de puntos racionales, entonces $G=G_\mathrm{tor}$ y $\# G=8$.
 \end{prop}
 
-\begin{proof}$\;$\\
-(\emph{i})
+\begin{proof}
+	Si aplicamos el algoritmo a la curva $X_0(15)$ con la ecuación de Weierstrass $y^2+xy+y=x^3+x^2-10x-10$, los coeficientes de las ecuaciones diofantinas son muy grandes para describir el proceso en este texto. Entonces, como el rango es invariante bajo isogenias (cf. la segunda nota después del teorema \ref{thm:kernel-isogenias}), vamos a cambiar $X_0(15)$ por una curva isógena que tenga coeficientes más pequeños. Para encontrar tal curva, primero buscamos la ecuación de Weierstrass de $X_0(15)$ en las tablas de Cremona \cite{Cremona}; está en la lista de curvas de conductor 15.\footnote{En general, cuando $X_0(N)$ es una curva elíptica, entonces su conductor es $N$; esto lo prueba Ligozat en su tesis. Además, comentamos que si usamos las tablas de Cremona, entonces a priori tenemos que el rango de $X_0(15)$ es 0, pero solamente estamos invocando las tablas de Cremona para simplificar los cálculos y la exposición.}
+	
+	Ahora buscamos otra curva elíptica en esa misma clase de isogenia con coeficientes más pequeños, en este caso tomamos la ecuación $y^2+xy+y= x^3+x^2$. Si simplificamos la ecuación de Weierstrass, obtenemos $y^2=x^3-27x+8694$ y después del cambio de variable $(x,y)\ra (9x-21,27y)$, obtenemos una ecuación de Weierstrass de la forma adecuada para aplicar el algoritmo \ref{alg:puntos-racionales}:
+\[
+	E\; : \; y^2=x^3-7x^2+16x.
+\]
+Las constantes necesarias para el algoritmo son $a=-7$ y $b=2^4$. De una vez calculamos la curva elíptica asociada:
+\[
+	\bar{E}\; :\; y^2=x^3+14x^2-15x,
+\]
+donde $\bar{a}=14$ y $\bar{b}=-15$. Aplicamos el el primer paso del algoritmo a $E$ y a $\bar{E}$:
 
-(\emph{ii}) Esta parte se sigue de una aplicación del teorema de Lutz-Nagell:
+Todo divisor $\delta$ de $b$ es de la forma $\pm 2^\alpha$ donde $0\leq\alpha\leq4$. Si $2\mid\alpha$, entonces $\delta$ es un cuadrado perfecto y $\pm\delta\equiv\pm1\Mod{\QQ^{*2}}$; si $2\nmid\alpha$ tenemos $\pm 2^\alpha\equiv\pm 2\Mod{\QQ^{*2}}$. Por lo tanto.
+\[
+	\mathfrak{D}'=\{-2,-1,1,2\}.
+\]
+Todos los divisores de $\bar{b}$ son libres de cuadrados, entonces ninguna pareja de divisores son congruentes módulo $\QQ^{*2}$ y por lo tanto
+\[
+	\bar{\mathfrak{D}}'=\mathfrak{D}=\{-15,-5,-3,-1,1,3,5,15\}.
+\]
 
-(\emph{iii})
+En el caso $E$, la ecuación asociada al divisor $\delta\mid b$
+\[
+	X^2=F_\delta(Y,Z)=\delta Y^4-7 Y^2 Z^2+\frac{16}{\delta}Z^4
+\]
+no tiene solución real (no trivial) cuando $\delta<0$ porque en este caso $16/\delta<0$ y así el lado derecho es negativo. Por lo tanto, si $\delta<0$, la ecuación diofantina $X^2=F_\delta(Y,Z)$ no tiene solución y por lo tanto $\delta\Mod{\QQ^{*2}}\not\in\alpha(G)$; descartamos los divisores negativos y nos quedamos con solamente $\delta=1,2$. Si $\delta=1$ tenemos que
+\[
+	(1,1,0)\;\;\text{es una solución de}\quad X^2=Y^4-7 Y^2 Z^2+16Z^4.
+\]
+Por lo tanto $1\Mod{\QQ^{*2}}\in\alpha(G)$, pero esto ya lo sabíamos porque $\alpha(O)=1\mod{\QQ^{*2}}$. Sin embargo, si $\delta=2$, la ecuación diofantina $X^2=2Y^4-7 Y^2 Z^2+8 Z^4$, no tiene soluciones.
+
+Para ver esto reducimos la ecuación módulo 4:
+\begin{equation}\label{eq:diof-mod-4}
+	X_0^2\equiv 2 Y_0^4+Y^2 Z^2\equiv Y_0^2(2Y_0^2+Z_0^2) \Mod{4}.
+\end{equation}
+Hay dos casos según si $Y_0^2\equiv0$ ó $Y_0^2\equiv1\Mod{4}$, ya que éstos son los únicos residuos cuadráticos módulo 4. Si ocurre lo último tenemos:
+\begin{equation}\label{eq:2-noRC-mod-4}
+	Y_0\equiv1\Mod{4}\quad\then\quad
+	X_0^2\equiv 2+Z_0^2\equiv\begin{cases}2\Mod{4} & Z_0^2\equiv0\Mod{4}\\ -1\Mod{4} & Z_0^2\equiv1\Mod{4} \end{cases}
+	\quad\ra\leftarrow.
+\end{equation}
+Por lo tanto necesariamente tenemos $Y_0^2\equiv0\Mod{4}$ ó equivalentemente $2\mid Y_0$. Esto, junto con la congruencia \eqref{eq:diof-mod-4}, implica que $X_0^2\equiv0\Mod{4}$ y también $2\mid X_0$.
+
+Por lo tanto existen $x_0,y_0\in\ZZ$ tales que $X_0=2x_0$ y $Y_0=2y_0$. Si sustituimos esto en la ecuación diofantina original para $\delta=2$, obtenemos:
+\begin{equation}\label{eq:diof2-reducido}
+	4x_0^2= 32 y_0^4-28y_0^2 Z_0^2+8Z_0^4=4(8 y_0^4-7y_0^2 Z_0^2+2Z_0^4)\quad\then\quad
+	x_0^2=8 y_0^4-7y_0^2 Z_0^2+2Z_0^4.
+\end{equation}
+Módulo 4 la ecuación se vuelve
+\[
+	x_0^2\equiv Z_0^2(y_0^2+2Z_0^2).
+\]
+Si $Z_0^2\equiv1\Mod{4}$ obtenemos la misma contradicción que en \eqref{eq:2-noRC-mod-4}, entonces $Z_0^2\equiv0\Mod{2}$, i.e. $Z_0=2z_0$ para alguna $z_0\in\ZZ$. Esto, junto con la congruencia anterior, implica que también $x_0^2\equiv0\Mod{4}$; escribimos $x_0=2x_1$ para alguna $x_1\in\ZZ$. Sustituimos estas expresiones en la ecuación \eqref{eq:diof2-reducido} para obtener
+\[
+	4x_1^2=8 y_0^4-28y_0^2 z_0^2+32z_0^4\quad\then\quad
+	x_1^2=2y_0^4-7y_0^2z_0^2+8z_0^4,
+\]
+es decir $(x_1,y_0,z_0)=(X_0/4,Y_0/2,Z_0/2)$ es una solución a la ecuación diofantina $X^2=F_2(Y,Z)$.
+
+Observe que las entradas de la nueva solución son estrictamente menores que las entradas originales y en particular $0<Y_0/2<Y_0$. Por lo tanto podemos construir una cadena infinita de soluciones enteras cuyas entradas decrecen estrictamente, lo cual es imposible. Esto es un ejemplo de \emph{descenso a infinito}, un método famoso para probar que una ecuación diofantina no tiene solución. Por lo tanto $X^2=F_2(Y,Z)$ no tiene soluciones y de esta manera el divisor $\delta=2$ no contribuye a la imagen. Hemos probado que
+\begin{equation}\label{eq:imag-alpha-G}
+	\alpha(G)=\{1\Mod{\QQ^{*2}}\}\quad\then\quad \#\alpha(G)=1 
+\end{equation}
+
+Ahora estudiamos las ecuaciones diofantinas asociadas a la curva $\bar{E}$: para todo divisor $\bar{\delta}\in\bar{\mathfrak{D}}'$, la ecuación diofantina asociada a $\bar{\delta}$ es $X^2=F_{\bar{\delta}}(Y,Z)$ donde $F_{\bar{\delta}}$ está definida por
+\[
+	F_{\bar{\delta}}(Y,Z)=\bar{\delta}Y^4+14Y^2 Z^2-\frac{15}{\delta}Z^4.
+\]
+
+Al tanteo, uno puede encontrar soluciones pequeñas a varias ecuaciones diofantinas. Por ejemplo:
+\begin{gather*}
+	(0,1,1)\;\;\text{es una solución de}\quad X^2=Y^4+14 Y^2 Z^2-15Z^4\;\;\text{y}\;\; X^2=-15Y^4+14 Y^2 Z^2+1Z^4, \\
+	(4,1,1)\;\;\text{es una solución de}\quad X^2=5Y^4+14 Y^2 Z^2-3Z^4\;\;\text{y}\;\; X^2=-3Y^4+14 Y^2 Z^2+5Z^4.
+\end{gather*}
+Entonces las ecuaciones asociadas a $\bar{\delta}=-15,-3,1,5$ tienen soluciones. Por lo tanto:
+\begin{equation}\label{eq:imag-alphabar}
+	\{-15\Mod{\QQ^{*2}},-3\Mod{\QQ^{*2}},1\Mod{\QQ^{*2}},5\Mod{\QQ^{*2}}\}\subseteq\bar{\alpha}(\bar{G}).
+\end{equation}
+
+
+
+El resto de las ecuaciones no tienen soluciones. Como ya hemos descrito con detalle este proceso para la curva $E$, solamente mencionamos bajo qué módulo sale la contradicción. Para $F_{-1}(Y,Z)$ y $F_{15}(Y,Z)$, reduce módulo 8 porque ahí $F_{-1}\equiv F_{15}\Mod{8}$; para $F_3(Y,Z)$ y $F_{-15}(Y,Z)$, reduce módulo 16. En ambos casos, la existencia de una solución nos produce una contradicción mediante un argumento de ``descenso a infinito''. Concluimos que la contención de \eqref{eq:imag-alphabar} es una igualdad y por lo tanto
+\begin{equation}\label{eq:card-imag-alphabar}
+	\#\bar{\alpha}(\bar{G})=4.
+\]
+Para terminar juntamos nuestras fórmulas para las imágenes de $\alpha$, (es decir \eqref{eq:imag-alpha-G} y \eqref{eq:card-imag-alphabar}), y sustituimos en la fórmula del rango de $E$ del lema \ref{lema:imagen-alpha} para concluir que:
+\[
+	2^{2+r}=4\quad\then\quad r=0.
+\]
 \end{proof}
 
 
