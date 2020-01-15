@@ -1,0 +1,40 @@
+\documentclass[12pt]{report}
+\usepackage{macros/preambulo}
+
+%\includeonly{secciones/utf,secciones/stw,secciones/ribet}
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+\include{secciones/intro}
+
+\chapter{Preliminares}
+	\include{secciones/formas-modulares}
+	\include{secciones/curvas}
+	\include{secciones/curvas-elipticas}
+	\include{secciones/rep-galois}
+	
+\chapter{El \'ultimo teorema de Fermat}
+	\include{secciones/utf}
+	\include{secciones/frey}
+	\include{secciones/stw}
+	\include{secciones/ribet}
+
+\chapter{El teorema de modularidad}
+	\include{secciones/langlands-tunnell}
+	\include{secciones/truco3-5}
+	\include{secciones/familias-mod5}
+	\include{secciones/clms}
+
+
+
+\appendix
+\include{secciones/apendices}
+
+\bibliography{bibliografia}{}
+\bibliographystyle{alpha}
+
+
+\end{document}

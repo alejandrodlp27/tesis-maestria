@@ -1,0 +1,1447 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.11)  9 JAN 2020 14:17
+entering extended mode
+**./tesis-maestria.tex
+(tesis-maestria.tex
+LaTeX2e <2018-12-01>
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\report.cls"
+Document Class: report 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(macros/preambulo.sty
+Package: macros/preambulo 
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks15
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(macros/math-letters.sty
+Package: macros/math-letters 
+) (macros/enumitem.sty
+Package: macros/enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen114
+\enit@toks=\toks28
+\enit@inbox=\box29
+\enit@count@id=\count101
+\enitdp@description=\count102
+) (macros/verbatim.sty
+Package: macros/verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancem
+ents
+\every@verbatim=\toks29
+\verbatim@line=\toks30
+\verbatim@in@stream=\read1
+)
+(macros/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: macros/cite 2015/02/27  v 5.5
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tikz-cd\tikz-cd.sty"
+Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen115
+\pgfutil@tempdimb=\dimen116
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.te
+x")) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box30
+("C:\Program Files\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2019/08/03 v3.1.4b (3.1.4b)
+))
+Package: pgf 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.te
+x"
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen117
+\pgf@y=\dimen118
+\pgf@xa=\dimen119
+\pgf@ya=\dimen120
+\pgf@xb=\dimen121
+\pgf@yb=\dimen122
+\pgf@xc=\dimen123
+\pgf@yc=\dimen124
+\pgf@xd=\dimen125
+\pgf@yd=\dimen126
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count103
+\c@pgf@countb=\count104
+\c@pgf@countc=\count105
+\c@pgf@countd=\count106
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count107
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2019/08/03 v3.1.4b (3.1.4b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+"
+File: pgfsys-common-pdf.def 2019/08/03 v3.1.4b (3.1.4b)
+)))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
+ex"
+File: pgfsyssoftpath.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfsyssoftpath@smallbuffer@items=\count108
+\pgfsyssoftpath@bigbuffer@items=\count109
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.t
+ex"
+File: pgfsysprotocol.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen127
+\pgfmath@count=\count110
+\pgfmath@box=\box31
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count111
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfint.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+"
+File: pgfcorepoints.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@picminx=\dimen128
+\pgf@picmaxx=\dimen129
+\pgf@picminy=\dimen130
+\pgf@picmaxy=\dimen131
+\pgf@pathminx=\dimen132
+\pgf@pathmaxx=\dimen133
+\pgf@pathminy=\dimen134
+\pgf@pathmaxy=\dimen135
+\pgf@xx=\dimen136
+\pgf@xy=\dimen137
+\pgf@yx=\dimen138
+\pgf@yy=\dimen139
+\pgf@zx=\dimen140
+\pgf@zy=\dimen141
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.c
+ode.tex"
+File: pgfcorepathconstruct.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@path@lastx=\dimen142
+\pgf@path@lasty=\dimen143
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.
+tex"
+File: pgfcorepathusage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@shorten@end@additional=\dimen144
+\pgf@shorten@start@additional=\dimen145
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+"
+File: pgfcorescopes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfpic=\box32
+\pgf@hbox=\box33
+\pgf@layerbox@main=\box34
+\pgf@picture@serial@count=\count112
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.co
+de.tex"
+File: pgfcoregraphicstate.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgflinewidth=\dimen146
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations
+.code.tex"
+File: pgfcoretransformations.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@pt@x=\dimen147
+\pgf@pt@y=\dimen148
+\pgf@pt@temp=\dimen149
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.te
+x"
+File: pgfcoreobjects.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.
+code.tex"
+File: pgfcorepathprocessing.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+"
+File: pgfcorearrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfarrowsep=\dimen150
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@max=\dimen151
+\pgf@sys@shading@range@num=\count113
+\pgf@shadingcount=\count114
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.te
+x"
+File: pgfcoreimage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.t
+ex"
+File: pgfcoreexternal.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfexternal@startupbox=\box35
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+"
+File: pgfcorelayers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.co
+de.tex"
+File: pgfcoretransparency.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.t
+ex"
+File: pgfcorepatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+))) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.
+tex"
+File: pgfmoduleshapes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfnodeparttextbox=\box36
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.
+sty"
+Package: pgfcomp-version-0-65 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@nodesepstart=\dimen152
+\pgf@nodesepend=\dimen153
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.
+sty"
+Package: pgfcomp-version-1-18 2019/08/03 v3.1.4b (3.1.4b)
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen154
+\pgffor@skip=\dimen155
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.
+code.tex"
+File: pgflibraryplothandlers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@plot@mark@count=\count115
+\pgfplotmarksize=\dimen156
+)
+\tikz@lastx=\dimen157
+\tikz@lasty=\dimen158
+\tikz@lastxsaved=\dimen159
+\tikz@lastysaved=\dimen160
+\tikz@lastmovetox=\dimen161
+\tikz@lastmovetoy=\dimen162
+\tikzleveldistance=\dimen163
+\tikzsiblingdistance=\dimen164
+\tikz@figbox=\box37
+\tikz@figbox@bg=\box38
+\tikz@tempbox=\box39
+\tikz@tempbox@bg=\box40
+\tikztreelevel=\count116
+\tikznumberofchildren=\count117
+\tikznumberofcurrentchild=\count118
+\tikz@fig@count=\count119
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfmatrixcurrentrow=\count120
+\pgfmatrixcurrentcolumn=\count121
+\pgf@matrix@numberofcolumns=\count122
+)
+\tikz@expandcount=\count123
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)))
+("C:\Program Files\MiKTeX 2.9\tex/latex/tikz-cd\tikzlibrarycd.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarymatrix.code.tex"
+File: tikzlibrarymatrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryquotes.code.tex"
+File: tikzlibraryquotes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.meta.c
+ode.tex"
+File: pgflibraryarrows.meta.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfarrowinset=\dimen165
+\pgfarrowlength=\dimen166
+\pgfarrowwidth=\dimen167
+\pgfarrowlinewidth=\dimen168
+)))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries/grap
+hs\tikzlibrarygraphs.code.tex"
+File: tikzlibrarygraphs.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\tikz@lib@auto@number=\count124
+\tikz@qnode@count=\count125
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.code.t
+ex"
+File: pgflibraryarrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\arrowsize=\dimen169
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarydecorations.markings.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarydecorations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduledecorations.code
+.tex"
+\pgfdecoratedcompleteddistance=\dimen170
+\pgfdecoratedremainingdistance=\dimen171
+\pgfdecoratedinputsegmentcompleteddistance=\dimen172
+\pgfdecoratedinputsegmentremainingdistance=\dimen173
+\pgf@decorate@distancetomove=\dimen174
+\pgf@decorate@repeatstate=\count126
+\pgfdecorationsegmentamplitude=\dimen175
+\pgfdecorationsegmentlength=\dimen176
+)
+\tikz@lib@dec@box=\box41
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
+ecorations.markings.code.tex")) (macros/footmisc.sty
+Package: macros/footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks43
+\footnotemargin=\dimen177
+\c@pp@next@reset=\count127
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\c@thm=\count128
+) (tesis-maestria.aux
+(secciones/intro.aux) (secciones/formas-modulares.aux) (secciones/curvas.aux)
+(secciones/curvas-elipticas.aux) (secciones/rep-galois.aux) (secciones/utf.aux)
+(secciones/frey.aux) (secciones/stw.aux) (secciones/ribet.aux)
+(secciones/langlands-tunnell.aux) (secciones/truco3-5.aux)
+(secciones/familias-mod5.aux) (secciones/clms.aux) (secciones/apendices.aux))
+\openout1 = `tesis-maestria.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count129
+\scratchdimen=\dimen178
+\scratchbox=\box42
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen179
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks45
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+ABD: EveryShipout initializing macros (tesis-maestria.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write4
+\openout4 = `tesis-maestria.toc'.
+
+ [1
+
+
+{C:/Users/alejandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+\openout2 = `secciones/intro.aux'.
+
+ (secciones/intro.tex [3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+(figuras/flt.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--71
+
+ []
+
+(figuras/teoremaWiles.tex
+
+LaTeX Warning: Reference `sec:X015' on page 4 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec:3_5' on page 4 undefined on input line 53.
+
+)) [4] [5]
+Chapter 1.
+[6
+
+
+]
+\openout2 = `secciones/formas-modulares.aux'.
+
+ (secciones/formas-modulares.tex
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]\OT1/cmr/m/n/12 cita de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/12 pon-trya-
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 44.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
+ [7
+
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
+<figuras/topologiaH.png, id=47, 839.135pt x 568.1225pt>
+File: figuras/topologiaH.png Graphic file (type png)
+<use figuras/topologiaH.png>
+Package pdftex.def Info: figuras/topologiaH.png  used on input line 127.
+(pdftex.def)             Requested size: 293.70164pt x 198.84584pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 <./figuras/topologiaH.png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:dominiofundamental' on page 10 undefined on input
+ line 291.
+
+[10] [11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 533--533
+[]\OT1/cmr/m/n/12 ESTO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--533
+\OT1/cmr/m/n/12 NO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--533
+\OT1/cmr/m/n/12 FUN-
+ []
+
+<figuras/domfundgamma015.png, id=74, 1209.51875pt x 1257.69875pt>
+File: figuras/domfundgamma015.png Graphic file (type png)
+<use figuras/domfundgamma015.png>
+Package pdftex.def Info: figuras/domfundgamma015.png  used on input line 685.
+(pdftex.def)             Requested size: 302.37895pt x 314.42392pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15 <./figuras/domfundgamma015.png (PNG copy)>] [16] [17]
+
+LaTeX Warning: Citation `FarkasKra' on page 18 undefined on input line 927.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--927
+[]\OT1/cmr/m/n/12 buscar
+ []
+
+[18] [19] [20]
+Overfull \hbox (27.97282pt too wide) in paragraph at lines 1090--1092
+[]\OT1/cmr/bx/n/12 Proposicion 24. []\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 G$
+ \OT1/cmr/m/it/12 el grupo dual de Pon-trya-gin del grupo finito $\U/msb/m/n/12
+ Z\OML/cmm/m/it/12 =N\U/msb/m/n/12 Z$\OT1/cmr/m/it/12 , i.e. $\OML/cmm/m/it/12 
+G \OT1/cmr/m/n/12 = []((\U/msb/m/n/12 Z\OML/cmm/m/it/12 =N\U/msb/m/n/12 Z\OT1/c
+mr/m/n/12 )[]\OML/cmm/m/it/12 ; \U/msb/m/n/12 C[]\OT1/cmr/m/n/12 )$\OT1/cmr/m/i
+t/12 .
+ []
+
+[21] [22] [23]
+Overfull \hbox (19.27919pt too wide) in paragraph at lines 1286--1289
+\OT1/cmr/m/n/12 Observe que, si $\OML/cmm/m/it/12 f \OMS/cmsy/m/n/12 2 \OML/cmm
+/m/it/12 S[]\OT1/cmr/m/n/12 ( [](\OML/cmm/m/it/12 M\OT1/cmr/m/n/12 ))$, en-tonc
+es $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 ][](
+\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 d[]f\OT1/cmr/m/n/12 (\OM
+L/cmm/m/it/12 dz\OT1/cmr/m/n/12 )$. Afir-mamos que $\OML/cmm/m/it/12 f\OT1/cmr/
+m/n/12 [\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 ][] \OMS/cmsy/m/n/12 2 \OML/cmm/m/i
+t/12 S[]\OT1/cmr/m/n/12 ( [](\OML/cmm/m/it/12 Md\OT1/cmr/m/n/12 )) \OMS/cmsy/m/
+n/12 
+ []
+
+[24] [25]
+
+LaTeX Warning: Characters dropped after `\end{comment}' on input line 1551.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1561
+[]\OT1/cmr/m/n/12 buscar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1561
+\OT1/cmr/m/n/12 cita y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1561
+\OT1/cmr/m/n/12 poner
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1583--1583
+[]\OT1/cmr/m/n/12 explicar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1583--1583
+\OT1/cmr/m/n/12 porque
+ []
+
+[26] [27]
+
+LaTeX Warning: Characters dropped after `\end{comment}' on input line 1748.
+
+[28]
+
+LaTeX Warning: Characters dropped after `\end{comment}' on input line 1833.
+
+[29] [30] [31] [32] [33]
+Overfull \hbox (4.80135pt too wide) in paragraph at lines 2151--2156
+\OMS/cmsy/m/n/12  []\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12  []\OML/cmm/m/it/12 ; \
+OMS/cmsy/m/n/12  []\OML/cmm/m/it/12 ; []$\OT1/cmr/m/it/12 . Ademas, para todo 
+com-pacto $\OML/cmm/m/it/12 Q \OMS/cmsy/m/n/12  \U/msb/m/n/12 H \OMS/cmsy/m/n/
+12  f<\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 > 
+\OMS/cmsy/m/n/12  []g$\OT1/cmr/m/it/12 , ex-is-ten con-stantes $\OML/cmm/m/it/1
+2 "; A; B; M >
+ []
+
+[34] [35] [36] [37]) [38]
+\openout2 = `secciones/curvas.aux'.
+
+ (secciones/curvas.tex
+
+LaTeX Warning: Citation `LangA' on page 39 undefined on input line 22.
+
+
+LaTeX Warning: Citation `MatsumuraCA' on page 39 undefined on input line 22.
+
+[39
+
+
+]
+LaTeX Font Info:    Try loading font information for U+euf on input line 51.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [40]
+
+LaTeX Warning: Citation `AtiyahITCA' on page 41 undefined on input line 82.
+
+[41]
+Overfull \hbox (11.5745pt too wide) in paragraph at lines 99--100
+[]\OT1/cmr/m/n/12 El sigu-iente teo-rema, que tomamos de [Har77], rela-ciona la
+ man-era intrnseca de definir $\OMS/cmsy/m/n/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/
+it/12 X\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 O[]$
+ []
+
+
+LaTeX Warning: Citation `MatsumuraCA' on page 42 undefined on input line 117.
+
+[42] [43]
+
+LaTeX Warning: Command \r invalid in math mode on input line 201.
+
+[44]
+
+LaTeX Warning: Citation `SerreGAECDC' on page 45 undefined on input line 238.
+
+
+Overfull \hbox (0.5394pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/it/12 so-bre $\U/msb/m/n/12 C$ \OT1/cmr/m/it/12 en-tre los $\U/msb/m
+/n/12 C\OMS/cmsy/m/n/12  $\OT1/cmr/m/it/12 puntos tal que el mor-fismo in-ducid
+o en campo de fun-ciones, $\OML/cmm/m/it/12 '[] \OT1/cmr/m/n/12 : \U/msb/m/n/12
+ C\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N\OT1/
+cmr/m/n/12 )[]) \OMS/cmsy/m/n/12 !
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+[]\OT1/cmr/m/n/8 Este teo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+\OT1/cmr/m/n/8 rema es
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+\OT1/cmr/m/n/8 nuevo en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+\OT1/cmr/m/n/8 la seccion
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 277--277
+\OT1/cmr/m/n/8 de cur-vase
+ []
+
+
+Overfull \hbox (4.97926pt too wide) in paragraph at lines 280--281
+[]\OT1/cmr/m/n/12 Ahora hace-mos una primera re-duccion para es-tu-diar $\OML/
+cmm/m/it/12 S[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 )$. Gra-cias 
+al teo-rema de uni-formizacion
+ []
+
+[46] [47]
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+[]\OT1/cmr/m/n/8 No se si
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 parte de
+ []
+
+
+Underfull \hbox (badness 6477) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 retculas a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 la seccion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 de cur-vas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 elpticas
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 para jus-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 ficar este
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+\OT1/cmr/m/n/8 iso-mor-
+ []
+
+[48] [49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
+[]\OT1/cmr/m/n/8 agregue
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
+\OT1/cmr/m/n/8 la seccion
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 447--447
+\OT1/cmr/m/n/8 del mod-ela
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 447--447
+\OT1/cmr/m/n/8 racional de
+ []
+
+
+Overfull \hbox (34.32652pt too wide) in paragraph at lines 464--465
+[]\OT1/cmr/m/n/12 Supongamos que $[\OML/cmm/m/it/12 E \OMS/cmsy/m/n/12 ! \OML/c
+mm/m/it/12 E[]\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 2 [][]\OT1/cmr/m/n/12 (\U/msb/
+m/n/12 Q\OT1/cmr/m/n/12 )$ es tal que $[][\OML/cmm/m/it/12 E \OMS/cmsy/m/n/12 
+! \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ] = (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 (\
+OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; j\OT1/cmr/m/n/12 (\OML/cmm
+/m/it/12 E[]\OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 '[]\OT1/cmr/
+m/n/12 (\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 1[][]\OT1/cmr/m/n
+/12 (\U/msb/m/n/12 Z\OT1/cmr/m/n/12 )))$.
+ []
+
+[51]) [52]
+\openout2 = `secciones/curvas-elipticas.aux'.
+
+ (secciones/curvas-elipticas.tex
+Underfull \hbox (badness 1442) in paragraph at lines 30--30
+\OT1/cmr/m/n/12 rema es
+ []
+
+[53
+
+
+] [54]
+<figuras/suma_eliptica_0.png, id=209, 683.55376pt x 868.24374pt>
+File: figuras/suma_eliptica_0.png Graphic file (type png)
+<use figuras/suma_eliptica_0.png>
+Package pdftex.def Info: figuras/suma_eliptica_0.png  used on input line 145.
+(pdftex.def)             Requested size: 151.14484pt x 191.98134pt.
+<figuras/suma_eliptica_1.png, id=210, 646.415pt x 823.075pt>
+File: figuras/suma_eliptica_1.png Graphic file (type png)
+<use figuras/suma_eliptica_1.png>
+Package pdftex.def Info: figuras/suma_eliptica_1.png  used on input line 148.
+(pdftex.def)             Requested size: 151.14484pt x 192.44304pt.
+<figuras/suma_eliptica_2.png, id=211, 665.48625pt x 847.165pt>
+File: figuras/suma_eliptica_2.png Graphic file (type png)
+<use figuras/suma_eliptica_2.png>
+Package pdftex.def Info: figuras/suma_eliptica_2.png  used on input line 151.
+(pdftex.def)             Requested size: 151.14484pt x 192.4007pt.
+ [55] [56 <./figuras/suma_eliptica_0.png (PNG copy)> <./figuras/suma_eliptica_1
+.png (PNG copy)> <./figuras/suma_eliptica_2.png (PNG copy)>] [57]
+[58] [59] [60] [61] [62] [63] [64]) [65]
+\openout2 = `secciones/rep-galois.aux'.
+
+ (secciones/rep-galois.tex [66
+
+
+]
+[67] [68]
+Overfull \hbox (17.2282pt too wide) in paragraph at lines 103--104
+[]\OT1/cmr/bx/n/12 Ejemplo 84. []\OT1/cmr/m/n/12 Sea $\OML/cmm/m/it/12  \OT1/c
+mr/m/n/12 : (\U/msb/m/n/12 Z\OML/cmm/m/it/12 =N\U/msb/m/n/12 Z\OT1/cmr/m/n/12 )
+[] \OMS/cmsy/m/n/12 ! \U/msb/m/n/12 C[]$ \OT1/cmr/m/n/12 un car-ac-ter de Diric
+h-let prim-i-tivo. Sabe-mos que $[](\U/msb/m/n/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/
+it/12 []\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j\U/msb/m/n/12 Q\OT1/cmr/m/n/12 ) []
+
+ []
+
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]\OT1/cmr/m/n/8 esta nota
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 nueva es
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 una gen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 er-al-iza-cion
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 de la nota
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 teo-rema
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 de Eichler-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 Shimura
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 de lu-gar
+ []
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 aqui. La
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 proposi-cion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 que sigue
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 tam-bien
+ []
+
+
+Underfull \hbox (badness 4899) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 se usa en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 Langlands-
+ []
+
+[70]
+
+LaTeX Warning: Characters dropped after `\end{comment}' on input line 225.
+
+[71]
+Overfull \hbox (4.31369pt too wide) in paragraph at lines 295--297
+[]\OT1/cmr/m/n/12 Del poli-nomio car-ac-terstico de $\OML/cmm/m/it/12 []\OT1
+/cmr/m/n/12 ([][])$ pode-mos leer el de-ter-mi-nante y la traza de $\OML/cmm/m/
+it/12 []\OT1/cmr/m/n/12 ([][])$.
+ []
+
+[72]
+Overfull \hbox (11.25778pt too wide) in paragraph at lines 314--316
+[]\OT1/cmr/bx/n/12 Teorema 94. []\OT1/cmr/m/it/12 (Eichler-Shimura) Sea $\OML/c
+mm/m/it/12 `$ \OT1/cmr/m/it/12 un numero primo. Para toda forma prim-i-tiva $\
+OML/cmm/m/it/12 f \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 ( [](\
+OML/cmm/m/it/12 N\OT1/cmr/m/n/12 ))$
+ []
+
+[73] [74]) [75]
+Chapter 2.
+[76
+
+
+]
+\openout2 = `secciones/utf.aux'.
+
+ (secciones/utf.tex [77
+
+] [78] [79]
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+ []
+
+(figuras/flt.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--129
+
+ []
+
+) [80] [81]
+\openout2 = `secciones/frey.aux'.
+
+ (secciones/frey.tex [82
+
+
+]) [83]
+\openout2 = `secciones/stw.aux'.
+
+ (secciones/stw.tex
+
+LaTeX Warning: Citation `s' on page 84 undefined on input line 7.
+
+
+LaTeX Warning: Citation `DiamonShurman' on page 84 undefined on input line 7.
+
+) [84
+
+
+]
+\openout2 = `secciones/ribet.aux'.
+
+ (secciones/ribet.tex
+
+LaTeX Warning: Citation `lettreMestre' on page 85 undefined on input line 3.
+
+) [85
+
+
+]
+Chapter 3.
+[86
+
+
+]
+\openout2 = `secciones/langlands-tunnell.aux'.
+
+ (secciones/langlands-tunnell.tex [87
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]\OT1/cmr/m/n/8 checar
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 59--59
+\OT1/cmr/m/n/8 que esa es
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+\OT1/cmr/m/n/8 la unica
+ []
+
+[88] [89] [90] [91] [92] [93] [94] [95]) [96]
+\openout2 = `secciones/truco3-5.aux'.
+
+ (secciones/truco3-5.tex
+
+LaTeX Warning: Characters dropped after `\end{comment}' on input line 14.
+
+
+Overfull \hbox (14.70259pt too wide) in paragraph at lines 24--25
+[]\OT1/cmr/m/n/12 Para jus-ti-ficar esta nueva va, nece-si-ta-mos el teo-rema
+ 113[]. La es-trate-gia de pro-barlo es parametrizar
+ []
+
+[97
+
+
+] [98]
+<figuras/eq_weierstrass.png, id=354, 721.69624pt x 722.7pt>
+File: figuras/eq_weierstrass.png Graphic file (type png)
+<use figuras/eq_weierstrass.png>
+Package pdftex.def Info: figuras/eq_weierstrass.png  used on input line 127.
+(pdftex.def)             Requested size: 216.51054pt x 216.81166pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[99] [100 <./figuras/eq_weierstrass.png (PNG copy)>] [101]
+<figuras/orden-puntos-racionales.png, id=364, 883.3pt x 878.28125pt>
+File: figuras/orden-puntos-racionales.png Graphic file (type png)
+<use figuras/orden-puntos-racionales.png>
+Package pdftex.def Info: figuras/orden-puntos-racionales.png  used on input lin
+e 239.
+(pdftex.def)             Requested size: 264.99205pt x 263.4864pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figuras/orbitas-puntos-2.png, id=365, 871.255pt x 866.23625pt>
+File: figuras/orbitas-puntos-2.png Graphic file (type png)
+<use figuras/orbitas-puntos-2.png>
+Package pdftex.def Info: figuras/orbitas-puntos-2.png  used on input line 253.
+(pdftex.def)             Requested size: 151.14484pt x 150.27185pt.
+<figuras/orbitas-puntos-1.png, id=366, 871.255pt x 866.23625pt>
+File: figuras/orbitas-puntos-1.png Graphic file (type png)
+<use figuras/orbitas-puntos-1.png>
+Package pdftex.def Info: figuras/orbitas-puntos-1.png  used on input line 256.
+(pdftex.def)             Requested size: 151.14484pt x 150.27185pt.
+<figuras/orbitas-puntos-3.png, id=367, 872.25874pt x 867.24pt>
+File: figuras/orbitas-puntos-3.png Graphic file (type png)
+<use figuras/orbitas-puntos-3.png>
+Package pdftex.def Info: figuras/orbitas-puntos-3.png  used on input line 259.
+(pdftex.def)             Requested size: 151.14484pt x 150.27394pt.
+[102] [103 <./figuras/orden-puntos-racionales.png (PNG copy)>] [104 <./figuras/
+orbitas-puntos-2.png (PNG copy)> <./figuras/orbitas-puntos-1.png (PNG copy)> <.
+/figuras/orbitas-puntos-3.png (PNG copy)>] [105] [106] [107] [108] [109]
+
+LaTeX Warning: Characters dropped after `\end{comment}' on input line 681.
+
+[110] [111]) [112]
+\openout2 = `secciones/familias-mod5.aux'.
+
+ (secciones/familias-mod5.tex
+
+LaTeX Warning: Reference `thm:1' on page 113 undefined on input line 3.
+
+) [113
+
+
+]
+\openout2 = `secciones/clms.aux'.
+
+ (secciones/clms.tex
+
+LaTeX Warning: Reference `eqn:eigenformabuscada' on page 114 undefined on input
+ line 25.
+
+
+LaTeX Warning: Reference `cond_ii' on page 114 undefined on input line 28.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]\OT1/cmr/m/n/12 revisar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 ulo de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 cor-nell
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 sil-ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 man,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 arith-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 metic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/12 ge-om-e-
+ []
+
+[114
+
+
+]) [115]
+\openout2 = `secciones/apendices.aux'.
+
+ (secciones/apendices.tex
+Appendix A.
+
+! LaTeX Error: File `domfundgamma015labeled' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...graphics[scale=0.3]{domfundgamma015labeled}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[116
+
+
+
+] [117] [118] [119]
+
+LaTeX Warning: Reference `ap:pihat' on page 120 undefined on input line 272.
+
+
+LaTeX Warning: Reference `eq:phihatdef' on page 120 undefined on input line 284
+.
+
+[120]
+
+LaTeX Warning: Reference `thm:formula_phi' on page 121 undefined on input line 
+331.
+
+
+LaTeX Warning: Reference `eq:phihatmas' on page 121 undefined on input line 332
+.
+
+
+LaTeX Warning: Reference `eq:phihatmenos' on page 121 undefined on input line 3
+32.
+
+
+LaTeX Warning: Reference `thm:prop_de_sigma' on page 121 undefined on input lin
+e 337.
+
+
+LaTeX Warning: Reference `thm:formula_phi' on page 121 undefined on input line 
+340.
+
+
+LaTeX Warning: Reference `eq:phihatmas' on page 121 undefined on input line 345
+.
+
+
+LaTeX Warning: Reference `thm:prop_de_sigma' on page 121 undefined on input lin
+e 350.
+
+
+LaTeX Warning: Reference `eq:phihatmenos' on page 121 undefined on input line 3
+50.
+
+[121]
+
+LaTeX Warning: Reference `eq:phihatmas' on page 122 undefined on input line 382
+.
+
+
+LaTeX Warning: Reference `thm:prop_de_sigma' on page 122 undefined on input lin
+e 394.
+
+[122]
+
+LaTeX Warning: Citation `Kummer1836' on page 123 undefined on input line 425.
+
+
+LaTeX Warning: Citation `TricomiFHC' on page 123 undefined on input line 430.
+
+
+LaTeX Warning: Citation `TricomiFHC' on page 123 undefined on input line 439.
+
+
+LaTeX Warning: Reference `sec:formas_series_eisenstein' on page 123 undefined o
+n input line 440.
+
+[123] [124]
+
+LaTeX Warning: Reference `eq:intercambio_int' on page 125 undefined on input li
+ne 542.
+
+
+LaTeX Warning: Reference `eq:n_derivada_st' on page 125 undefined on input line
+ 582.
+
+
+LaTeX Warning: Reference `eq:n_derivada_st' on page 125 undefined on input line
+ 582.
+
+[125]
+Overfull \hbox (6.91438pt too wide) detected at line 643
+[] []\OML/cmm/m/it/12 y[] [] \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/1
+2 ; \OML/cmm/m/it/12  \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 j;  \OT1/cmr/m/n/12
+ + \OML/cmm/m/it/12 n \OT1/cmr/m/n/12 + 1) + [] []\OML/cmm/m/it/12 y[] [] \OT1
+/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12  \OMS/cmsy/m
+/n/12   \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j \OT1/cmr/m/n/12 + 1)\OML/cmm/m/it/1
+2 ;  \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 n \OT1/cmr/m/n/12 + 1)
+ []
+
+[126] [127]) [128] (tesis-maestria.bbl [129
+
+
+]
+Underfull \hbox (badness 2343) in paragraph at lines 130--134
+[]\OT1/cmr/m/n/12 J.S. Milne.  \OT1/cmr/m/it/12 Mod-u-lar Func-tions and Mod-u-
+lar Forms\OT1/cmr/m/n/12 .  2017.  Disponible en
+ []
+
+[130]) [131] (tesis-maestria.aux (secciones/intro.aux)
+(secciones/formas-modulares.aux) (secciones/curvas.aux)
+(secciones/curvas-elipticas.aux) (secciones/rep-galois.aux) (secciones/utf.aux)
+(secciones/frey.aux) (secciones/stw.aux) (secciones/ribet.aux)
+(secciones/langlands-tunnell.aux) (secciones/truco3-5.aux)
+(secciones/familias-mod5.aux) (secciones/clms.aux) (secciones/apendices.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 17828 strings out of 492895
+ 383203 string characters out of 3133467
+ 435202 words of memory out of 3000000
+ 21273 multiletter control sequences out of 15000+200000
+ 23004 words of font info for 88 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,21n,86p,1180b,1297s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/eule
+r/eufm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pf
+b>
+Output written on tesis-maestria.pdf (131 pages, 1242068 bytes).
+PDF statistics:
+ 559 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+

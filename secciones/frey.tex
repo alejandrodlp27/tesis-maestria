@@ -1,0 +1,60 @@
+\section{Las curvas de Frey}
+
+El punto de partida de la prueba del último teorema de Fermat es asociar una curva elíptica a un posible contraejemplo $a^n+b^n=c^n$. Esta curva elíptica lleva el nombre de \emph{curva de Frey}. Aunque Yves Hellegouarch estudió este tipo de curvas elípticas antes que Frey (cf. \cite{Hellegouarch}), fue Frey quien primero sugirió que una curva elíptica de ese tipo asociada a una solución de la ecuación de Fermat podía producir una contradicción (cf. \cite{Frey86}).
+
+Empezamos con la definición de la curva de Frey:
+
+\begin{defin}
+	Sean $A,B,C\in\ZZ$ tales que $A+B+C=0$. La \emph{curva de Frey} asociada a la terna $(A,B,C)$ es la curva $E_{A,B,C}$ definida por
+	\[
+		E_{A,B,C}\; : \; y^2=x(x-A)(x+B).
+	\]
+\end{defin}
+
+\begin{nota}
+	La curva de Frey $E_{A,B,C}$ es elíptica cuando es suave, es decir cuando el discriminante es diferente de 0.  El discriminante lo denotamos por $\Delta_{A,B,C}$ y es igual a:
+	\begin{equation}\label{eq:disc-frey}
+		\Delta_{A,B,C}=2^4(ABC)^2.
+	\end{equation}
+
+\end{nota}
+
+Si $(a,b,c)$ es una solución no trivial de la ecuación de Fermat $x^p+y^p+z^p=0$, donde $p$ es impar, entonces los enteros $A=a^p$, $B=b^p$ y $C=c^p$ producen una curva de Frey que denotamos:
+\[
+	E_{a,b,c,p}:=E_{a^p,b^p,c^p}\; :\; y^2=x(x-a^p)(x+b^p)
+\]
+
+Con estas condiciones obtenemos la mitad del teorema \ref{thm:frey}:
+
+\begin{prop}\label{prop:frey-semiestable}
+	Sean $a,b,c\in\ZZ$ que cumplen \eqref{solucion-reducida} tales que $a^p+b^p=c^p$, entonces la curva de Frey $E_{a,b,c,p}$ cumple:
+	\begin{enumerate}[label=(\roman*)]
+	\item $E_{a,b,c,p}$ es semiestable.
+	\item El discriminante minimal de $E_{a,b,c,p}$ es $\tilde{\Delta}_{a,b,c,p}=2^{-8}(abc)^{2p}$.
+	\item El conductor de $E_{a,b,c,p}$ es:
+	\[
+		N_{a,b,c,p}=\prod_{\underset{\l\,\mathrm{primo}}{\l\mid abc}}\l.
+	\]
+	\end{enumerate}
+\end{prop}
+
+\begin{proof} Escribimos $E:=E_{a,b,c,p}$ y en general suprimimos el subíndice ``$a,b,c,p$'' de la notación.
+	\begin{enumerate}[label=(\emph{\roman*})]
+		\item Vamos a probar que $E$ es semiestable sobre los primos impares $\l$, i.e. hay reducción buena módulo $\l$ o reducción multiplicativa módulo $\l$. Cuando $\l=2$, $E$ tiene reducción multiplicativa pero solamente referimos el lector al artículo de Serre donde aparece la prueba (cf. \cite[\S4.1.3]{Serre87}).
+		
+		Para $\l>2$ la ecuación que define a $E$ se reduce módulo $p$ a:
+		\begin{equation}\label{eq:frey-mod-l}
+			y^2\equiv x(x-a^p)(x+b^p) \Mod{\l}.
+		\end{equation}
+		$E$ es semiestable en $p$ si las tres raíces del lado derecho $0,a^p$ y $-b^p$ no son todos iguales. Si este es el caso tendríamos $0\equiv a^p\equiv -b^p\Mod{\l}$ o en particular $\l\mid a,b$ lo cual a su vez implica que $\l\mid c$. Esto no puede suceder porque $(a,b,c)=1$ por hipótesis. Por lo tanto al menos dos raíces del lado derecho de \eqref{eq:frey-mod-l} son distintas y podemos concluir que $E$ es semiestable en $\l>2$.
+		
+		\item Sea
+		
+		\item Ya sabemos que el discriminante de $E$ es $2^4(abc)^{2p}$ por \eqref{eq:disc-frey}. Entonces módulo $p$, la ecuación que define $E$ tiene discriminante congruente a 0 módulo $\l$ si y solamente $\l\mid abc$. Por lo tanto si $\l\nmid abc$, $E$ tiene buena reducción en $\l$ y por lo tanto el exponente de $\l$ en el conductor de $E$ es 0 (véase la definición \ref{def:conductor}). Si $\l\mid abc$ entonces solamente hay reducción multiplicativa y por lo tanto el exponente de $\l$ es 1. De esta manera el conductor de $E$ es
+	\[
+		N_{a,b,c,p}=\prod_{\underset{\l\,\mathrm{primo}}{\l\mid abc}}\l.
+	\]
+	Observe que como $2\mid b$, entonces el conductor $N_{a,b,c,p}$ es par. 
+	\end{enumerate}
+\end{proof}
+

@@ -1,0 +1,250 @@
+\begin{thebibliography}{KKS11}
+
+\bibitem[Ahl79]{AhlforsCA}
+Lars~V. Ahlfors.
+\newblock {\em Complex Analysis}.
+\newblock McGraw-Hill, 1979.
+
+\bibitem[AL70]{AtkinLehnerHOOG}
+A.O.L. Atkin and J.~Lehner.
+\newblock Hecke operators on $\gamma_0(n)$.
+\newblock {\em Mathematische Annalen}, pages 185:134--160, 1970.
+
+\bibitem[AM94]{AtiyahCA}
+M.F. Atiyah and I.G. Macdonald.
+\newblock {\em Introduction to Commutative Algebra}.
+\newblock Avalon Publishing, 1994.
+
+\bibitem[Apo90]{ApostolMFADSINT}
+Tom Apostol.
+\newblock {\em Modular Functions and Dirichlet Series in Number Theory}.
+\newblock Springer, 1990.
+
+\bibitem[Bum98]{BumpAFAR}
+Daniel Bump.
+\newblock {\em Automorphic Forms and Representations}.
+\newblock Cambridge University Press, 1998.
+
+\bibitem[Cre97]{Cremona}
+J.~Cremona.
+\newblock {\em Algorithms for Modular Elliptic Curves}.
+\newblock Springer New York, 1997.
+
+\bibitem[Del71]{DeligneFMERLA}
+Pierre Deligne.
+\newblock {\em Formes modulaires et repr\'esentations $\l-$adiques}.
+\newblock Springer, 1971.
+\newblock en ``Lecture Notes in Math'', volumen 179, p\'aginas 139-172.
+
+\bibitem[DS74]{DeligneSerreFMDP1}
+Pierre Deligne and Jean-Pierre Serre.
+\newblock Formes modulaires de poids 1.
+\newblock {\em Annales scientifiques de L'\'E.N.S.}, pages 507--530, 1974.
+
+\bibitem[DS05]{DiamondShurmanAFCIMF}
+Fred Diamond and Jerry Shurman.
+\newblock {\em A First Course in Modular Forms}.
+\newblock Springer, 2005.
+
+\bibitem[Eis04]{EisenbudCA}
+David Eisenbud.
+\newblock {\em Commutative Algebra with a View Toward Algebraic Geometry}.
+\newblock Springer, 2004.
+
+\bibitem[Eul40]{EulerDSSR}
+Leonhard Euler.
+\newblock De summis serierum reciprocarum.
+\newblock {\em Commentarii academiae scientiarum Petropolitanae 7}, pages
+  123--134, 1740.
+
+\bibitem[Eul70]{EulerAlgebra}
+Leonhard Euler.
+\newblock {\em Vollstandige Anleitung zur Algebra II}.
+\newblock 1770.
+\newblock Aparece como E388 en http://eulerarchive.maa.org/.
+
+\bibitem[Fre86]{Frey86}
+Gerhard Frey.
+\newblock {\em Links Between Stable Elliptic Curves and Certain Diophantine
+  Equations}.
+\newblock Saarbrücken : Universität des Saarlandes. Fachbereich Mathematik,
+  1986.
+
+\bibitem[Fri22]{Fricke}
+Robert Fricke.
+\newblock {\em Die Elliptischen Funktionen Und Ihere Anwendungen}.
+\newblock Leipzig, Berlin, B.G. Teubner, 1922.
+
+\bibitem[Ful08]{FultonAC}
+W.~Fulton.
+\newblock {\em Algebraic Curves: an Introduction to Algebraic Geometry}.
+\newblock Addison-Wesley Pub. Co., 2008.
+
+\bibitem[Gel97]{GelbartTL}
+Stephen Gelbart.
+\newblock {\em Three Lectures on the Modularity of $\rhot$ and the Langlands
+  Reciprocity Conjecture}.
+\newblock Springer, 1997.
+\newblock en ``Modular Forms and Fermat's Last Theorem'' editado por Cornell,
+  Silverman y Stevens.
+
+\bibitem[Har77]{HartshorneAG}
+Robin Hartshorne.
+\newblock {\em Algebraic Geometry}.
+\newblock Springer, 1977.
+
+\bibitem[Hel75]{Hellegouarch}
+Yves Hellegouarch.
+\newblock Points d'ordre $2p^h$ sur les courbes elliptiques.
+\newblock {\em Polska Akademia Nauk. Instytut Matematyczny. Acta Arithmetica},
+  26:253--263, 1975.
+
+\bibitem[IR90]{IrelandRosenACITMNT}
+Kenneth Ireland and Michael Rosen.
+\newblock {\em A Classical Introduction to Modern Number Theory}.
+\newblock Springer, 1990.
+
+\bibitem[KKS11]{SaitoNumberTheory2}
+Kazuya Kato, Nobushige Kurokawa, and Takeshi Saito.
+\newblock {\em Number Theory 2: An introduction to Class Field Theory}.
+\newblock American Mathematical Society, 2011.
+
+\bibitem[Lan80]{LanglandsBCFGL}
+Robert~P. Langlands.
+\newblock {\em Base Change for GL(2)}.
+\newblock Annals of Mathematics Studies. Princeton University Press, 1980.
+
+\bibitem[Lig75]{LigozatCMDG1}
+G\'erard Ligozat.
+\newblock {\em Courbes modulaires de genre 1}.
+\newblock Number~43 in M\'emoires de la Soci\'et\'e Math\'ematique de France.
+  Soci\'et\'e math\'ematique de France, 1975.
+
+\bibitem[Lut37]{Lutz}
+Elisabeth Lutz.
+\newblock Sur l'\'equation $y^2 = x^3 - ax - b$ dans les corps $p-$adiques.
+\newblock {\em Journal für die reine und angewandte Mathematik}, 177:238--247,
+  1937.
+
+\bibitem[Mil17]{MilneMFAMF}
+J.S. Milne.
+\newblock {\em Modular Functions and Modular Forms}.
+\newblock 2017.
+\newblock Disponible en www.jmilne.org/math/.
+
+\bibitem[Miy89]{MiyakeMF}
+Toshitsune Miyake.
+\newblock {\em Modular Forms}.
+\newblock Springer, 1989.
+
+\bibitem[Nag35]{Nagell}
+Trygve Nagell.
+\newblock Solution de quelques probl$\grave{e}$mes dans la the\'eorie
+  arithme\'etique des cubiques nagell planes du premier genre.
+\newblock {\em Wid. Akad. Skrifter Oslo I}, 1935.
+
+\bibitem[Neu99]{NeukirchANT}
+J\"urgen Neukirch.
+\newblock {\em Algebraic Number Theory}.
+\newblock Springer, 1999.
+
+\bibitem[New56]{NewmanCAAOACOMFI}
+Morris Newman.
+\newblock Construction and application of a class of modular functions i.
+\newblock {\em Proc. London Math. Soc.}, pages 334--350, 1956.
+
+\bibitem[New58]{NewmanCAAOACOMFII}
+Morris Newman.
+\newblock Construction and application of a class of modular functions ii.
+\newblock {\em Proc. London Math. Soc.}, pages 373--387, 1958.
+
+\bibitem[Rot95]{RotmanAITTTOG}
+Joseph~J. Rotman.
+\newblock {\em An Introduction to the Theory of Groups}.
+\newblock Springer, 1995.
+
+\bibitem[Sai13a]{SaitoFLTBT}
+Takeshi Saito.
+\newblock {\em Fermat's Last Theorem: Basic Tools}.
+\newblock American Mathematical Society, 2013.
+
+\bibitem[Sai13b]{SaitoFLTTP}
+Takeshi Saito.
+\newblock {\em Fermat's Last Theorem: The Proof}.
+\newblock American Mathematical Society, 2013.
+
+\bibitem[Ser73]{SerreACIA}
+Jean-Pierre Serre.
+\newblock {\em A Course in Arithmetic}.
+\newblock Springer, 1973.
+
+\bibitem[Ser77a]{SerreLROFG}
+Jean-Pierre Serre.
+\newblock {\em Linear Representations of Finite Groups}.
+\newblock Springer, 1977.
+
+\bibitem[Ser77b]{SerreMFOW1AGR}
+Jean-Pierre Serre.
+\newblock {\em Modular Forms of Weight 1 and Galois Representations}.
+\newblock Academic Press, 1977.
+\newblock en ``Algebraic Number Fields'', editado por A. Fr\"olich.
+
+\bibitem[Ser79]{SerreLF}
+Jean-Pierre Serre.
+\newblock {\em Local Fields}.
+\newblock Springer, 1979.
+
+\bibitem[Ser87]{Serre87}
+Jean-Pierre Serre.
+\newblock Sur les représentations modulaires de degré $2$ de
+  $\mathrm{Gal}(\overline{\mathbf{q}}/\mathbf{Q})$.
+\newblock {\em Duke Mathematical Journal}, 54(1):179--230, 1987.
+
+\bibitem[Shi94]{ShimuraITTATOAF}
+Goro Shimura.
+\newblock {\em Introduction to the Arithmetic Theory of Automorphics
+  Functions}.
+\newblock Springer, 1994.
+
+\bibitem[Shi12]{ShimuraMFBAB}
+Goro Shimura.
+\newblock {\em Modular Forms: Basics and Beyond}.
+\newblock Springer, 2012.
+
+\bibitem[Sil99]{SilvermanATITAOEC}
+Joseph~H. Silverman.
+\newblock {\em Advanced Topics in the Arithmetic of Elliptic Curves}.
+\newblock Springer, 1999.
+
+\bibitem[Sil09]{SilvermanTAOEC}
+Joseph~H. Silverman.
+\newblock {\em The Arithmetic of Elliptic Curves}.
+\newblock Springer, 2009.
+
+\bibitem[SS02]{SteinFA}
+Elias~M. Stein and Rami Shakarchi.
+\newblock {\em Fourier Analysis}.
+\newblock Princeton University Press, 2002.
+
+\bibitem[ST09]{SilvermanTateRPOEC}
+Joseph~H. Silverman and John~T. Tate.
+\newblock {\em Rational Points on Elliptic Curves}.
+\newblock Springer, 2009.
+
+\bibitem[Tun81]{TunnellACFROOT}
+Jerrold Tunnell.
+\newblock Artin's conjecture for representations of octahedral type.
+\newblock {\em Bulletin of the American Mathematical Society}, 5:173--175,
+  1981.
+
+\bibitem[Vé71]{VeluIECE}
+Jaques Vélu.
+\newblock Isogénies entre courbes elliptiques.
+\newblock {\em C. R. Acad. Sci. Paris}, 273:A238--A241, 1971.
+
+\bibitem[Wil95]{Wiles}
+Andrew Wiles.
+\newblock Modular elliptic curves and fermat's last theorem.
+\newblock {\em Annals of Mathematics}, 141:443--551, 1995.
+
+\end{thebibliography}

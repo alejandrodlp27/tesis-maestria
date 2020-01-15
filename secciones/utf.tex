@@ -1,0 +1,130 @@
+\section{Enunciado, reducciones preliminares y estrategia de la prueba}
+
+Fermat, en el margen de su copia de \emph{Arithmetica} de Diofanto, propuso que la ecuación $x^n+y^n=z^n$ no tiene soluciones enteras no triviales para toda $n>2$. Decimos que una solución $(a,b,c)$ de la ecuación diofantina $x^n+y^n=z^n$, donde $a,b,c\in\ZZ$, es una solución \emph{no trivial} si $abc\neq0$, i.e. los tres enteros son distintos de cero. Con esto, el enunciado de Fermat se convierte en
+\begin{equation}\label{utfn-fermat}\tag{UTF($n$)}
+	(a,b,c)\;\;\text{es una solución de la ecuación diofantina}\;\; x^n+y^n=z^n\quad\then\quad abc=0.
+\end{equation}
+Fermat dijo que esto era cierto para toda $n>2$. Cuando $n=1$, UTF($n$) es claramente falso y también para $n=2$. En efecto, la ecuación diofantina $x^2+y^2=z^2$ tiene una infinidad de soluciones no triviales, las famosas \emph{ternas pitagóricas}. De hecho las ternas pitagóricas están parametrizadas por parejas de enteros $(a,b)$ tales que $(a,b)=1$ y al menos uno es par; dada una pareja de estas podemos construir la solución $(b^2-a^2,2ab,a^2+b^2)$. Para ver esto simplemente hay que observar que $(a,b,c)$ es una terna pitagórica si y solo si $|a+ib|\in\ZZ$, por lo tanto si $a+ib\in\ZZ[i]$ entonces $|(a+ib)^2|\in\ZZ$ y así $(b^2-a^2,2ab,a^2+b^2)$ es una terna pitagórica.
+
+El caso $n=3$ es debido a Euler. La prueba es por descenso al infinito como en el caso $n=4$ (cf. proposició \ref{prop:utf4}) y la prueba definitiva de Euler aparece en la segunda parte de su libro de texto de álgebra \cite[capítulo XV]{EulerAlgebra}. No probamos el caso $n=3$, pero esbozamos una prueba debida a Lamé: factorizamos la ecuación de Fermat como
+\[
+	(x+y)(x+\zeta y)(x+\zeta^2 y)=z^3,\quad\left(\zeta=\frac{-1+\sqrt{-3}}{2} \right).
+\]
+Los tres factores del lado izquierdo son primos relativos, entonces, como $\ZZ[\zeta]$ es un dominio de factorización única, la ecuación anterior implica que cada factor del lado izquierdo es un cubo en $\ZZ[\zeta]$, pero esto no puede suceder.
+
+El siguiente caso $n=4$, lo probamos porque es muy elemental y corto; la prueba es debido a Fermat:
+
+\begin{prop}\label{prop:utf4}
+	UTF(4) es cierto, es decir la ecuación $x^4+y^4=z^4$ no tiene soluciones no triviales.
+\end{prop}
+
+\begin{proof}
+Como Fermat, probaremos algo más fuerte: la ecuación diofantina $x^4+y^4=z^2$ no tiene soluciones no triviales. Observe que si $(a,b,c)$ es una solución de $x^4+y^4=z^4$, entonces $(a,b,c^2)$ es una solución de $x^4+y^4=z^2$ y por lo tanto la falta de soluciones no triviales de $x^4+y^4=z^2$ implica UTF(4).
+
+Supongamos que $(a,b,c)$ es una solución (con $b$ par, cf. \eqref{solucion-reducida} más adelante), como $(-a,-b,-c)$ también es solución, podemos asumir que $b>0$. Por lo tanto podemos asumir que la solución $(a,b,c)$ es tal que $b$ es mínimo entre las segundas coordenadas de todas las soluciones.
+
+Ahora, como $(a,b,c)$ es solución, tenemos que $(a^2)^2+(b^2)^2=c^2$, es decir $(a^2,b^2,c)$ es una terna pitagórica. Por lo tanto existen $d,e\in\ZZ$, primos relativos, tales que
+\[
+	a^2=e^2-d^2,\quad b^2=2de,\quad c=d^2+e^2.
+\]
+La primera ecuación de arriba implica que $(a,d,e)$ es una terna pitagórica, es decir existen enteros $f$ y $g$, primos relativos, tales que
+\[
+	a=g^2-f^2,\quad d=2fg,\quad e=f^2+g^2.
+\]
+Como $f$ y $g$ son primos relativos, la tercera ecuación de arriba implica que $e,f$ y $g$ son primos relativos dos a dos. Por lo tanto
+\[
+	b^2=2de=4efg \quad\then\quad (b/2)^2=efg \quad\then\quad e,f,g\;\;\text{son cuadrados}.
+\]
+Entonces existen $e_0,f_0,g_0\in\ZZ$ tales que $e=e_0^2$, $f=f_0^2$ y $g=g_0^2$. Sustituimos esto en la ecuación para $e$ y obtenemos $e_0^2=f_0^4+g_0^4$, es decir $(f_0,g_0,e_0)$ es una solución de $x^4+y^4=z^2$. Pero esto es una contradicción porque
+\[
+	(b/2)^2=efg\quad\then\quad b/2=e_0f_0g_0 \quad\then\quad g_0\mid b/2 \quad\then\quad g_0<b
+\]
+y por lo tanto $b$ no es mínimo entre las segundas coordenadas de las soluciones, lo cual contradice la construcción de $(a,b,c)$. Por lo tanto $x^4+y^4=z^2$ no tiene soluciones no triviales y mcon esto concluimos que UTF(4) es verdadero.
+\end{proof}
+
+Hemos visto que UTF($n$) es falso para $n=1,2$ y verdadero para $n=3,4$. En lugar de seguir con $n=5,6,7,\ldots$, ahora buscamos restringir los posibles valores de $n$ donde UTF($n$) es verdadero. Supongamos que hemos probado que UTF($n$) es verdadero para alguna $n$ y sea $m>0$ un múltiplo de $n$, i.e. $m=nk$ para alguna $k\in\ZZ$, entonces afirmamos que UTF($m$) también es verdadero. En efecto: si $(a,b,c)$ es una solución de $x^m+y^m=z^m$ entonces $(a^k,b^k,c^k)$ es una solución de $x^n+y^n=z^n$, por UTF($n$), tenemos que $a^kb^kc^k=(abc)^k=0$ y en particular $abc=0$. Por lo tanto hemos probado que
+\[
+	n\mid m \quad\then\quad \Big( \mathrm{UTF}(n)\;\;\then\;\;\mathrm{UTF}(m)\Big).
+\]
+Esto significa que solamente hay que probar UTF($p$) para todo primo impar $p$, para probar UTF($n$) para toda $n>2$. Con este método solamente nos falta los casos cuando $n$ no es divisible por un primom impar, i.e. $n=2^k$ para alguna $k>0$. Si $k=1$ vimos que UTF(2) es falso, pero si $k>1$, entonces $4\mid n$ y por la proposición \ref{prop:utf4} tendremos que UTF($2^k$) es verdadero para $k>1$.
+
+En resumen, solamente hay que probar UTF($n$) para $n$ primo impar ó $n=4$. Como ya vimos que UTF(3) y UTF(4) son verdaderos, el último teorema de Fermat lo definimos como el siguiente enunciado:
+
+\begin{thm}\label{thm:utf}
+Sea $p\geq5$ un primo impar, entonces la ecuación diofantina $x^p+y^p+z^p=0$ no tiene soluciones no triviales, es decir para todo $p\geq 5$ tenemos
+\begin{equation}\tag{UTF(p)}
+	\exists a,b,c\in\ZZ\;\;\text{tales que}\;\; a^p+b^p+c^p=0 \quad\then\quad abc=0.
+\end{equation}
+\end{thm}
+
+\begin{nota}
+A la ecuación diofantina $x^p+y^p+z^p=0$ se le llama la \emph{ecuación de Fermat}. Por la simetría de esta ecuación, si permutamos las entradas de una solución $(a,b,c)$ obtenemos otra solución. Por lo tanto podemos permutar libremente las entradas de cualquier solución a la ecuación de Fermat. Además, si $(a,b,c)$ es una solución, entonces $(\la a,\la b,\la c)$ es otra solución para toda $\la\in\ZZ$, es decir podemos escalar las soluciones y en particular podemos cambiar el signo de toda la terna.
+\end{nota}
+
+Si estamos trabajando con una supuesta solución a la ecuación de Fermat, podemos asumir algunas propiedades elementales sobre la solución.
+Por ejemplo, si $(a,b,c)$ es una solución, podemos asumir que $a$, $b$ y $c$ no comparten factores primos. En efecto, si $d\mid a,b,c$, entonces $(a/d,b/d,c/d)$ es otra solución de la ecuación de Fermat. Por lo tanto podemos eliminar todos los factores comunes de las entradas de una solución $(a,b,c)$ obtener una terna $(a',b',c')$ donde $a'$, $b'$ y $c'$ son primos relativos; una solución de esta forma se llama una solución \emph{primitiva}, es decir podemos asumir que la solución $(a,b,c)$ es primitiva.
+
+Otra propiedad que podemos asumir de una solución $(a,b,c)$ es que $b$ es par. En efecto, $a,b$ y $c$ no pueden ser todos impares, porque en este caso la ecuación de Fermat se reduciría módulo 2 a $0\equiv a^p+b^p\equiv c^p\equiv 1\Mod{2}$, lo cual es falso. Por lo tanto alguno de $a$, $b$ o $c$ es par. Como no importa el orden de la terna $(a,b,c)$, podemos asumir que $2\mid b$.
+
+Entonces podemos escribir $b=2b'$ para alguna $b'\in\ZZ$. Si reducimos la ecuación $a^p+b^p=c^p$ módulo 4 obtenemos
+\[
+	a\equiv a^p\equiv 2^pb'^p + c^2\equiv c^p\equiv c\Mod{4}
+\]
+y por lo tanto $a\equiv c\equiv1$ o $a\equiv c\equiv -1\Mod{4}$ (ya que ambos no pueden ser pares). Como podemos cambiar el signo a toda la terna, podemos asumir sin pérdida de generalidad que $a\equiv-1\Mod{4}$; esta elección de signo se requiere para probar la semiestabilidad de la curva de Frey asociada a una solución de la ecuación de Fermat (cf. proposición \ref{prop:frey-semiestable}).
+
+En resumen, si $(a,b,c)$ es una supuesta solución a la ecuación diofantina $x^p+y^p+z^p=0$, entonces podemos asumir sin pérdida de generalidad que la solución satisface las siguientes tres propiedades:
+\begin{gather}
+	(a,b,c)=1, \nonumber\\
+	2\mid b, \label{solucion-reducida}\tag{*}\\
+	a\equiv -1\Mod{4}. \nonumber
+\end{gather}
+De ahora en adelante, cuando tomamos una solución no trivial $(a,b,c)$ de la ecuación de Fermat $x^p+y^p+z^p=0$ vamos a asumir que $a$, $b$ y $c$ cumplen las condiciones \ref{solucion-reducida}.
+
+Antes de la prueba del último teorema de Fermat en 1995, una posible demostración del teorema \ref{thm:utf} fue propuesta por Frey en \cite[III. Conjectures]{Frey86}. Un año después, Serre adaptó el método de Frey e identificó una conjetura precisa sobre representaciones de Galois de la cual se deducía el último teorema de Fermat mediante el método de Frey (Véase la sección \S3.3 para la formulación de la conjetura y \S4.2 para la prueba del último teorema de Fermat como consecuencia).
+
+Ahora describimos la prueba de \ref{thm:utf} en cuatro pasos, basados en las pruebas propuestas en \cite{Frey86} y \cite{Serre87}. El primer paso es construir una curva elíptica semiestable $E$ asociada a una solución no trivial de la ecuación de Fermat. El segundo paso es traducir las propiedades de $E$ a propiedades de ramificación de la representación de Galois $\rhop$ asociada a los puntos de $p-$torsión. El tercer paso es aplicar el teorema de modularidad a $E$ para obtener una forma modular $f$ de peso 2 cuya representación de Galois asociada $\rho_f$ satisface $\bar{\rho}_f\cong\rhop$ y por lo tanto cumple las mismas propiedades de ramificación. El último paso es aplicar un teorema de Ribet a la representación $\bar{\rho}_f$ para reducir el nivel de la forma modular $f$ a 2, es decir encontramos una forma modular $g\in S_2(\Gamma_0(2))$ tal que $\rhop\cong\bar{\rho}_f\cong\bar{\rho}_g$. Esto produce una contradicción porque el espacio de formas modulares de peso 2 y nivel 2 es de dimensión 0.
+
+Enunciamos estos cuatro pasos en los siguientes tres teoremas:
+
+\begin{thm}\label{thm:frey}(Frey,Serre)
+		Si $(a,b,c)$ es una solución no trivial a la ecuación de Fermat $x^p+y^p+z^p=0$, la curva elíptica $E/\QQ$, definida por $y^2=x(x-a^p)(x+b^p)$, es semiestable y su conductor es
+		\[
+			N=\prod_{\underset{\l\,\mathrm{primo}}{\l\mid abc}}\l.
+		\]
+		La representación de Galois $\rhop$ asociada a los puntos de $p-$torsión es irreducible e impar y además cumple las siguientes propiedades de ramificación:
+		\begin{enumerate}[label=\roman*)]
+			\item $\rhop$ es no ramificado en todo primo $q$ tal que $q\nmid 2p$.
+			\item $\rhop$ es plano en $p$.
+		\end{enumerate}
+\end{thm}
+
+\begin{thm}\label{thm:wiles}(Wiles)
+	Toda curva elíptica $E/\QQ$ semiestable es modular. En particular, existe $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ tal que $\rhop\cong\bar{\rho}_f$ donde $\rho_f$ es la representación de Galois asociada a $f$ por la teoría de Eichler-Shimura (cf. teorema \ref{thm:eichlershimura})
+\end{thm}
+
+\begin{thm}\label{thm:ribet}(Ribet)
+	Sea $F$ un campo finito de característica $\l>2$ y sea $\rho:\GQ\ra\GL_2(F)$ una representación de Galois modular de nivel $N$ y de peso 2, i.e. existe $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ tal que $\rho\cong\bar{\rho}_f$. Sea $q$ un divisor primo impar exacto de $N$ (i.e. $q\mid N$ pero $q^2\nmid N$). Entonces:
+	\[
+		\mathrm{Si}\;\; \rho \;\;\mathrm{es}\;\mathrm{no}\;\mathrm{ramificado}\;\mathrm{o}\;\mathrm{plano}\;\mathrm{en}\;\;q\quad\then\quad \rho  \;\;\mathrm{es}\;\mathrm{modular}\;\mathrm{de}\;\mathrm{nivel}\;\; \frac{N}{q}.
+	\]
+\end{thm}
+
+Con estos tres teoremas, la prueba del último teorema de Fermat es sencilla:
+
+\begin{proof}(del teorema \ref{thm:utf})
+	Supongamos por contradicción que existe una solución no trivial $(a,b,c)$ a la ecuación de Fermat $x^p+y^p+z^p=0$ y además supongamos que $a$, $b$ y $c$ cumplen las condiciones \ref{solucion-reducida}. Por el teorema \ref{thm:frey} existe una curva elíptica $E/\QQ$ semiestable con conductor $N$ par (gracias a que $2\mid b$). Por el teorema \ref{thm:wiles} existe una forma primitiva $f\in S_2^{\mathrm{new}}(\Gamma_0(N))$ tal que $\rhop\cong\bar{\rho}_f$.
+	
+	Por otro lado, como $E$ es semiestable, su conductor $N$ es libre de cuadrados (cf. la nota después de la definición \ref{defin:conductor}) y por lo tanto todo divisor primo $q$ de $N$ es un divisor exacto; escribimos $N=2q_1\cdots q_n$ como su producto en primos donde las $q_i$ son impares. Ahora aplicamos el teorema \ref{thm:frey} a $\rho=\bar{\rho}_f$ y a $q=q_1$. Si $q_1=p$, entonces el teorema \ref{thm:frey}.ii nos dice que $\bar{\rho}_f(\cong\rhop)$ es plano en $q_1$; si $q_1\neq p$, entonces el teorema \ref{thm:frey}.i dice que $\bar{\rho}_f$ es no ramificado en $q$. De todas maneras podemos aplicar el teorema \ref{thm:frey} para concluir que $\bar{\rho}_f$ es modular de nivel $N/q_1=q_2\cdots q_n$, es decir existe $g_1\in S_2^{\mathrm{new}}(\Gamma_0(2q_2\cdots q_n))$ tal que $\bar{\rho}_f\cong\bar{\rho}_{g_1}$.
+	
+	Ahora repetimos este proceso para $\rho=\bar{\rho}_{g_1}$ y $q=q_2$ para obtener una forma primitiva $g_2\in S_2^{\mathrm{new}}(\Gamma_0(2q_3\cdots q_n))$ tal que $\bar{\rho}_f\cong\bar{\rho}_{g_1}\cong\bar{\rho}_{g_2}$. Si en total hacemos esto $n$ veces (i.e. la cantidad de divisores primos impares de $N$) obtenemos una forma primitiva $g_n\in S_2^{\mathrm{new}}(\Gamma_0(2))$ tal que $\rhop\cong\bar{\rho}_f\cong\bar{\rho}_{g_n}$. Sabemos que $S_2(\Gamma_0(2))$ es de dimensión 0 por ser igual al género de la curva modular $X_0(2)$ (cf. el ejemplo \ref{ej:X02}), por lo tanto $g_n=0$ lo cual es una contradicción porque $\rhop$ es una representación no trivial. Por lo tanto una solución no trivial a la ecuación de Fermat no puede existir.
+\end{proof}
+
+La prueba del último teorema de Fermat se puede resumir en el siguiente diagrama:
+\newline
+
+\begingroup
+\centering
+\input{figuras/flt.tex}
+\endgroup
+
+En las siguientes dos secciones vamos a revisar la prueba del teorema \ref{thm:frey}. Lo descomponemos en dos proposiciones: una estudiando las propiedades de la curva de Frey y la otra estudiando las propiedades de ramificación de la representación de Galois asociada a sus puntos de $p-$torsión.
